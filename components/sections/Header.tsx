@@ -50,7 +50,7 @@ const BlurBg: React.FC = () => {
     <div
       className="h-full w-full"
       style={{
-        background: "url('header-bg-image.png')",
+        background: "url(&apos;header-bg-image.png&apos;)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -116,8 +116,8 @@ const Header: React.FC = () => {
             <p className="sm:text-2xl text-center">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
-              development company. Let's discuss your project and find “Why your
-              company need our solution”.
+              development company. Let&apos;s discuss your project and find “Why
+              your company need our solution”.
             </p>
             <ButtonComp
               text="Connect with us"

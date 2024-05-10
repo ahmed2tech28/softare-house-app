@@ -55,11 +55,11 @@ const ReviewBox: React.FC = () => {
   return (
     <div className="w-[26rem] h-[35rem] bg-white px-7 py-14 flex-col justify-between flex rounded-xl">
       <p className="leading-loose">
-        Devhouse's team has been instrumental in the success of our platform,
-        Muqawiloon.com. Their programmers' technical expertise and their
-        designers' creative flair have combined to make our vision a reality,
-        providing a powerful, user-friendly solution for the construction
-        industry.
+        Devhouse&apos;s team has been instrumental in the success of our
+        platform, Muqawiloon.com. Their programmers&apos; technical expertise
+        and their designers&apos; creative flair have combined to make our
+        vision a reality, providing a powerful, user-friendly solution for the
+        construction industry.
       </p>
       <ClinetCard />
     </div>

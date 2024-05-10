@@ -34,9 +34,10 @@ const ClientArea: React.FC = () => {
               <h1 className="text-2xl">CTO at Blockbuster, TDC</h1>
             </div>
             <p className="font-semibold md:text-2xl text-xl">
-              "We're very happy with Cleveroad. They seem to work in the way
-              that we do, and we have a close collaboration with them. Every day
-              we talk to the developers and outline what needs to be done."
+              &quot;We&apos;re very happy with Cleveroad. They seem to work in
+              the way that we do, and we have a close collaboration with them.
+              Every day we talk to the developers and outline what needs to be
+              done.&quot;
             </p>
             <div>
               <ButtonComp
