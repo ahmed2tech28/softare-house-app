@@ -50,7 +50,7 @@ const BlurBg: React.FC = () => {
     <div
       className="h-full w-full"
       style={{
-        background: "url(&apos;header-bg-image.png&apos;)",
+        background: "url('header-bg-image.png')",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
