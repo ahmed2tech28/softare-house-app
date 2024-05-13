@@ -102,12 +102,12 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="h-[1px] w-full bg-white" />
-        <div className="flex container mx-auto text-white justify-center items-center">
+        <div className="flex container h-14 mx-auto text-white justify-center items-center">
           <div className="w-1/2 h-full flex flex-col justify-center mb-[-4rem]">
             <h1>Dev House</h1>
             <p>© Dev House 2011-2022. All rights reserved</p>
           </div>
-          <div className="w-1/2 flex gap-x-3 justify-end mb-[-4rem]">
+          <div className="w-1/2 flex gap-x-9 justify-end mb-[-4rem]">
             <img src="/social/1.png" alt="" />
             <img src="/social/2.png" alt="" />
             <img src="/social/3.png" alt="" />

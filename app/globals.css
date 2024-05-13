@@ -14,4 +14,8 @@ body, .cover {
 ::-webkit-scrollbar-button {
     width: 0px; 
     height: 0px; 
-  }
+}
+
+footer td {
+    cursor: pointer;
+}

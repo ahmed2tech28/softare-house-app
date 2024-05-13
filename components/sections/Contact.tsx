@@ -144,6 +144,7 @@ const Form: React.FC = () => {
           variant="contained"
           edges="rounded"
           type="submit"
+          padding="0.7rem 2rem"
         />
       </div>
     </form>
