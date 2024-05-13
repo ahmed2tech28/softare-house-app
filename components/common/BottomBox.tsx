@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 interface Boxes {
   title: string;
@@ -16,21 +17,24 @@ interface BoxProps {
 }
 
 const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
+  const completed = (time / 7) * 100;
   if (expand == i) {
     return (
-      <div className="flex h-full justify-center items-center lg:w-[35%] w-full transition-all duration-700">
+      <div className="flex h-full justify-center items-center lg:w-[35%] w-full transition-all duration-700 ease-in">
         <div className="w-[92%] xl:p-0 md:p-2">
           <h1
             className="font-bold text-2xl"
             dangerouslySetInnerHTML={{ __html: title }}
           ></h1>
           <p className="leading-[2rem] text-[1.15rem]">{desc}</p>
-          <progress
-            id="file"
-            value={`${time}`}
-            max={"7"}
-            className="h-[2px] w-full"
-          ></progress>
+          <ProgressBar
+            completed={completed}
+            customLabel="|"
+            labelColor="green"
+            bgColor="green"
+            height="3px"
+            className="mt-3"
+          />
         </div>
         <div className="w-[8%] h-[62%] flex flex-col justify-start items-start">
           <button className="px-1 hover:bg-[#423ED6]">→</button>
@@ -39,26 +43,14 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
     );
   }
   return (
-    <div
-      className="lg:flex h-full justify-center items-center w-[20%] transition-all duration-100 hidden"
-      onMouseEnter={(e) => {
-        onHover(i);
-      }}
-    >
-      <div className="w-[92%] xl:p-0 md:p-2">
+    <div className="lg:flex h-full justify-center items-center w-[20%] transition-all duration-1000 ease-out hidden">
+      <div className="w-[92%] xl:p-0 md:p-2 h-[38%]">
         <h1
           className="font-bold text-2xl"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h1>
-        {/* <p className="leading-[2rem] text-[1.15rem]">{desc}</p> */}
       </div>
-      <div className="w-[8%] h-[62%] flex flex-col justify-start items-start">
-        {/* {i == 0 ? (
-          <button className="bg-[#423ED6] px-1">→</button>
-        ) : (
-          <button className="px-1">→</button>
-        )} */}
-      </div>
+      <div className="w-[8%] h-[62%] flex flex-col justify-start items-start"></div>
     </div>
   );
 };
@@ -68,6 +60,7 @@ const BottomBox: React.FC = () => {
   const [time, setTime] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(() => {
+      setTime(0);
       if (expand == 3) {
         setExpand(0);
       } else {
@@ -78,11 +71,7 @@ const BottomBox: React.FC = () => {
   }, [expand]);
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (time == 7) {
-        setTime(0);
-      } else {
-        setTime(time + 1);
-      }
+      setTime(time + 1);
     }, 1000);
     return () => clearInterval(intervalId);
   }, [time]);

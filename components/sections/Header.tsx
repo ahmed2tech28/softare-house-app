@@ -67,38 +67,93 @@ const BlurBg: React.FC = () => {
 const Navbar: React.FC = () => {
   const [navRes, setNavRes] = useState(false);
   return (
-    <nav className="flex md:container w-[95vw] mx-auto justify-between items-center h-44">
-      <div className="logo">
-        <img src="/devLogo.png" width={"130"} alt="logo" />
-      </div>
-      <ul className="xl:flex gap-x-4 hidden">
-        {navRoutes.map((item, i) => {
-          return (
-            <li key={i} className="text-[1.15rem]">
-              <Link href={item.path} className="text-white">
-                {item.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <div className="seacrh-icon flex gap-x-2">
-        <SearchIcon sx={{ color: "white", cursor: "pointer" }} />
-        <span onClick={(e) => setNavRes(!navRes)}>
-          {navRes ? (
-            <CloseIcon
-              sx={{ color: "white", cursor: "pointer" }}
-              className="xl:hidden inline"
-            />
-          ) : (
-            <MenuIcon
-              sx={{ color: "white", cursor: "pointer" }}
-              className="xl:hidden inline"
-            />
-          )}
-        </span>
-      </div>
-    </nav>
+    <>
+      <nav className="flex md:container w-[95vw] mx-auto justify-between items-center h-44">
+        <div className="logo">
+          <img src="/devLogo.png" width={"130"} alt="logo" />
+        </div>
+        <ul className="xl:flex gap-x-4 hidden">
+          {navRoutes.map((item, i) => {
+            return (
+              <li key={i} className="text-[1.15rem]">
+                <Link href={item.path} className="text-white">
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="seacrh-icon flex gap-x-2">
+          <SearchIcon sx={{ color: "white", cursor: "pointer" }} />
+          <span onClick={(e) => setNavRes(!navRes)}>
+            {navRes ? (
+              <CloseIcon
+                sx={{ color: "white", cursor: "pointer" }}
+                className="xl:hidden inline"
+              />
+            ) : (
+              <MenuIcon
+                sx={{ color: "white", cursor: "pointer" }}
+                className="xl:hidden inline"
+              />
+            )}
+          </span>
+        </div>
+      </nav>
+      {!navRes ? (
+        <div className="w-[90vw] h-screen bg-white fixed right-0 z-30 top-0 transition-transform duration-100 translate-x-full">
+          <div className="top flex h-[20%] justify-end px-3 py-3">
+            <span onClick={(e) => setNavRes(!navRes)}>
+              {navRes ? (
+                <CloseIcon
+                  sx={{ color: "black", cursor: "pointer" }}
+                  className="xl:hidden inline"
+                />
+              ) : (
+                <MenuIcon
+                  sx={{ color: "black", cursor: "pointer" }}
+                  className="xl:hidden inline"
+                />
+              )}
+            </span>
+          </div>
+        </div>
+      ) : (
+        <div className="w-[90vw] h-screen bg-white fixed right-0 z-30 top-0 transition-transform duration-100 translate-x-0">
+          <div className="top flex h-[20%] justify-end px-3 py-3">
+            <span onClick={(e) => setNavRes(!navRes)}>
+              {navRes ? (
+                <CloseIcon
+                  sx={{ color: "black", cursor: "pointer" }}
+                  className="xl:hidden inline"
+                />
+              ) : (
+                <MenuIcon
+                  sx={{ color: "black", cursor: "pointer" }}
+                  className="xl:hidden inline"
+                />
+              )}
+            </span>
+          </div>
+          <div className="h-[80%] flex flex-col justify-start items-start w-full">
+            <ul className="gap-x-4 flex flex-col border-collapse w-full">
+              {navRoutes.map((item, i) => {
+                return (
+                  <li
+                    key={i}
+                    className="text-[1.15rem] border-b-2 border-black w-full py-3 px-3"
+                  >
+                    <Link href={item.path} className="text-black">
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

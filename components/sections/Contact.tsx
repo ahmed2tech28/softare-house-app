@@ -7,16 +7,130 @@ const Form: React.FC = () => {
     <form className="flex flex-col gap-y-10">
       <div className="flex w-full gap-x-2">
         <div className="w-1/2 flex flex-col gap-y-10">
-          <TextField id="full-name" label="Full Name" variant="standard" />
-          <TextField id="phone" label="Phone" variant="standard" />
+          <TextField
+            sx={{
+              fontSize: "1.2rem",
+            }}
+            id="full-name"
+            label="Full Name"
+            variant="standard"
+            InputLabelProps={{
+              style: {
+                opacity: "0.3",
+              },
+            }}
+            InputProps={{
+              style: {
+                "& .MuiInput-underline:after": {
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+                },
+              } as React.CSSProperties, // Type assertion
+            }}
+          />
+          <TextField
+            sx={{
+              fontSize: "1.2rem",
+            }}
+            id="phone"
+            label="Phone"
+            variant="standard"
+            InputLabelProps={{
+              style: {
+                opacity: "0.3",
+              },
+            }}
+            InputProps={{
+              style: {
+                "& .MuiInput-underline:after": {
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+                },
+              } as React.CSSProperties, // Type assertion
+            }}
+          />
         </div>
         <div className="w-1/2 flex flex-col gap-y-10">
-          <TextField id="email" label="Email" variant="standard" />
-          <TextField id="career" label="Career" variant="standard" />
+          <TextField
+            sx={{
+              fontSize: "1.2rem",
+            }}
+            id="email"
+            label="Email"
+            variant="standard"
+            InputLabelProps={{
+              style: {
+                opacity: "0.3",
+              },
+            }}
+            InputProps={{
+              style: {
+                "& .MuiInput-underline:after": {
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+                },
+              } as React.CSSProperties, // Type assertion
+            }}
+          />
+          <TextField
+            sx={{
+              fontSize: "1.2rem",
+            }}
+            id="career"
+            label="Career"
+            variant="standard"
+            InputLabelProps={{
+              style: {
+                opacity: "0.3",
+              },
+            }}
+            InputProps={{
+              style: {
+                "& .MuiInput-underline:after": {
+                  borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+                },
+              } as React.CSSProperties, // Type assertion
+            }}
+          />
         </div>
       </div>
-      <TextField id="company" label="Company" variant="standard" />
-      <TextField id="message" label="Message" variant="standard" />
+      <TextField
+        sx={{
+          fontSize: "1.2rem",
+        }}
+        id="company"
+        label="Company"
+        variant="standard"
+        InputLabelProps={{
+          style: {
+            opacity: "0.3",
+          },
+        }}
+        InputProps={{
+          style: {
+            "& .MuiInput-underline:after": {
+              borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+            },
+          } as React.CSSProperties, // Type assertion
+        }}
+      />
+      <TextField
+        sx={{
+          fontSize: "1.2rem",
+        }}
+        id="message"
+        label="Message"
+        variant="standard"
+        InputLabelProps={{
+          style: {
+            opacity: "0.3",
+          },
+        }}
+        InputProps={{
+          style: {
+            "& .MuiInput-underline:after": {
+              borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
+            },
+          } as React.CSSProperties, // Type assertion
+        }}
+      />
       <div className="flex gap-x-2">
         <input type="checkbox" name="terms" id="terms" />
         <label htmlFor="terms">

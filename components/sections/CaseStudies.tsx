@@ -33,13 +33,17 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
   return (
     <div className="w-[40rem] h-fit bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
       {blur ? (
-        <img src="/case-studies/1.png" style={{ filter: "blur(5px)" }} alt="" />
+        <img
+          src="/case-studies/1.png"
+          style={{ filter: "blur(5px)", transition: "all 0.3s" }}
+          alt=""
+        />
       ) : (
         <img src="/case-studies/1.png" alt="" />
       )}
 
       <div
-        className="absolute top-0 z-20 h-full w-full bg-[#00000056] hover:bg-[#000000c3] flex flex-col items-start gap-y-4 justify-end p-5"
+        className="absolute top-0 z-20 h-full w-full bg-[#00000056] hover:bg-[#000000c3] flex flex-col items-start gap-y-4 justify-end p-5 transition-colors duration-300 ease-linear"
         onMouseEnter={(e) => setBlur(true)}
         onMouseLeave={(e) => setBlur(false)}
       >

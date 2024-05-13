@@ -25,7 +25,7 @@ const ClientArea: React.FC = () => {
             <img
               src="/client.png"
               alt="client"
-              className="h-full w-full rounded-3xl"
+              className="w-full h-full object-cover rounded-3xl"
             />
           </div>
           <div className="lg:w-[50%] h-[100%] flex flex-col gap-y-4 justify-center w-[90%] md:mx-0 mx-auto">
