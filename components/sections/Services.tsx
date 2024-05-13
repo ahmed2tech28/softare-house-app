@@ -4,7 +4,7 @@ const SpecialBtn: React.FC = () => {
   return (
     <button className="hover:bg-[#1B4E68] bg-gray-200 transition-colors duration-75 ease-in hover:text-white text-left py-7 rounded-[4rem] px-8 font-bold inline-flex justify-between">
       <span>Explore more</span>
-      <span>→;</span>
+      <span>→</span>
     </button>
   );
 };
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
         Our Services
       </h1>
       <div className="ms-[10vw] overflow-x-auto overflow-y-hidden">
-        <div className="w-fit flex  gap-x-5">
+        <div className="w-fit flex gap-x-5">
           <Card />
           <Card />
           <Card />
