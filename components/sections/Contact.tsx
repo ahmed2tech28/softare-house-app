@@ -21,7 +21,7 @@ const Form: React.FC = () => {
             }}
             InputProps={{
               style: {
-                "& .MuiInput-underline:after": {
+                "& .MuiInputUnderline:after": {
                   borderBottom: "1px solid rgba(0, 0, 0, 0.3)", // Change opacity of input underline
                 },
               } as React.CSSProperties, // Type assertion
@@ -168,7 +168,7 @@ const ClinetCard: React.FC = () => {
 const ReviewBox: React.FC = () => {
   return (
     <div className="w-[26rem] h-[35rem] bg-white px-7 py-14 flex-col justify-between flex rounded-xl">
-      <p className="leading-loose">
+      <p className="leading-loose text-[18px]">
         Devhouse&apos;s team has been instrumental in the success of our
         platform, Muqawiloon.com. Their programmers&apos; technical expertise
         and their designers&apos; creative flair have combined to make our
@@ -185,7 +185,7 @@ const Contact: React.FC = () => {
     <div className="lg:h-[50rem] h-fit w-screen bg-[#F7F7F7]">
       <div className="h-full container mx-auto py-10 flex">
         <div className="lg:w-1/2 w-[90vw] lg:mx-0 mx-auto flex flex-col gap-y-5">
-          <h1 className="md:text-5xl text-3xl font-semibold leading-[1.5]">
+          <h1 className="md:text-5xl text-3xl font-semibold md:leading-[4rem]">
             Start growing your <br /> business with us
           </h1>
           <Form />

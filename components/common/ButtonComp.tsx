@@ -7,6 +7,7 @@ interface Props {
   variant: "contained" | "outlined" | "text";
   edges?: "boxy" | "rounded";
   type?: "submit" | "button" | "reset";
+  padding?: string;
 }
 
 const ButtonComp: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const ButtonComp: React.FC<Props> = ({
   type,
   variant,
   edges,
+  padding,
 }) => {
   return (
     <Button
@@ -27,12 +29,12 @@ const ButtonComp: React.FC<Props> = ({
             ? "#423ED6"
             : variant == "outlined"
             ? "#F7F7F7"
-            : "white"
+            : "#F7F7F7"
         }`,
         color: `${variant == "contained" ? "white" : "#423ED6"}`,
         textTransform: "none",
         fontSize: "1.2rem",
-        padding: "0.7rem 3rem",
+        padding: padding || "0.7rem 1rem",
       }}
       onClick={onClick}
     >

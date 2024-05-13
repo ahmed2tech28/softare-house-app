@@ -1,5 +1,6 @@
 import React from "react";
 import MapDetailBox from "../common/MapDetailBox";
+import MapTooltip from "../common/MapTooltip";
 
 const MapArea: React.FC = () => {
   return (
@@ -131,6 +132,7 @@ const MapArea: React.FC = () => {
         hiding="33+"
         desc="Years on the market"
       />
+      <MapTooltip />
     </div>
   );
 };

@@ -2,12 +2,12 @@ import React from "react";
 
 const BlogCard: React.FC = () => {
   return (
-    <div className="h-[40rem] bg-[#F5F5FA] rounded-[4rem] overflow-hidden cursor-pointer">
+    <div className="h-[33rem] bg-[#F5F5FA] rounded-[4rem] overflow-hidden cursor-pointer w-[30rem]">
       <img src="/blogs/1.png" alt="" />
-      <div className="p-5 flex flex-col justify-between items-start h-[50%]">
-        <div className="flex flex-col gap-y-3">
+      <div className="px-7 py-10 flex flex-col justify-between items-start h-[50%]">
+        <div className="flex flex-col gap-y-6">
           <p>Blog → Clinet Guides</p>
-          <h1 className="text-4xl">
+          <h1 className="text-2xl">
             Guide to Understanding the Cloud-Based App Development
           </h1>
         </div>

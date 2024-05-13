@@ -27,15 +27,15 @@ const UpperSection: React.FC = () => {
     <div className="flex w-full justify-between h-[50%]">
       <div className="md:w-[50%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
         <h1 className="text-4xl font-semibold">Our Achivements</h1>
-        <p className="text-2xl">
+        <p className="text-xl">
           Dev House stands tall among the leading software development
           companies, earning top rankings and glowing reviews.
         </p>
       </div>
       <div className="w-[50%] md:flex hidden justify-end items-center">
-        <div className="box w-[25rem] h-[15rem] bg-gray-300 rounded-2xl p-[3rem] flex-col justify-between items-center flex ">
-          <div className="text-center font-semibold">43 reviews in Clutch</div>
-          <div className="text-center font-bold flex justify-center items-center gap-x-5">
+        <div className="box w-[23rem] h-[16rem] bg-[#F7F7F7] rounded-2xl p-[3rem] flex-col justify-between items-center flex ">
+          <div className="text-center font-medium">43 reviews in Clutch</div>
+          <div className="text-center font-semibold flex justify-center items-center gap-x-5">
             <span className="w-10 h-10 flex items-center justify-center bg-black rounded-full relative">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-gray-300 bg-clip-text bg-gradient-to-br from-black to-transparent text-3xl font-bold">
@@ -92,7 +92,7 @@ const BottomSection: React.FC = () => {
         return (
           <div
             key={i}
-            className="lg:w-[50%] w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#DFDFDF] cursor-pointer transition-colors duration-100 ease-in text-center"
+            className="lg:w-[50%] w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
           >
             <div className="flex lg:justify-center justify-start items-center lg:w-full w-[30%] text-center h-[60%]">
               <img
@@ -102,11 +102,11 @@ const BottomSection: React.FC = () => {
                 className="text-center"
               />
             </div>
-            <div className="h-[40%] flex flex-col gap-y-4 lg:w-auto w-[70%]">
-              <h1 className="text-2xl font-semibold lg:text-center text-start w-full">
+            <div className="h-[40%] flex flex-col gap-y-2 lg:w-auto w-[70%]">
+              <h1 className="text-[18px] font-semibold lg:text-center text-start w-full">
                 {item.name}
               </h1>
-              <p className="text-xl lg:text-center text-start w-full">
+              <p className="text-sm lg:text-center text-start w-full">
                 {item.for}
               </p>
             </div>

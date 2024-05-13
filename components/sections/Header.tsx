@@ -165,7 +165,7 @@ const Header: React.FC = () => {
         <div>
           <Navbar />
           <div className="xl:w-[50%] lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-5xl text-3xl text-center leading-[4rem] font-bold">
+            <h1 className="sm:text-5xl text-3xl text-center sm:leading-[4rem] font-bold">
               Custom Software Development Company
             </h1>
             <p className="sm:text-2xl text-center">
@@ -179,6 +179,7 @@ const Header: React.FC = () => {
               variant="contained"
               edges="rounded"
               type="button"
+              padding="0.7rem 3rem"
             />
           </div>
         </div>

@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import ButtonComp from "../common/ButtonComp";
 
-const PaginationBAll: React.FC = () => {
-  return <span className="w-[1rem] h-[1rem] bg-[#423ED6] rounded-sm"></span>;
+interface PaginationBAllProps {
+  index: number;
+  paginationClicked: number;
+  onClick: (index: number) => void;
+}
+
+const PaginationBAll: React.FC<PaginationBAllProps> = ({
+  index,
+  paginationClicked,
+  onClick,
+}) => {
+  if (index == paginationClicked) {
+    return (
+      <span className="w-[1rem] h-[1rem] bg-[#423ED6] rounded-sm cursor-pointer"></span>
+    );
+  }
+  return (
+    <span
+      className="w-[1rem] h-[1rem] bg-[#DFDFDF] rounded-sm cursor-pointer"
+      onClick={(e) => onClick(index)}
+    ></span>
+  );
 };
 
 const ClientArea: React.FC = () => {
+  const [paginationClicked, setPaginationClicked] = useState(0);
   return (
     <section className="bg-gray-200 w-screen lg:h-[40rem] h-fit">
       <div className="container mx-auto">
@@ -50,13 +73,14 @@ const ClientArea: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center items-center w-full gap-x-2 h-20">
-          <PaginationBAll />
-          <PaginationBAll />
-          <PaginationBAll />
-          <PaginationBAll />
-          <PaginationBAll />
-          <PaginationBAll />
-          <PaginationBAll />
+          {Array.from({ length: 7 }).map((item, i) => (
+            <PaginationBAll
+              key={i}
+              index={i}
+              paginationClicked={paginationClicked}
+              onClick={(index) => setPaginationClicked(index)}
+            />
+          ))}
         </div>
       </div>
     </section>
