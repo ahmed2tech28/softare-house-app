@@ -17,6 +17,17 @@ const ButtonComp: React.FC<Props> = ({
   edges,
   padding,
 }) => {
+  if (variant == "contained") {
+    return (
+      <button
+        onClick={onClick}
+        type={type}
+        className={`bg-[#0C8CE9] text-white px-14 py-[0.8rem] rounded-[22px]`}
+      >
+        {text}
+      </button>
+    );
+  }
   return (
     <button>
       {variant == "text" && (

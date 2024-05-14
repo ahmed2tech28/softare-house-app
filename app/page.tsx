@@ -7,6 +7,7 @@ import Acievement from "@/components/sections/Acievement";
 import CaseStudies from "@/components/sections/CaseStudies";
 import LatestInsights from "@/components/sections/LatestInsights";
 import Contact from "@/components/sections/Contact";
+import CoreIndustries from "@/components/sections/CoreIndustries";
 import Footer from "@/components/sections/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
         <MapArea />
         <ClientArea />
         <Acievement />
+        <CoreIndustries />
         <CaseStudies />
         <LatestInsights />
         <Contact />
