@@ -16,82 +16,85 @@ interface BoxProps {
   time: number;
 }
 
+const Button: React.FC<{ blue: boolean }> = ({ blue }) => {
+  return (
+    <button
+      className={`${
+        blue ? "bg-[#0C8CE9]" : ""
+      } w-[2rem] h-[1.3rem] rounded-[22px]`}
+    >
+      &gt;
+    </button>
+  );
+};
+
 const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
   const completed = (time / 7) * 100;
   return (
     <div
-      className={`lg:flex h-full justify-center items-center hidden ${
-        expand == i ? "lg:w-[35%]" : "lg:w-[20%]"
-      } w-[95vw] lg:mx-0 mx-auto transition-all duration-700 ease-in`}
+      className={`${
+        expand == i ? "w-[34%]" : "w-[22%]"
+      } h-full border-[0.1px] border-white p-5 flex flex-col justify-between transition-all delay-700`}
     >
-      <div className="w-[92%] xl:p-0 md:p-2">
-        <h1
-          className={`font-bold text-2xl transition-transfom delay-[0.8s] ease-in-out ${
-            expand == i ? "translate-y-0" : "translate-y-9"
-          }`}
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></h1>
-        <p
-          className={`leading-[2rem] text-[1.15rem] ${
-            expand == i ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-700 ease-linear`}
-        >
-          {desc}
-        </p>
-        {expand == i && (
-          <ProgressBar
-            completed={completed}
-            customLabel="|"
-            labelColor="green"
-            bgColor="green"
-            height="3px"
-            className="mt-3"
-          />
-        )}
+      {expand == i ? (
+        <ProgressBar
+          completed={completed}
+          customLabel="|"
+          labelColor="green"
+          bgColor="green"
+          height="3px"
+          className="mt-3"
+        />
+      ) : (
+        <div className="h-[3px]"></div>
+      )}
+      <div>
+        <img src={`/header-files/${title}`} width={"200"} alt="" />
+        {expand == i && <p className="text-[14px] w-[90%] ms-2">{desc}</p>}
       </div>
-      <div className="w-[8%] h-[62%] flex flex-col justify-start items-start">
-        {expand == i && <button className="px-1 hover:bg-[#423ED6]">→</button>}
+      <div className="flex justify-between">
+        {expand == i && <button>View case study</button>}
+        {!(expand == i) && <span></span>}
+        <Button blue={expand == i} />
       </div>
     </div>
   );
 };
 
 const MobileBox: React.FC<BoxProps> = ({
-  i,
   desc,
-  title,
-  expand,
+  i,
   onHover,
   time,
+  title,
+  expand,
 }) => {
   const completed = (time / 7) * 100;
 
-  return (
-    <>
-      {expand == i && (
-        <div className="flex h-full justify-center items-center w-[95vw] lg:mx-0 mx-auto">
-          <div className="w-[92%] xl:p-0 md:p-2">
-            <h1
-              className="font-bold text-2xl"
-              dangerouslySetInnerHTML={{ __html: title }}
-            ></h1>
-            <p className={`leading-[2rem] text-[1.15rem]`}>{desc}</p>
-            {expand == i && (
-              <ProgressBar
-                completed={completed}
-                customLabel="|"
-                labelColor="green"
-                bgColor="green"
-                height="3px"
-                className="mt-3"
-              />
-            )}
-          </div>
-          <div className="w-[8%] h-[62%] flex flex-col justify-start items-start"></div>
+  if (expand == i) {
+    return (
+      <div className="w-full h-full flex flex-col justify-between p-5">
+        <ProgressBar
+          completed={completed}
+          customLabel="|"
+          labelColor="green"
+          bgColor="green"
+          height="3px"
+          className="mt-3"
+        />
+        <div>
+          <img src={`/header-files/${title}`} width={"200"} alt="" />
+          <p className="text-[14px] w-[90%] ms-2">{desc}</p>
         </div>
-      )}
-    </>
-  );
+        <div className="flex justify-between">
+          <button>View case study</button>
+          <Button blue={true} />
+        </div>
+      </div>
+    );
+  } else {
+    return <></>;
+  }
 };
 
 const BottomBox: React.FC = () => {
@@ -121,25 +124,25 @@ const BottomBox: React.FC = () => {
 
   const boxes: Boxes[] = [
     {
-      title: "Dedicated Development Team",
-      desc: "Fast team building, flexible collaboration, and software engineers with proven expertise to give your project new superpowers.",
+      title: "1.png",
+      desc: "Reduced time to market for a suite of enterprise apps .",
     },
     {
-      title: "End-to-End Software development",
-      desc: "Full coverage of the development cycle, highly customized solutions, and partnership with the focus on your business goals.",
+      title: "2.png",
+      desc: "Reduced time to market for a suite of enterprise apps ",
     },
     {
-      title: "PoC/MVP <br> development",
-      desc: "Quick project start, well-calculated functionality, high return on investment in the product, and ample room for improvements.",
+      title: "3.png",
+      desc: "Reduced time to market for a suite of enterprise apps .",
     },
     {
-      title: "Legacy software <br>modernization",
-      desc: "Flexible approach to replace and rethink outdated software solutions for scale and growth with the best cost-effectiveness.",
+      title: "4.png",
+      desc: "Reduced time to market for a suite of enterprise apps ",
     },
   ];
   return (
-    <div className="w-full mx-auto bg-[rgba(0,0,0,0.5)] h-72 ">
-      <div className="container mx-auto lg:flex hidden flex-wrap h-full gap-x-3">
+    <div className="w-full mx-auto h-60 mt-36">
+      <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[10px] border-[0.1px] border-white">
         {boxes.map((item, i) => {
           return (
             <Box
@@ -154,7 +157,7 @@ const BottomBox: React.FC = () => {
           );
         })}
       </div>
-      <div className="container mx-auto lg:hidden flex flex-wrap h-full gap-x-3">
+      <div className="container mx-auto flex lg:hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[10px] border-[0.1px] border-white">
         {boxes.map((item, i) => {
           return (
             <MobileBox

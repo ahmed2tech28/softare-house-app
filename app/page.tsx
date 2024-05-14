@@ -8,6 +8,8 @@ import CaseStudies from "@/components/sections/CaseStudies";
 import LatestInsights from "@/components/sections/LatestInsights";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home: React.FC = () => {
   return (

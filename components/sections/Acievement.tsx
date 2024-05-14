@@ -10,7 +10,7 @@ const Star: React.FC = () => {
   return (
     <div>
       <svg
-        className="w-8 h-8 ms-3 text-[#423ED6]"
+        className="w-[48px] h-[38.19px] ms-3 text-[#423ED6]"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -22,28 +22,36 @@ const Star: React.FC = () => {
   );
 };
 
+const Ci: React.FC = () => {
+  return (
+    <span className="w-[50.35px] h-[50px] flex items-center justify-center bg-black rounded-full relative">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-gray-300 bg-clip-text bg-gradient-to-br from-black to-transparent text-[40px] font-bold">
+          C
+        </div>
+      </div>
+    </span>
+  );
+};
+
 const UpperSection: React.FC = () => {
   return (
     <div className="flex lg:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%]">
-      <div className="md:w-[50%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
-        <h1 className="text-4xl font-semibold">Our Achivements</h1>
-        <p className="text-xl">
+      <div className="md:w-[30%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
+        <h1 className="text-[38px] font-medium">Our Achivements</h1>
+        <p className="text-[16px]">
           Dev House stands tall among the leading software development
           companies, earning top rankings and glowing reviews.
         </p>
       </div>
       <div className="w-[50%] md:flex hidden justify-end items-center">
-        <div className="box w-[23rem] h-[16rem] bg-[#F7F7F7] rounded-2xl p-[3rem] flex-col justify-between items-center flex ">
-          <div className="text-center font-medium">43 reviews in Clutch</div>
+        <div className="box w-[360px] h-[258.19px] bg-[#FFFFFF] rounded-[40px] p-[3rem] flex-col justify-between items-center flex">
+          <div className="text-center font-medium text-[18px]">
+            43 reviews in Clutch
+          </div>
           <div className="text-center font-semibold flex justify-center items-center gap-x-5">
-            <span className="w-10 h-10 flex items-center justify-center bg-black rounded-full relative">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-gray-300 bg-clip-text bg-gradient-to-br from-black to-transparent text-3xl font-bold">
-                  C
-                </div>
-              </div>
-            </span>
-            <span className="text-3xl">4.93</span>
+            <Ci />
+            <span className="text-[34px]">4.93</span>
           </div>
           <div className="stars flex justify-between items-center">
             <Star />
@@ -94,11 +102,11 @@ const BottomSection: React.FC = () => {
             key={i}
             className="lg:w-[50%] lg:py-0 py-4 w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
           >
-            <div className="flex lg:justify-center justify-start items-center lg:w-full w-[30%] text-center h-[60%]">
+            <div className="flex lg:justify-center justify-start items-center lg:w-full w-[30%] text-center h-[247px]">
               <img
                 src={`/certificates/${item.img}`}
                 alt={item.name}
-                width={"200"}
+                width={"190"}
                 className="text-center"
               />
             </div>
@@ -119,13 +127,15 @@ const BottomSection: React.FC = () => {
 
 const Acievement: React.FC = () => {
   return (
-    <section
-      className="container lg:h-[50rem] lg:block lg:p-0 py-[5rem] h-fit flex flex-col gap-y-6 mx-auto"
-      id="company"
-    >
-      <UpperSection />
-      <BottomSection />
-    </section>
+    <div className="w-full h-fit bg-[#F9F9F9]">
+      <section
+        className="container lg:h-[50rem] lg:block lg:p-0 py-[5rem] h-fit flex flex-col gap-y-6 mx-auto"
+        id="company"
+      >
+        <UpperSection />
+        <BottomSection />
+      </section>
+    </div>
   );
 };
 

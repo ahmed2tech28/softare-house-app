@@ -56,10 +56,10 @@ const BlurBg: React.FC = () => {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         position: "relative",
-        filter: "blur(5px)",
+        filter: "blur(1px)",
       }}
     >
-      <div className="bg-[rgba(0,0,0,0.37)] w-full h-full"></div>
+      <div className="bg-[rgba(0,0,0,0.44)] w-full h-full"></div>
     </div>
   );
 };
@@ -165,13 +165,13 @@ const Header: React.FC = () => {
     >
       <BlurBg />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
-        <div>
-          <Navbar />
-          <div className="xl:w-[50%] lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-5xl text-3xl text-center sm:leading-[4rem] font-bold">
+        <Navbar />
+        <div className="h-full justify-between container mx-auto">
+          <div className="xl:w-[60%] lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
+            <h1 className="sm:text-[40px] text-3xl text-center sm:leading-[4rem] font-bold">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-2xl text-center">
+            <p className="sm:text-[16px] text-center w-[80%] mx-auto">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
               development company. Let&apos;s discuss your project and find “Why
@@ -179,7 +179,7 @@ const Header: React.FC = () => {
             </p>
             <Link href={"#contact"}>
               <ButtonComp
-                text="Connect with us"
+                text="Let's Talk Now"
                 variant="contained"
                 edges="rounded"
                 type="button"
@@ -187,8 +187,8 @@ const Header: React.FC = () => {
               />
             </Link>
           </div>
+          <BottomBox />
         </div>
-        <BottomBox />
       </div>
     </header>
   );
