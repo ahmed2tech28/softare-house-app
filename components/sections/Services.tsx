@@ -29,7 +29,10 @@ const Card: React.FC = () => {
 
 const Services: React.FC = () => {
   return (
-    <section className="h-[55rem] my-[3rem] flex flex-col gap-y-3">
+    <section
+      className="h-[55rem] my-[3rem] flex flex-col gap-y-3"
+      id="services"
+    >
       <h1 className="text-center font-semibold text-4xl leading-[5rem]">
         Our Services
       </h1>

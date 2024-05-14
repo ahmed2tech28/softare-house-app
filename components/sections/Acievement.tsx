@@ -119,7 +119,10 @@ const BottomSection: React.FC = () => {
 
 const Acievement: React.FC = () => {
   return (
-    <section className="container lg:h-[50rem] lg:block lg:p-0 py-[5rem] h-fit flex flex-col gap-y-6 mx-auto">
+    <section
+      className="container lg:h-[50rem] lg:block lg:p-0 py-[5rem] h-fit flex flex-col gap-y-6 mx-auto"
+      id="company"
+    >
       <UpperSection />
       <BottomSection />
     </section>

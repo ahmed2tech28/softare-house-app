@@ -22,7 +22,10 @@ const Top: React.FC = () => {
 
 const LatestInsights: React.FC = () => {
   return (
-    <section className="w-full 2xl:h-[50rem] h-fit flex flex-col gap-y-14">
+    <section
+      className="w-full 2xl:h-[50rem] h-fit flex flex-col gap-y-14"
+      id="blog"
+    >
       <Top />
       <div className="container mx-auto grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-5 gap-y-3">
         <BlogCard />

@@ -4,7 +4,7 @@ import MapTooltip from "../common/MapTooltip";
 
 const MapArea: React.FC = () => {
   return (
-    <div className="container mx-auto h-[60rem] relative">
+    <div className="container mx-auto h-[60rem] relative" id="industries">
       <img src="/map.png" width={"900"} alt="map" />
       <span className="lg:inline hidden">
         <MapDetailBox

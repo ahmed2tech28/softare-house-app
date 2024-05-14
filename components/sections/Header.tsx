@@ -16,7 +16,7 @@ interface Path {
 
 const navRoutes: Path[] = [
   {
-    path: "/",
+    path: "#home",
     name: "Home",
   },
   {
@@ -159,7 +159,10 @@ const Navbar: React.FC = () => {
 
 const Header: React.FC = () => {
   return (
-    <header className="sm:h-[57rem] h-[60rem] w-screen relative text-white">
+    <header
+      className="sm:h-[57rem] h-[60rem] w-screen relative text-white"
+      id="home"
+    >
       <BlurBg />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <div>
@@ -174,13 +177,15 @@ const Header: React.FC = () => {
               development company. Let&apos;s discuss your project and find “Why
               your company need our solution”.
             </p>
-            <ButtonComp
-              text="Connect with us"
-              variant="contained"
-              edges="rounded"
-              type="button"
-              padding="0.7rem 3rem"
-            />
+            <Link href={"#contact"}>
+              <ButtonComp
+                text="Connect with us"
+                variant="contained"
+                edges="rounded"
+                type="button"
+                padding="0.7rem 3rem"
+              />
+            </Link>
           </div>
         </div>
         <BottomBox />

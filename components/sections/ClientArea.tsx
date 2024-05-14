@@ -31,7 +31,7 @@ const PaginationBAll: React.FC<PaginationBAllProps> = ({
 const ClientArea: React.FC = () => {
   const [paginationClicked, setPaginationClicked] = useState(0);
   return (
-    <section className="bg-gray-200 w-screen lg:h-[40rem] h-fit">
+    <section className="bg-gray-200 w-screen lg:h-[40rem] h-fit" id="portfolio">
       <div className="container mx-auto">
         <div className="flex md:flex-row flex-col md:justify-between justify-center gap-y-3 items-center h-36">
           <h1 className="font-semibold lg:text-4xl text-2xl">
