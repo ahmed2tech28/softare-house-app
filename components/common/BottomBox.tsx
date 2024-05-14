@@ -18,15 +18,27 @@ interface BoxProps {
 
 const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
   const completed = (time / 7) * 100;
-  if (expand == i) {
-    return (
-      <div className="flex h-full justify-center items-center lg:w-[35%] w-[95vw] lg:mx-0 mx-auto transition-all duration-700 ease-in">
-        <div className="w-[92%] xl:p-0 md:p-2">
-          <h1
-            className="font-bold text-2xl"
-            dangerouslySetInnerHTML={{ __html: title }}
-          ></h1>
-          <p className="leading-[2rem] text-[1.15rem]">{desc}</p>
+  return (
+    <div
+      className={`flex h-full justify-center items-center ${
+        expand == i ? "lg:w-[35%]" : "lg:w-[20%]"
+      } w-[95vw] lg:mx-0 mx-auto transition-all duration-700 ease-in`}
+    >
+      <div className="w-[92%] xl:p-0 md:p-2">
+        <h1
+          className={`font-bold text-2xl transition-transfom delay-[0.8s] ease-in-out ${
+            expand == i ? "translate-y-0" : "translate-y-9"
+          }`}
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></h1>
+        <p
+          className={`leading-[2rem] text-[1.15rem] ${
+            expand == i ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-700 ease-linear`}
+        >
+          {desc}
+        </p>
+        {expand == i && (
           <ProgressBar
             completed={completed}
             customLabel="|"
@@ -35,16 +47,17 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
             height="3px"
             className="mt-3"
           />
-        </div>
-        <div className="w-[8%] h-[62%] flex flex-col justify-start items-start">
-          <button className="px-1 hover:bg-[#423ED6]">→</button>
-        </div>
+        )}
       </div>
-    );
-  }
+      <div className="w-[8%] h-[62%] flex flex-col justify-start items-start">
+        {expand == i && <button className="px-1 hover:bg-[#423ED6]">→</button>}
+      </div>
+    </div>
+  );
+
   return (
     <div className="lg:flex h-full justify-center items-center w-[20%] transition-all duration-1000 ease-out hidden">
-      <div className="w-[92%] xl:p-0 md:p-2 h-[38%]">
+      <div className="w-[92%] xl:p-0 md:p-2">
         <h1
           className="font-bold text-2xl"
           dangerouslySetInnerHTML={{ __html: title }}
