@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ButtonComp from "../common/ButtonComp";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 interface PaginationBAllProps {
   index: number;
@@ -16,12 +17,12 @@ const PaginationBAll: React.FC<PaginationBAllProps> = ({
 }) => {
   if (index == paginationClicked) {
     return (
-      <span className="w-[1rem] h-[1rem] bg-[#423ED6] rounded-sm cursor-pointer"></span>
+      <span className="w-[0.8rem] h-[0.8rem] bg-[#423ED6] rounded-[0.3rem] cursor-pointer"></span>
     );
   }
   return (
     <span
-      className="w-[1rem] h-[1rem] bg-[#DFDFDF] rounded-sm cursor-pointer"
+      className="w-[0.8rem] h-[0.8rem] bg-[#DFDFDF] rounded-[0.3rem] cursor-pointer"
       onClick={(e) => onClick(index)}
     ></span>
   );
@@ -44,17 +45,30 @@ const ClientArea: React.FC = () => {
           />
         </div>
         <div className="flex lg:justify-between items-center lg:h-[27rem] h-[40rem] lg:flex-row flex-col w-full">
-          <div className="lg:w-[40%] w-[80%] h-[25rem] overflow-hidden">
+          <div className="lg:w-[40%] w-[80%] h-[25rem] overflow-hidden group relative rounded-3xl">
             <img
               src="/client.png"
               alt="client"
-              className="w-full h-full object-cover rounded-3xl"
+              className="w-full h-full object-cover "
             />
+            <div className="hidden group-hover:flex cursor-pointer transition-all duration-100 ease-in absolute top-0 left-0 w-full h-full bg-[#00000069] justify-center items-center">
+              <span className="player bg-[#ffffff51] w-16 h-16 rounded-2xl flex justify-center items-center">
+                <PlayArrowIcon sx={{ color: "white", fontSize: "3rem" }} />
+              </span>
+            </div>
           </div>
           <div className="lg:w-[50%] h-[100%] flex flex-col gap-y-4 justify-center w-[90%] md:mx-0 mx-auto">
-            <div>
-              <h1 className="font-bold text-2xl">Henrik Loop</h1>
-              <h1 className="text-2xl">CTO at Blockbuster, TDC</h1>
+            <div className="flex justify-between items-center">
+              <div className="w-2/3">
+                <h1 className="font-bold text-2xl">Henrik Loop</h1>
+                <h1 className="text-2xl">CTO at Blockbuster, TDC</h1>
+              </div>
+              <div className="w-1/3 flex gap-x-2 items-center">
+                <div>
+                  <img src="/flag.png" width={"30"} alt="flag" />
+                </div>
+                <h1 className="text-xl">Denmark</h1>
+              </div>
             </div>
             <p className="font-semibold md:text-2xl text-xl">
               &quot;We&apos;re very happy with Cleveroad. They seem to work in
