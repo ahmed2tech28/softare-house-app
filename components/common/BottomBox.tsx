@@ -20,7 +20,7 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
   const completed = (time / 7) * 100;
   return (
     <div
-      className={`flex h-full justify-center items-center ${
+      className={`lg:flex h-full justify-center items-center hidden ${
         expand == i ? "lg:w-[35%]" : "lg:w-[20%]"
       } w-[95vw] lg:mx-0 mx-auto transition-all duration-700 ease-in`}
     >
@@ -54,17 +54,43 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
       </div>
     </div>
   );
+};
+
+const MobileBox: React.FC<BoxProps> = ({
+  i,
+  desc,
+  title,
+  expand,
+  onHover,
+  time,
+}) => {
+  const completed = (time / 7) * 100;
 
   return (
-    <div className="lg:flex h-full justify-center items-center w-[20%] transition-all duration-1000 ease-out hidden">
-      <div className="w-[92%] xl:p-0 md:p-2">
-        <h1
-          className="font-bold text-2xl"
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></h1>
-      </div>
-      <div className="w-[8%] h-[62%] flex flex-col justify-start items-start"></div>
-    </div>
+    <>
+      {expand == i && (
+        <div className="flex h-full justify-center items-center w-[95vw] lg:mx-0 mx-auto">
+          <div className="w-[92%] xl:p-0 md:p-2">
+            <h1
+              className="font-bold text-2xl"
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></h1>
+            <p className={`leading-[2rem] text-[1.15rem]`}>{desc}</p>
+            {expand == i && (
+              <ProgressBar
+                completed={completed}
+                customLabel="|"
+                labelColor="green"
+                bgColor="green"
+                height="3px"
+                className="mt-3"
+              />
+            )}
+          </div>
+          <div className="w-[8%] h-[62%] flex flex-col justify-start items-start"></div>
+        </div>
+      )}
+    </>
   );
 };
 
@@ -113,10 +139,25 @@ const BottomBox: React.FC = () => {
   ];
   return (
     <div className="w-full mx-auto bg-[rgba(0,0,0,0.5)] h-72 ">
-      <div className="container mx-auto flex flex-wrap h-full gap-x-3">
+      <div className="container mx-auto lg:flex hidden flex-wrap h-full gap-x-3">
         {boxes.map((item, i) => {
           return (
             <Box
+              title={item.title}
+              desc={item.desc}
+              i={i}
+              key={i}
+              expand={expand}
+              onHover={onHover}
+              time={time}
+            />
+          );
+        })}
+      </div>
+      <div className="container mx-auto lg:hidden flex flex-wrap h-full gap-x-3">
+        {boxes.map((item, i) => {
+          return (
+            <MobileBox
               title={item.title}
               desc={item.desc}
               i={i}
