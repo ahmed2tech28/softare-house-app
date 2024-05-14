@@ -183,7 +183,7 @@ const ReviewBox: React.FC = () => {
 
 const Contact: React.FC = () => {
   return (
-    <div className="lg:h-[50rem] h-fit w-screen bg-[#F7F7F7]">
+    <div className="lg:h-[50rem] h-fit w-screen bg-[#F7F7F7] mt-8">
       <div className="h-full container mx-auto py-10 flex">
         <div className="lg:w-1/2 w-[90vw] lg:mx-0 mx-auto flex flex-col gap-y-5">
           <h1 className="md:text-5xl text-3xl font-semibold md:leading-[4rem]">

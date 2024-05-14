@@ -10,8 +10,10 @@ interface CaseStudy {
 const TopSection: React.FC = () => {
   return (
     <div className="items-center flex justify-between container mx-auto">
-      <h1 className="w-1/3"></h1>
-      <h1 className="w-1/3 text-center text-4xl font-bold">Case studies</h1>
+      <h1 className="w-1/3 md:block hidden"></h1>
+      <h1 className="md:w-1/3 w-2/3 text-center text-4xl font-semibold">
+        Case studies
+      </h1>
       <div className="w-1/3 flex justify-end gap-x-2">
         <button className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md">
           ←

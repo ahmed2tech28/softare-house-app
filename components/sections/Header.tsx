@@ -159,7 +159,7 @@ const Navbar: React.FC = () => {
 
 const Header: React.FC = () => {
   return (
-    <header className="sm:h-[57rem] h-[65rem] w-screen relative text-white">
+    <header className="sm:h-[57rem] h-[60rem] w-screen relative text-white">
       <BlurBg />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <div>

@@ -24,7 +24,7 @@ const Star: React.FC = () => {
 
 const UpperSection: React.FC = () => {
   return (
-    <div className="flex w-full justify-between h-[50%]">
+    <div className="flex lg:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%]">
       <div className="md:w-[50%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
         <h1 className="text-4xl font-semibold">Our Achivements</h1>
         <p className="text-xl">
@@ -92,7 +92,7 @@ const BottomSection: React.FC = () => {
         return (
           <div
             key={i}
-            className="lg:w-[50%] w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
+            className="lg:w-[50%] lg:py-0 py-4 w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
           >
             <div className="flex lg:justify-center justify-start items-center lg:w-full w-[30%] text-center h-[60%]">
               <img

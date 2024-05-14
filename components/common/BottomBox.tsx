@@ -20,7 +20,7 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
   const completed = (time / 7) * 100;
   if (expand == i) {
     return (
-      <div className="flex h-full justify-center items-center lg:w-[35%] w-full transition-all duration-700 ease-in">
+      <div className="flex h-full justify-center items-center lg:w-[35%] w-[95vw] lg:mx-0 mx-auto transition-all duration-700 ease-in">
         <div className="w-[92%] xl:p-0 md:p-2">
           <h1
             className="font-bold text-2xl"
