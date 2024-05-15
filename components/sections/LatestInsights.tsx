@@ -4,8 +4,8 @@ import BlogCard from "../common/BlogCard";
 
 const Top: React.FC = () => {
   return (
-    <div className="items-center flex justify-between container mx-auto">
-      <h1 className="w-1/2 text-left text-4xl font-semibold">
+    <div className="items-center flex justify-between w-[73vw] mx-auto">
+      <h1 className="w-1/2 text-left text-[38px] font-semibold">
         Latest insights
       </h1>
       <div className="w-1/2 flex justify-end gap-x-2">
@@ -27,7 +27,7 @@ const LatestInsights: React.FC = () => {
       id="blog"
     >
       <Top />
-      <div className="container mx-auto grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-5 gap-y-3">
+      <div className="w-fit mx-auto grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-5 gap-y-3">
         <BlogCard />
         <BlogCard />
         <BlogCard />

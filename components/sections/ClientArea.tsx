@@ -78,20 +78,17 @@ const ClientDetails: React.FC = () => {
 };
 
 const ClientArea: React.FC = () => {
-  const [paginationClicked, setPaginationClicked] = useState(0);
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+
     customPaging: (i: any) => {
       return (
         <div
-          className={`w-[0.8rem] h-[0.8rem] ${
-            paginationClicked == i ? "bg-[#0C8CE9]" : "bg-[#CBD1DC]"
-          } rounded-[0.3rem] cursor-pointer`}
-          onClick={(e) => setPaginationClicked(i)}
+          className={`w-[0.8rem] h-[0.8rem] bg-[#CBD1DC] rounded-[0.3rem] cursor-pointer`}
         />
       );
     },

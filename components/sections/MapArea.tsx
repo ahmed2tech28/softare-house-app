@@ -1,138 +1,75 @@
 import React from "react";
 import MapDetailBox from "../common/MapDetailBox";
 import MapTooltip from "../common/MapTooltip";
+import Map from "../svgs/Map";
 
 const MapArea: React.FC = () => {
   return (
-    <div className="container mx-auto h-[60rem] relative" id="industries">
-      <img src="/map.png" width={"900"} alt="map" />
-      <span className="lg:inline hidden">
+    <div
+      className="container mx-auto h-[876px] flex flex-col gap-y-3"
+      id="industries"
+    >
+      <div className="w-full h-[599px] flex flex-col justify-start items-center">
+        <Map />
+      </div>
+      <div className="h-[277px] w-[80%] mx-auto relative">
         <MapDetailBox
-          left={"29rem"}
-          top={"3rem"}
-          height="7rem"
-          width="12rem"
-          hiding="Estina"
-          desc="Tallinn"
-        />
-      </span>
-      <span className="lg:hidden inline">
-        <MapDetailBox
-          left={"25rem"}
-          top={"1rem"}
-          height="7rem"
-          width="12rem"
-          hiding="Estina"
-          desc="Tallinn"
-        />
-      </span>
-      <span className="lg:inline hidden">
-        <MapDetailBox
-          left={"70vw"}
-          top={"1rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
           hiding="1000+"
-          desc="projects dilivered"
+          desc="projects delivered"
+          height="146px"
+          width="308px"
+          top="0"
+          left="0"
+          fontSize="30px"
+          bg="#0C8CE9"
         />
-      </span>
-      <span className="lg:hidden inline">
         <MapDetailBox
-          left={"60vw"}
-          top={"1rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="1000+"
-          desc="projects dilivered"
-        />
-      </span>
-      <span className="lg:inline hidden">
-        <MapDetailBox
-          left={"65vw"}
-          top={"12rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="120+"
-          desc="active clients"
-        />
-      </span>
-      <span className="lg:hidden inline">
-        <MapDetailBox
-          left={"55vw"}
-          top={"12rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="120+"
-          desc="active clients"
-        />
-      </span>
-      <span className="lg:inline hidden">
-        <MapDetailBox
-          left={"70vw"}
-          top={"24rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="66"
-          desc="net promoted score (NPS)"
-        />
-      </span>
-      <span className="lg:hidden inline">
-        <MapDetailBox
-          left={"60vw"}
-          top={"24rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="66"
-          desc="net promoted score (NPS)"
-        />
-      </span>
-      <span className="lg:inline hidden">
-        <MapDetailBox
-          left={"65vw"}
-          top={"36rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
           hiding="2000+"
           desc="top tech experts, middle and senior level"
+          height="146px"
+          width="235px"
+          top="103px"
+          left="208px"
+          fontSize="30px"
         />
-      </span>
-      <span className="lg:hidden inline">
         <MapDetailBox
-          left={"15vw"}
-          top={"18rem"}
-          height="10rem"
-          width="18rem"
-          fontSize="2rem"
-          hiding="2000+"
-          desc="top tech experts, middle and senior level"
+          hiding="120+"
+          desc="active clients, including Fortune 500 companies"
+          height="146px"
+          width="235px"
+          top="13px"
+          left="378px"
+          fontSize="30px"
         />
-      </span>
-      <MapDetailBox
-        left={"48vw"}
-        top={"30rem"}
-        height="10rem"
-        width="18rem"
-        fontSize="2rem"
-        hiding="2000+"
-        desc="top tech experts, middle and senior level"
-      />
-      <MapDetailBox
-        left={"31vw"}
-        top={"36rem"}
-        height="10rem"
-        width="18rem"
-        fontSize="2rem"
-        hiding="33+"
-        desc="Years on the market"
-      />
-      <MapTooltip />
+        <MapDetailBox
+          hiding="33+"
+          desc="years on the market"
+          height="146px"
+          width="308px"
+          top="103px"
+          left="590px"
+          fontSize="30px"
+          bg="#0C8CE9"
+        />
+        <MapDetailBox
+          hiding="20"
+          desc="offices and delivery centres globally"
+          height="146px"
+          width="235px"
+          top="-2px"
+          left="750px"
+          fontSize="30px"
+        />
+        <MapDetailBox
+          hiding="66"
+          desc="net promoted score (NPS)"
+          height="146px"
+          width="235px"
+          top="73px"
+          left="975px"
+          fontSize="30px"
+        />
+      </div>
     </div>
   );
 };

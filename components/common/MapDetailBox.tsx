@@ -8,6 +8,7 @@ interface Props {
   hiding: string;
   desc: string;
   fontSize?: string;
+  bg?: string;
 }
 
 const MapDetailBox: React.FC<Props> = ({
@@ -18,16 +19,20 @@ const MapDetailBox: React.FC<Props> = ({
   hiding,
   desc,
   fontSize,
+  bg,
 }) => {
   return (
     <div
-      className="rounded-xl flex flex-col justify-between p-5 bg-white absolute border border-gray-300 shadow-xl"
-      style={{ top, left, height, width }}
+      className="rounded-xl flex flex-col justify-start p-5 bg-white absolute border border-gray-300 shadow-xl"
+      style={{ top, left, height, width, background: `${bg || "white"}` }}
     >
-      <span className="font-semibold" style={{ fontSize }}>
+      <span
+        className="font-semibold"
+        style={{ fontSize, color: `${bg ? "white" : "black"}` }}
+      >
         {hiding}
       </span>
-      <span>{desc}</span>
+      <span style={{ color: `${bg ? "white" : "black"}` }}>{desc}</span>
     </div>
   );
 };

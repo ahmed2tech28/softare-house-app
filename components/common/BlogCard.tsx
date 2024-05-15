@@ -2,16 +2,16 @@ import React from "react";
 
 const BlogCard: React.FC = () => {
   return (
-    <div className="h-[33rem] bg-[#F5F5FA] rounded-[4rem] overflow-hidden cursor-pointer sm:w-[30rem] w-[90vw] lg:mx-0 mx-auto">
+    <div className="h-[487px] bg-[#F5F5FA] rounded-[4rem] overflow-hidden cursor-pointer sm:w-[390px] w-[90vw] lg:mx-0 mx-auto">
       <img src="/blogs/1.png" alt="" />
-      <div className="px-7 py-10 flex flex-col justify-between items-start h-[50%]">
+      <div className="px-7 py-4 flex flex-col justify-between items-start h-[50%]">
         <div className="flex flex-col gap-y-6">
           <p>Blog → Clinet Guides</p>
-          <h1 className="text-2xl">
+          <h1 className="text-[22px]">
             Guide to Understanding the Cloud-Based App Development
           </h1>
         </div>
-        <p>Oct 10, 2023</p>
+        <p className="text-[16px]">Oct 10, 2023</p>
       </div>
     </div>
   );

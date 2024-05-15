@@ -33,7 +33,7 @@ const Line: React.FC = () => {
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
   const [blur, setBlur] = useState(false);
   return (
-    <div className="w-[40rem] h-fit bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
+    <div className="w-[489px] h-[302px] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
       {blur ? (
         <img
           src="/case-studies/1.png"
@@ -49,31 +49,31 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
         onMouseEnter={(e) => setBlur(true)}
         onMouseLeave={(e) => setBlur(false)}
       >
-        <h1 className="text-2xl font-bold text-white">{projectname}</h1>
+        <h1 className="text-[18px] font-bold text-white">{projectname}</h1>
         <Line />
         <div className="flex h-[3rem] justify-between w-full group-hover:hidden transition-all duration-100 ease-out">
           <div className="w-[70%]">
             <img src="/devLogo.png" width={"80"} height={"30"} alt="DevLogo" />
           </div>
           <div className="right flex w-[30%] gap-x-2 items-center text-white">
-            <span className="text-3xl font-bold">{percent1}</span>
-            <span className="">Lorem ipsum dolor sit.</span>
+            <span className="text-[25px] font-bold">{percent1}</span>
+            <span className="text-[10px]">Lorem ipsum dolor sit.</span>
           </div>
         </div>
         <div className="hidden group-hover:flex h-[50%] flex-col w-full transition-all duration-100 ease-out">
           <div className="flex h-[50%] justify-between w-full gap-x-4">
             <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-4xl font-bold">{percent1}</span>
-              <span className="">Lorem ipsum dolor sit.</span>
+              <span className="text-[25px] font-bold">{percent1}</span>
+              <span className="text-[10px]">Lorem ipsum dolor sit.</span>
             </div>
             <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-4xl font-bold">{percent2}</span>
-              <span className="">Lorem ipsum dolor sit.</span>
+              <span className="text-[25px] font-bold">{percent2}</span>
+              <span className="text-[10px]">Lorem ipsum dolor sit.</span>
             </div>
           </div>
           <div className="flex h-[50%] w-full items-center">
             <div className="w-1/2 flex gap-x-3">
-              <button className="font-bold bg-white px-3 rounded-3xl h-9">
+              <button className="font-bold bg-white px-3 rounded-3xl text-[12px] h-[32px] w-[106px]">
                 See Design
               </button>
               <div className="w-[30%]">
@@ -86,7 +86,7 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
               </div>
             </div>
             <div className="w-1/2 flex justify-end h-full items-center">
-              <button className="bg-white h-10 w-10 text-2xl rounded-md">
+              <button className="bg-white h-[21px] w-[21px] text-[10px] rounded-md">
                 →
               </button>
             </div>
@@ -119,7 +119,7 @@ const CaseStudies: React.FC = () => {
     },
   ];
   return (
-    <section className="w-screen h-[40rem] flex flex-col gap-y-[5rem]">
+    <section className="w-screen h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
       <TopSection />
       <div className="overflow-x-auto w-full ms-[10vw]">
         <div className="flex gap-x-3 w-fit">
