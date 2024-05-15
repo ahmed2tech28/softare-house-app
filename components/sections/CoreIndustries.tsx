@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Slider from "react-slick";
 
 interface industry {
   title: string;
@@ -50,7 +52,7 @@ const industries: industry[] = [
 
 const Industry: React.FC<industry> = ({ title, desc }) => {
   return (
-    <div className="border-[0.4px] border-[#eeececd6] p-4 w-[240px] h-[283px] flex flex-col justify-between">
+    <div className="border-[0.4px] border-[#eeececd6] p-4 w-[240px] h-[283px] flex flex-col justify-between lg:mx-0 mx-auto">
       <div className="flex flex-col gap-y-4">
         <h1 className="text-white text-[16px]">{title}</h1>
         <p className="text-white text-[14px] font-light">{desc}</p>
@@ -64,19 +66,33 @@ const Industry: React.FC<industry> = ({ title, desc }) => {
 };
 
 const CoreIndustries: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
-    <section className="w-screen h-[816px] bg-[#111827] mb-4 py-10 flex flex-col gap-y-4">
+    <section className="w-screen xl:h-[816px] h-fit bg-[#111827] mb-4 py-10 flex flex-col gap-y-4">
       <h1 className="text-center text-white text-[36px]">
         Core Industries we Serve
       </h1>
-      <p className="text-center text-white text-[16px] font-light w-[684px] mx-auto leading-[28px]">
+      <p className="text-center text-white text-[16px] font-light lg:w-[684px] w-[80vw] mx-auto leading-[28px]">
         We provide web and mobile app development services to a wide range of
         industries based on the latest industry trends.
       </p>
-      <div className="mx-auto h-[670px] mt-7 grid grid-cols-5 grid-rows-2">
+      <div className="mx-auto xl:h-[670px] h-fit mt-7 lg:grid xl:grid-cols-5 lg:grid-cols-3 hidden">
         {industries.map((item, i) => (
           <Industry key={i} title={item.title} desc={item.desc} />
         ))}
+      </div>
+      <div className="h-fit">
+        <Slider {...settings}>
+          {industries.map((item, i) => (
+            <Industry key={i} title={item.title} desc={item.desc} />
+          ))}
+        </Slider>
       </div>
     </section>
   );

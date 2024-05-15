@@ -100,7 +100,7 @@ const BottomSection: React.FC = () => {
         return (
           <div
             key={i}
-            className="lg:w-[50%] lg:py-0 py-4 w-full h-[80%] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
+            className="lg:w-[50%] lg:py-0 py-4 w-full lg:h-[80%] h-[10rem] flex lg:flex-col flex-row lg:justify-center justify-between items-center gap-y-6 border border-gray-300 hover:bg-[#F7F7F7] cursor-pointer transition-colors duration-100 ease-in text-center"
           >
             <div className="flex lg:justify-center justify-start items-center lg:w-full w-[30%] text-center h-[247px]">
               <img
