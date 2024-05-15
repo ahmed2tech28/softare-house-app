@@ -6,13 +6,13 @@ import Map from "../svgs/Map";
 const MapArea: React.FC = () => {
   return (
     <div
-      className="container mx-auto h-[876px] flex flex-col gap-y-3"
+      className="container mx-auto xl:h-[876px] h-[40rem] flex flex-col gap-y-3"
       id="industries"
     >
-      <div className="w-full h-[599px] flex flex-col justify-start items-center">
+      <div className="xl:w-full w-[70vh] xl:mt-0 mt-[5rem] xl:ml-0 ml-[-10rem] xl:h-[599px] h-[90vw] xl:rotate-0 rotate-45 flex flex-col justify-start items-center">
         <Map />
       </div>
-      <div className="h-[277px] w-[80%] mx-auto relative">
+      <div className="h-[277px] 2xl:w-[80%] xl:w-[90%] hidden xl:block mx-auto relative">
         <MapDetailBox
           hiding="1000+"
           desc="projects delivered"

@@ -84,7 +84,6 @@ const ClientArea: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-
     customPaging: (i: any) => {
       return (
         <div

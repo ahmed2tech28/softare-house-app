@@ -60,7 +60,7 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
             <span className="text-[10px]">Lorem ipsum dolor sit.</span>
           </div>
         </div>
-        <div className="hidden group-hover:flex h-[50%] flex-col w-full transition-all duration-100 ease-out">
+        <div className="hidden group-hover:flex translate-y-full group-hover:translate-y-0 h-[50%] flex-col w-full transition-all duration-100 ease-out">
           <div className="flex h-[50%] justify-between w-full gap-x-4">
             <div className="flex w-[50%] items-center text-white gap-x-2">
               <span className="text-[25px] font-bold">{percent1}</span>

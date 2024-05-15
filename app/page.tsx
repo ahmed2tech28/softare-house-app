@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Header />
       <main className="cover">
         <Services />
-        {/* <MapArea /> */}
+        <MapArea />
         <ClientArea />
         <Acievement />
         <CoreIndustries />

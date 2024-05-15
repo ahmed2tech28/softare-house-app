@@ -5,8 +5,7 @@ const Map = () => {
     <svg
       version="1.1"
       viewBox="0 0 1600 800"
-      width="1280"
-      height="1280"
+      className="xl:w-[1280] xl:h-[1280]"
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* Here All the circle start */}
@@ -16,13 +15,9 @@ const Map = () => {
           d="m0 0c5.54-0.369 5.54-0.369 7.88 1.5 0.371 0.495 0.742 0.99 1.12 1.5-0.99 0.33-1.98 0.66-3 1v2h-6c-1-3-1-3 0-6z"
           fill="#0B0E0B"
         />
-        <rect
-          x="801"
-          y="306"
-          width="150"
-          height="100"
-          className="hidden"
-        ></rect>
+        <rect x="801" y="306" width="150" height="100" className="hidden">
+          Estonia
+        </rect>
       </a>
       <a href="#" className="hover-able-map">
         <path
