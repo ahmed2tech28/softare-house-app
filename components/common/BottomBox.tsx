@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ProgressBar from "@ramonak/react-progress-bar";
+import LinearProgress from "@mui/material/LinearProgress";
 
 interface Boxes {
   title: string;
@@ -37,14 +37,7 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
       } h-full border-[0.1px] border-white p-5 flex flex-col justify-between transition-all delay-700`}
     >
       {expand == i ? (
-        <ProgressBar
-          completed={completed}
-          customLabel="|"
-          labelColor="green"
-          bgColor="green"
-          height="3px"
-          className="mt-3"
-        />
+        <LinearProgress variant="determinate" value={completed} />
       ) : (
         <div className="h-[3px]"></div>
       )}
@@ -74,14 +67,7 @@ const MobileBox: React.FC<BoxProps> = ({
   if (expand == i) {
     return (
       <div className="w-full h-full flex flex-col justify-between p-5">
-        <ProgressBar
-          completed={completed}
-          customLabel="|"
-          labelColor="green"
-          bgColor="green"
-          height="3px"
-          className="mt-3"
-        />
+        <LinearProgress variant="determinate" value={completed} />
         <div>
           <img src={`/header-files/${title}`} width={"200"} alt="" />
           <p className="text-[14px] w-[90%] ms-2">{desc}</p>
@@ -108,13 +94,13 @@ const BottomBox: React.FC = () => {
       } else {
         setExpand(expand + 1);
       }
-    }, 7000);
+    }, 8000);
     return () => clearInterval(intervalId);
   }, [expand]);
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(time + 1);
-    }, 1000);
+      setTime(time + 0.5);
+    }, 500);
     return () => clearInterval(intervalId);
   }, [time]);
 

@@ -102,3 +102,11 @@ li.slick-active>div {
         display: inline !important;
     }
 }
+
+.hover-able-map:hover text {
+    visibility: visible;
+    display: block;
+    /* Ensure text is not set to display: none */
+    fill: white;
+    /* Adjust color to ensure visibility */
+}

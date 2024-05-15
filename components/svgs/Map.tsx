@@ -16,7 +16,15 @@ const Map = () => {
           fill="#0B0E0B"
         />
         <rect x="801" y="306" width="150" height="100" className="hidden">
-          Estonia
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="white"
+          >
+            Estonia
+          </text>
         </rect>
       </a>
       <a href="#" className="hover-able-map">
