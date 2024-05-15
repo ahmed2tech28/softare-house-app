@@ -88,10 +88,10 @@ li.slick-active>div {
     background-color: #0C8CE9;
 }
 
-.hover-able-map:hover>rect {
+/* .hover-able-map:hover>rect {
     display: block;
     fill: #cad2d8;
-}
+} */
 
 .industry-img {
     display: none !important;

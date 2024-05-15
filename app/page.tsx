@@ -11,6 +11,7 @@ import CoreIndustries from "@/components/sections/CoreIndustries";
 import Footer from "@/components/sections/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ContextProvider } from "@/context/MapContext";
 
 const Home: React.FC = () => {
   return (
@@ -18,7 +19,9 @@ const Home: React.FC = () => {
       <Header />
       <main className="cover">
         <Services />
-        <MapArea />
+        <ContextProvider>
+          <MapArea />
+        </ContextProvider>
         <ClientArea />
         <Acievement />
         <CoreIndustries />
