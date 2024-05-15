@@ -75,7 +75,7 @@ const BottomSection: React.FC = () => {
     },
     {
       name: "INC. 5000",
-      for: "Pakistan&apos;s Fastest Growing Companies",
+      for: "Pakistan's Fastest Growing Companies",
       img: "2.png",
     },
     {

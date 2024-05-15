@@ -4,9 +4,9 @@ import ButtonComp from "../common/ButtonComp";
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="w-screen xl:h-[40rem] h-fit bg-[#111827] py-[6rem] hidden flex-col xl:flex">
+      <footer className="w-screen xl:h-[610px] h-fit bg-[#111827] py-[6rem] hidden flex-col xl:flex">
         <div
-          className="container mx-auto h-full grid text-left"
+          className="container mx-auto grid text-left h-[fit]"
           style={{ gridTemplateColumns: "3fr 1fr" }}
         >
           <div className="text-white">
@@ -93,26 +93,21 @@ const Footer: React.FC = () => {
               placeholder="Email"
               className="bg-[#111827] border p-3 rounded-lg"
             />
-            <ButtonComp
-              text="Subscribe"
-              variant="contained"
-              edges="boxy"
-              type="button"
-            />
+            <button className="bg-[#423ED6] py-4 text-[14px]">Subscribe</button>
           </div>
         </div>
         <div className="h-[1px] w-full bg-white" />
-        <div className="flex container h-14 mx-auto text-white justify-center items-center">
-          <div className="w-1/2 h-full flex flex-col justify-center mb-[-4rem]">
+        <div className="flex container h-fit mx-auto text-white justify-center items-center">
+          <div className="w-1/2 h-[72px] flex flex-col justify-center mb-[-4rem]">
             <h1>Dev House</h1>
             <p>© Dev House 2011-2022. All rights reserved</p>
           </div>
           <div className="w-1/2 flex gap-x-9 justify-end mb-[-4rem]">
-            <img src="/social/1.png" alt="" />
-            <img src="/social/2.png" alt="" />
-            <img src="/social/3.png" alt="" />
-            <img src="/social/4.png" alt="" />
-            <img src="/social/5.png" alt="" />
+            <img src="/social/1.png" alt="" width={"46px"} />
+            <img src="/social/2.png" alt="" width={"46px"} />
+            <img src="/social/3.png" alt="" width={"46px"} />
+            <img src="/social/4.png" alt="" width={"46px"} />
+            <img src="/social/5.png" alt="" width={"46px"} />
           </div>
         </div>
       </footer>
