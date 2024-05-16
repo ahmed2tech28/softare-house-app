@@ -45,18 +45,13 @@ const navRoutes: Path[] = [
   },
 ];
 
-const BlurBg: React.FC = () => {
+const BlurBg: React.FC<{ img: string }> = ({ img }) => {
   return (
     <div
-      className="h-full w-full"
+      className="h-full w-full header-img"
       style={{
-        background: "url('header-bg-image.png')",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        position: "relative",
-        filter: "blur(1px)",
+        backgroundImage: `url('/header-images/${img}')`,
+        // background: `url('/header-images/1.png')`,
       }}
     >
       <div className="bg-[rgba(0,0,0,0.44)] w-full h-full"></div>
@@ -158,12 +153,13 @@ const Navbar: React.FC = () => {
 };
 
 const Header: React.FC = () => {
+  const [img, setImg] = useState("1.png");
   return (
     <header
       className="sm:h-[57rem] h-[60rem] w-screen relative text-white"
       id="home"
     >
-      <BlurBg />
+      <BlurBg img={img} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <Navbar />
         <div className="h-full justify-between container mx-auto">
@@ -187,7 +183,7 @@ const Header: React.FC = () => {
               />
             </Link>
           </div>
-          <BottomBox />
+          <BottomBox setImg={setImg} />
         </div>
       </div>
     </header>

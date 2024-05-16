@@ -84,7 +84,7 @@ const MobileBox: React.FC<BoxProps> = ({
   }
 };
 
-const BottomBox: React.FC = () => {
+const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
   const [expand, setExpand] = useState(0);
   const [time, setTime] = useState(0);
   useEffect(() => {
@@ -96,6 +96,7 @@ const BottomBox: React.FC = () => {
         setExpand(expand + 1);
       }
     }, 7500);
+    setImg(`${expand}.png`);
     return () => clearInterval(intervalId);
   }, [expand]);
   useEffect(() => {

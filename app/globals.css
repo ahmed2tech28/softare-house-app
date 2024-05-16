@@ -110,3 +110,12 @@ li.slick-active>div {
     fill: white;
     /* Adjust color to ensure visibility */
 }
+
+.header-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    filter: blur(1px);
+}
