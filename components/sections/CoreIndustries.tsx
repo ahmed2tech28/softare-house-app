@@ -10,7 +10,7 @@ interface industry {
 
 const industries: industry[] = [
   {
-    img: "",
+    img: "/industry-icons/finance.svg",
     title: "Finance",
     desc: "We help financial institutions manage their risks and unlock Big Data's potential with software development for Fintech comprising advanced analytics, Machine Learning and more.",
   },
