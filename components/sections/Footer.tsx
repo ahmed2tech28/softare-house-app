@@ -1,121 +1,143 @@
 import React from "react";
 import ButtonComp from "../common/ButtonComp";
+import Link from "next/link";
+
+const MobileFooter: React.FC = () => {
+  return (
+    <footer className="w-screen justify-center items-center bg-[#111827] py-[6rem] flex flex-col xl:hidden">
+      <div className="text-white text-xl">
+        &copy; 2023 DevHouse All rights reserved
+      </div>
+    </footer>
+  );
+};
+
+const services: string[] = [
+  "Web Application Development",
+  "Mobile App Development",
+  "UI/UX Design Services",
+  "Desktop Application Development",
+  "Hire a Developer",
+];
+
+const solutions: string[] = [
+  "App Development Cost",
+  "How to Build Ride Sharing",
+  "How to build a fitness app",
+  "Build a streaming app",
+  "CRM for Agriculture",
+  "Web design process",
+];
+
+const industries: string[] = [
+  "Health Care",
+  "Logistics",
+  "FinTech",
+  "Market Place",
+  "Retail",
+  "Travel",
+  "Education",
+];
+
+const icons: string[] = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+
+const offices: string[] = [
+  "Wales <br> +44 7726 777947",
+  "Rome <br> +39 320 973 0997",
+  "Germany <br> +49 1590 6702779",
+  "Faisalabad <br> +92 322 7946794",
+  "Lahore <br> +92 321 8351765",
+];
+
+const PcFooter: React.FC = () => {
+  return (
+    <footer className="w-screen xl:h-[610px] h-fit bg-[#111827] py-[6rem] hidden flex-col xl:flex">
+      <div className="h-[490px] container mx-auto">
+        <div className="h-[358px] w-full flex justify-between text-white">
+          <div className="w-[253px] h-full flex flex-col gap-y-6">
+            <h1 className="text-[16px] font-semibold">Services</h1>
+            <div className="flex flex-col gap-y-6">
+              {services.map((item, i) => (
+                <Link key={i} href={"#"} className="text-[14px] font-normal">
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="w-[195px] h-full flex flex-col gap-y-6">
+            <h1 className="text-[16px] font-semibold">Solutions</h1>
+            <div className="flex flex-col gap-y-6">
+              {solutions.map((item, i) => (
+                <Link key={i} href={"#"} className="text-[14px] font-normal">
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="w-[102px] h-full flex flex-col gap-y-6">
+            <h1 className="text-[16px] font-semibold">Industries</h1>
+            <div className="flex flex-col gap-y-5">
+              {industries.map((item, i) => (
+                <Link key={i} href={"#"} className="text-[14px] font-normal">
+                  {item}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="w-[133px] h-full flex flex-col gap-y-6">
+            <h1 className="text-[16px] font-semibold">Offices</h1>
+            <div className="flex flex-col gap-y-5">
+              {offices.map((item, i) => (
+                <Link
+                  key={i}
+                  href={"#"}
+                  className="text-[14px] font-normal"
+                  dangerouslySetInnerHTML={{ __html: item }}
+                ></Link>
+              ))}
+            </div>
+          </div>
+          <div className="w-[241px] h-full flex flex-col gap-y-6">
+            <h1 className="text-[16px] font-semibold">Subscribe</h1>
+            <p className="text-[14px] font-normal">
+              Get executive insights, curated resources and expert guidence
+            </p>
+            <input
+              type="email"
+              placeholder="Email"
+              className="text-[14px] border border-white bg-transparent py-3 px-2"
+            />
+            <button className="bg-[#423ED6] rounded-md py-3 text-[14px]">
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div className="line bg-[#DFDFDF] w-full h-[1px] my-6"></div>
+        <div className="h-[72px] w-full text-white flex">
+          <div className="w-1/2">
+            <h1 className="text-[18px] font-semibold">Dev House</h1>
+            <p className="text-[15px] font-semibold">
+              &copy; Dev House 2011-2022. All rights reserved
+            </p>
+          </div>
+          <div className="w-1/2 flex gap-x-12 justify-end">
+            {icons.map((item, i) => (
+              <Link key={i} href={"#"}>
+                <img src={`/social/${item}`} alt="" width={"50"} />
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="w-screen xl:h-[610px] h-fit bg-[#111827] py-[6rem] hidden flex-col xl:flex">
-        <div
-          className="container mx-auto grid text-left h-[fit]"
-          style={{ gridTemplateColumns: "3fr 1fr" }}
-        >
-          <div className="text-white">
-            <table className="w-full">
-              <thead>
-                <tr>
-                  <th>Services</th>
-                  <th>Solutions</th>
-                  <th>Industries</th>
-                  <th>Offices</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Web Application Development</td>
-                  <td>App Development Cost</td>
-                  <td>Health Care</td>
-                  <td>
-                    Wales <br /> +44 7726 777947
-                  </td>
-                </tr>
-                <tr>
-                  <td>Mobile App Development</td>
-                  <td>How to Build Ride Sharing</td>
-                  <td>Logistics</td>
-                  <td>
-                    Rome <br />
-                    +39 320 973 0997
-                  </td>
-                </tr>
-                <tr>
-                  <td>UI/UX Design Services</td>
-                  <td>How to build a fitness app</td>
-                  <td>FinTech</td>
-                  <td>
-                    Rome <br />
-                    +49 1590 6702779
-                  </td>
-                </tr>
-                <tr>
-                  <td>Desktop Application Development</td>
-                  <td>Build a streaming app</td>
-                  <td>Market Place</td>
-                  <td>
-                    Germany <br />
-                    +49 1590 6702779
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>How to build a CRM</td>
-                  <td>Travel</td>
-                  <td>
-                    Faisalabad <br />
-                    +92 322 7946794
-                  </td>
-                </tr>
-                <tr>
-                  <td>Hire a Developer</td>
-                  <td>CRM for Agriculture</td>
-                  <td>Retail</td>
-                  <td>
-                    Faisalabad <br />
-                    +92 322 7946794
-                  </td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Web design process</td>
-                  <td>Education</td>
-                  <td>
-                    Lahore <br />
-                    +92 321 8351765
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="text-white flex flex-col gap-y-3">
-            <h1 className="font-bold">Subscribe</h1>
-            <p>Get executive insights, curated resources and expert guidence</p>
-            <input
-              type="text"
-              placeholder="Email"
-              className="bg-[#111827] border p-3 rounded-lg"
-            />
-            <button className="bg-[#423ED6] py-4 text-[14px]">Subscribe</button>
-          </div>
-        </div>
-        <div className="h-[1px] w-full bg-white" />
-        <div className="flex container h-fit mx-auto text-white justify-center items-center">
-          <div className="w-1/2 h-[72px] flex flex-col justify-center mb-[-4rem]">
-            <h1>Dev House</h1>
-            <p>© Dev House 2011-2022. All rights reserved</p>
-          </div>
-          <div className="w-1/2 flex gap-x-9 justify-end mb-[-4rem]">
-            <img src="/social/1.png" alt="" width={"46px"} />
-            <img src="/social/2.png" alt="" width={"46px"} />
-            <img src="/social/3.png" alt="" width={"46px"} />
-            <img src="/social/4.png" alt="" width={"46px"} />
-            <img src="/social/5.png" alt="" width={"46px"} />
-          </div>
-        </div>
-      </footer>
-      <footer className="w-screen justify-center items-center h-[10rem] bg-[#111827] py-[6rem] flex flex-col xl:hidden">
-        <div className="text-white text-xl">
-          &copy; 2023 DevHouse All rights reserved
-        </div>
-      </footer>
+      <PcFooter />
+      <MobileFooter />
     </>
   );
 };

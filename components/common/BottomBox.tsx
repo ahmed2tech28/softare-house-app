@@ -34,7 +34,8 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
     <div
       className={`${
         expand == i ? "w-[34%]" : "w-[22%]"
-      } h-full border-[0.1px] border-white p-5 flex flex-col justify-between transition-all delay-700`}
+      } h-full border-[0.1px] border-white p-5 flex flex-col justify-between transition-[width] duration-1000`}
+      onClick={(e) => onHover(i)}
     >
       {expand == i ? (
         <LinearProgress variant="determinate" value={completed} />
@@ -87,14 +88,14 @@ const BottomBox: React.FC = () => {
   const [expand, setExpand] = useState(0);
   const [time, setTime] = useState(0);
   useEffect(() => {
+    setTime(0);
     const intervalId = setInterval(() => {
-      setTime(0);
       if (expand == 3) {
         setExpand(0);
       } else {
         setExpand(expand + 1);
       }
-    }, 8000);
+    }, 7500);
     return () => clearInterval(intervalId);
   }, [expand]);
   useEffect(() => {
