@@ -23,7 +23,7 @@ const Map = () => {
         <path
           transform="translate(801,406)"
           d="m0 0c5.54-0.369 5.54-0.369 7.88 1.5 0.371 0.495 0.742 0.99 1.12 1.5-0.99 0.33-1.98 0.66-3 1v2h-6c-1-3-1-3 0-6z"
-          fill="#CFD6E6"
+          fill="#0B0E0B"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -55,7 +55,7 @@ const Map = () => {
         <path
           transform="translate(219,324)"
           d="m0 0c1.68 0.286 3.34 0.618 5 1v5c-2.38 0.625-2.38 0.625-5 1-0.66-0.66-1.32-1.32-2-2 0.536-3.54 0.536-3.54 2-5z"
-          fill="#CFD6E6"
+          fill="#050706"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -83,7 +83,7 @@ const Map = () => {
         <path
           transform="translate(778,462)"
           d="m0 0c1.68 0.286 3.34 0.618 5 1 0.625 1.88 0.625 1.88 1 4-0.66 0.66-1.32 1.32-2 2-2.62-0.375-2.62-0.375-5-1-0.0427-1.67-0.0406-3.33 0-5 0.33-0.33 0.66-0.66 1-1z"
-          fill="#CFD6E6"
+          fill="#050706"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -111,7 +111,7 @@ const Map = () => {
         <path
           transform="translate(760,443)"
           d="m0 0h6c0.382 1.66 0.714 3.32 1 5-1 1-1 1-3.5 1.12-2.5-0.125-2.5-0.125-3.5-1.12-0.0406-1.67-0.0427-3.33 0-5z"
-          fill="#CFD6E6"
+          fill="#060807"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -139,7 +139,7 @@ const Map = () => {
         <path
           transform="translate(815,299)"
           d="m0 0h6c0.382 1.66 0.714 3.32 1 5-1 1-1 1-3.5 1.12-2.5-0.125-2.5-0.125-3.5-1.12-0.0406-1.67-0.0427-3.33 0-5z"
-          fill="#CFD6E6"
+          fill="#060807"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -167,7 +167,7 @@ const Map = () => {
         <path
           transform="translate(798,483)"
           d="m0 0c1.68 0.286 3.34 0.618 5 1v5c-1.66 0.382-3.32 0.714-5 1-1-1-1-1-1.12-3.5 0.125-2.5 0.125-2.5 1.12-3.5z"
-          fill="#CFD6E6"
+          fill="#050707"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -195,7 +195,7 @@ const Map = () => {
         <path
           transform="translate(837 475)"
           d="m0 0c1.21 0.0309 1.21 0.0309 2.44 0.0625 0.382 1.66 0.714 3.32 1 5-1 1-1 1-3.56 1.06-1.21-0.0309-1.21-0.0309-2.44-0.0625-0.382-1.66-0.714-3.32-1-5 1-1 1-1 3.56-1.06z"
-          fill="#CFD6E6"
+          fill="#080A08"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -223,7 +223,7 @@ const Map = () => {
         <path
           transform="translate(746,473)"
           d="m0 0c1.68 0.286 3.34 0.618 5 1v5c-1.66 0.382-3.32 0.714-5 1-1-1-1-1-1.12-3.5 0.125-2.5 0.125-2.5 1.12-3.5z"
-          fill="#CFD6E6"
+          fill="#050606"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -251,7 +251,7 @@ const Map = () => {
         <path
           transform="translate(859,427)"
           d="m0 0h6v6h-6v-6z"
-          fill="#CFD6E6"
+          fill="#050807"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -279,7 +279,7 @@ const Map = () => {
         <path
           transform="translate(404,292)"
           d="m0 0h6v6h-6v-6z"
-          fill="#CFD6E6"
+          fill="#040505"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -307,7 +307,7 @@ const Map = () => {
         <path
           transform="translate(724,452)"
           d="m0 0c1.67-0.0427 3.33-0.0406 5 0 1 1 1 1 1.06 3.56-0.0206 0.804-0.0412 1.61-0.0625 2.44h-6v-6z"
-          fill="#CFD6E6"
+          fill="#030504"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -335,7 +335,7 @@ const Map = () => {
         <path
           transform="translate(825,443)"
           d="m0 0h6v6c-1.67 0.0427-3.33 0.0406-5 0-1-1-1-1-1.06-3.56 0.0206-0.804 0.0412-1.61 0.0625-2.44z"
-          fill="#CFD6E6"
+          fill="#060807"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -363,7 +363,7 @@ const Map = () => {
         <path
           transform="translate(800,433)"
           d="m0 0h6c0.0427 1.67 0.0406 3.33 0 5-1 1-1 1-3.56 1.06-1.21-0.0309-1.21-0.0309-2.44-0.0625v-6z"
-          fill="#CFD6E6"
+          fill="#020404"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -391,7 +391,7 @@ const Map = () => {
         <path
           transform="translate(755,420)"
           d="m0 0c1.67-0.0427 3.33-0.0406 5 0 1 1 1 1 1.06 3.56-0.0206 0.804-0.0412 1.61-0.0625 2.44h-6v-6z"
-          fill="#CFD6E6"
+          fill="#050606"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -419,7 +419,7 @@ const Map = () => {
         <path
           transform="translate(435,274)"
           d="m0 0h6c0.0427 1.67 0.0406 3.33 0 5-1 1-1 1-3.56 1.06-1.21-0.0309-1.21-0.0309-2.44-0.0625v-6z"
-          fill="#CFD6E6"
+          fill="#050606"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -447,7 +447,7 @@ const Map = () => {
         <path
           transform="translate(712,424)"
           d="m0 0c1.68 0.286 3.34 0.618 5 1v5h-6c-0.0427-1.67-0.0406-3.33 0-5 0.33-0.33 0.66-0.66 1-1z"
-          fill="#CFD6E6"
+          fill="#080A09"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
@@ -475,7 +475,7 @@ const Map = () => {
         <path
           transform="translate(1432,265)"
           d="m0 0h5c-0.33 1.65-0.66 3.3-1 5-1.65-0.33-3.3-0.66-5-1 0.33-1.32 0.66-2.64 1-4z"
-          fill="#CFD6E6"
+          fill="#1D1F17"
           onMouseEnter={(e) =>
             setState({
               city: "Estonia",
