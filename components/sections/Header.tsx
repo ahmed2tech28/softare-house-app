@@ -65,12 +65,12 @@ const Navbar: React.FC = () => {
     <>
       <nav className="flex md:container w-[95vw] mx-auto justify-between items-center h-44">
         <div className="logo">
-          <img src="/devLogo.png" width={"130"} alt="logo" />
+          <img src="/devLogo.png" width={"75px"} alt="logo" />
         </div>
-        <ul className="xl:flex gap-x-4 hidden">
+        <ul className="xl:flex gap-x-[2.5rem] hidden f-mon">
           {navRoutes.map((item, i) => {
             return (
-              <li key={i} className="text-[1.15rem]">
+              <li key={i} className="text-[14px]">
                 <Link href={item.path} className="text-white">
                   {item.name}
                 </Link>
@@ -79,7 +79,14 @@ const Navbar: React.FC = () => {
           })}
         </ul>
         <div className="seacrh-icon flex gap-x-2">
-          <SearchIcon sx={{ color: "white", cursor: "pointer" }} />
+          <SearchIcon
+            sx={{
+              color: "white",
+              cursor: "pointer",
+              width: "24px",
+              height: "24px",
+            }}
+          />
           <span onClick={(e) => setNavRes(!navRes)}>
             {navRes ? (
               <CloseIcon
@@ -131,7 +138,7 @@ const Navbar: React.FC = () => {
             </span>
           </div>
           <div className="h-[80%] flex flex-col justify-start items-start w-full">
-            <ul className="gap-x-4 flex flex-col border-collapse w-full">
+            <ul className="gap-x-4 flex flex-col border-collapse w-full f-mon">
               {navRoutes.map((item, i) => {
                 return (
                   <li
@@ -164,14 +171,16 @@ const Header: React.FC = () => {
         <Navbar />
         <div className="h-full justify-between container mx-auto">
           <div className="xl:w-[60%] lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-[40px] text-3xl text-center sm:leading-[4rem] font-bold">
+            <h1 className="sm:text-[40px] text-3xl text-center sm:leading-[4rem] font-normal">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-[16px] text-center w-[80%] mx-auto">
+            <p className="sm:text-[16px] text-center w-[80%] mx-auto font-normal f-mon leading-[28px]">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
-              development company. Let&apos;s discuss your project and find “Why
-              your company need our solution”.
+              development company. Let&apos;s discuss your project and find{" "}
+              <span className="font-semibold">
+                “Why your company need our solution”.
+              </span>
             </p>
             <Link href={"#contact"}>
               <ButtonComp

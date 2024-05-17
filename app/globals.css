@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
     font-family: "gilroy";
@@ -75,8 +76,8 @@ body,
     overflow-y: auto;
 }
 
-::-webkit-scrollbar-button {
-    width: 0px;
+::-webkit-scrollbar {
+    /* width: 0px; */
     height: 0px;
 }
 
@@ -118,4 +119,14 @@ li.slick-active>div {
     background-attachment: fixed;
     position: relative;
     filter: blur(1px);
+}
+
+.f-mon {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.hover-shadow-custom:hover {
+    box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.194);
+    /* -webkit-box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.68); */
 }

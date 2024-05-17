@@ -10,7 +10,7 @@ const Star: React.FC = () => {
   return (
     <div>
       <svg
-        className="w-[48px] h-[38.19px] ms-3 text-[#423ED6]"
+        className="w-[48px] h-[38.19px] ms-3 text-[#0C8CE9]"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -39,12 +39,12 @@ const UpperSection: React.FC = () => {
     <div className="flex lg:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%]">
       <div className="md:w-[30%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
         <h1 className="text-[38px] font-medium">Our Achivements</h1>
-        <p className="text-[16px]">
+        <p className="text-[16px] f-mon">
           Dev House stands tall among the leading software development
           companies, earning top rankings and glowing reviews.
         </p>
       </div>
-      <div className="w-[50%] md:flex hidden justify-end items-center">
+      <div className="w-[50%] md:flex hidden justify-end items-center f-mon">
         <div className="box w-[360px] h-[258.19px] bg-[#FFFFFF] rounded-[40px] p-[3rem] flex-col justify-between items-center flex">
           <div className="text-center font-medium text-[18px]">
             43 reviews in Clutch
@@ -114,7 +114,7 @@ const BottomSection: React.FC = () => {
               <h1 className="text-[18px] font-semibold lg:text-center text-start w-full">
                 {item.name}
               </h1>
-              <p className="text-sm lg:text-center text-start w-full">
+              <p className="text-sm lg:text-center text-start w-full text-[#969FAF]">
                 {item.for}
               </p>
             </div>

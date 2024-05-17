@@ -65,16 +65,53 @@ const Industry: React.FC<industry> = ({ title, desc, img }) => {
   return (
     <div className="border-[0.4px] border-[#eeececd6] p-4 w-[240px] h-[283px] flex flex-col justify-between lg:mx-0 mx-auto hover:bg-[#0C8CE9] transition-colors duration-100 ease-linear cursor-pointer group">
       <div className="lg:hidden flex-col gap-y-4 group-hover:flex flex">
-        <h1 className="text-white text-[16px]">{title}</h1>
-        <p className="text-white text-[14px] font-light">{desc}</p>
+        <h1 className="text-white font-normal text-[16px]">{title}</h1>
+        <p className="text-white text-[14px] font-light f-mon">{desc}</p>
       </div>
       <div className="lg:hidden justify-between w-full group-hover:flex flex">
         <button className="text-white text-[12px]">View Case Study</button>
-        <button className="bg-white px-3 rounded-2xl">&gt;</button>
+        <button className="bg-white px-3 rounded-2xl fill-black">
+          <svg
+            fill="#0C8CE9"
+            height="10px"
+            width="10px"
+            version="1.1"
+            id="Layer_1"
+            viewBox="0 0 330 330"
+          >
+            <path
+              id="XMLID_222_"
+              d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+	c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+	C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+	C255,161.018,253.42,157.202,250.606,154.389z"
+            />
+          </svg>
+        </button>
       </div>
-      <div className="flex flex-col w-full h-full group-hover:hidden gap-y-4">
+      <div className="lg:flex hidden flex-col w-full h-full group-hover:hidden gap-y-4">
         {img && <img width={"80"} src={img} className="industry-img" />}
         <h1 className="text-white text-[16px]">{title}</h1>
+      </div>
+      <div className="lg:flex justify-end w-full group-hover:hidden hidden">
+        <button className="px-3 rounded-2xl fill-black">
+          <svg
+            fill="white"
+            height="15px"
+            width="15px"
+            version="1.1"
+            id="Layer_1"
+            viewBox="0 0 330 330"
+          >
+            <path
+              id="XMLID_222_"
+              d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+	c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+	C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+	C255,161.018,253.42,157.202,250.606,154.389z"
+            />
+          </svg>
+        </button>
       </div>
     </div>
   );

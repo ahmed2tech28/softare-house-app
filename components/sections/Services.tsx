@@ -10,7 +10,7 @@ interface CardProps {
 
 const SpecialBtn: React.FC = () => {
   return (
-    <button className="hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-75 ease-in hover:text-white text-left py-7 rounded-[4rem] px-8 font-semibold inline-flex justify-between">
+    <button className="group-hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-75 ease-in group-hover:text-white text-left h-[65px] rounded-[4rem] px-8 font-semibold inline-flex justify-between items-center">
       <span className="text-xl">Explore more</span>
       <span className="text-xl">→</span>
     </button>
@@ -23,14 +23,16 @@ const CardCircle: React.FC = () => {
 
 const Card: React.FC<CardProps> = ({ category, desc, title }) => {
   return (
-    <div className="w-[407px] shadow-lg h-[509px] rounded-[2rem] border border-gray-300 p-5 py-10 flex flex-col justify-between">
+    <div className="w-[407px] hover-shadow-custom h-[509px] rounded-[2rem] border border-gray-300 p-5 py-10 flex flex-col justify-between group cursor-pointer">
       <div className="top flex justify-start gap-x-2 items-center">
         <CardCircle />
         <div>{category}</div>
       </div>
       <div className="bottom flex flex-col gap-y-2">
         <h1 className="text-[30px] font-semibold">{title}</h1>
-        <p className="text-[16px] text-[#969FAF] leading-[30.4px]">{desc}</p>
+        <p className="text-[16px] text-[#969FAF] leading-[30.4px] f-mon">
+          {desc}
+        </p>
       </div>
       <SpecialBtn />
     </div>
@@ -69,14 +71,14 @@ const Services: React.FC = () => {
   ];
   return (
     <section
-      className="h-[45rem] my-[3rem] flex flex-col gap-y-3"
+      className="h-[45rem] my-[3rem] flex flex-col gap-y-3 "
       id="services"
     >
       <h1 className="text-center font-semibold text-4xl leading-[5rem]">
         Our Services
       </h1>
-      <div className="ms-[10vw] overflow-x-auto overflow-y-hidden">
-        <div className="w-fit flex gap-x-5 h-full">
+      <div className="ms-[10vw] overflow-x-auto py-[1rem]">
+        <div className="w-fit flex gap-x-5 h-full px-4">
           {cards.map((item, i) => {
             return (
               <Card

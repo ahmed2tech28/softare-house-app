@@ -32,7 +32,7 @@ const MapDetailBox: React.FC<Props> = ({
       >
         {hiding}
       </span>
-      <span style={{ color: `${bg ? "white" : "black"}` }}>{desc}</span>
+      <span style={{ color: `${bg ? "white" : "#969FAF"}` }}>{desc}</span>
     </div>
   );
 };

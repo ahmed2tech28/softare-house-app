@@ -29,11 +29,10 @@ const ButtonComp: React.FC<Props> = ({
     );
   }
   return (
-    <button>
+    <button className="inline-flex gap-x-3 items-center">
       {variant == "text" && (
-        <span className="bg-[#0C8CE9] text-white px-4 py-[0.35rem] rounded-[22px] me-3">
-          {" "}
-          &gt;
+        <span className="w-[31px] h-[20px] bg-[#0C8CE9] rounded-xl inline-flex justify-center items-center">
+          <img src="/arrow.svg" className=" fill-white" width={"10"} alt="" />
         </span>
       )}
       <span>{text}</span>

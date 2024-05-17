@@ -46,8 +46,8 @@ const ClientDetails: React.FC = () => {
       </div>
       <div className="lg:w-[50%] h-[100%] flex flex-col gap-y-6 justify-center w-[90%] md:mx-0 mx-auto">
         <div className="flex justify-between items-center">
-          <div className="w-2/3">
-            <h1 className="font-bold text-[18px]">Henrik Loop</h1>
+          <div className="w-2/3 f-mon">
+            <h1 className="font-bold text-[22px]">Henrik Loop</h1>
             <h1 className="text-[18px]">CTO at Blockbuster, TDC</h1>
           </div>
           <div className="w-1/3 flex gap-x-2 items-center">
@@ -57,7 +57,7 @@ const ClientDetails: React.FC = () => {
             <h1 className="text-[18px]">Denmark</h1>
           </div>
         </div>
-        <p className="font-normal text-[16px]">
+        <p className="font-normal text-[16px] text-[#969FAF]">
           Devhouse&apos;s team has been instrumental in the success of our
           platform, Muqawiloon.com. Their programmers&apos; technical expertise
           and their designers&apos; creative flair have combined to make our
