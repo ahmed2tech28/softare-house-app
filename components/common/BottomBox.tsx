@@ -50,7 +50,7 @@ const Box: React.FC<BoxProps> = ({
         <div className="h-[4px]"></div>
       )}
       <div>
-        <img src={`/header-files/${title}`} width={"137px"} alt="" />
+        <img src={`/header-files/${title}`} width={"187px"} alt="" />
         {expand == i && <p className="text-[16px] w-[90%] ms-2">{desc}</p>}
       </div>
       <div className="flex justify-between">
