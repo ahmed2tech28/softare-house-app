@@ -54,7 +54,7 @@ const BlurBg: React.FC<{ img: string }> = ({ img }) => {
         // background: `url('/header-images/1.png')`,
       }}
     >
-      <div className="bg-[rgba(0,0,0,0.44)] w-full h-full"></div>
+      <div className="bg-[rgba(0,0,0,0.62)] w-full h-full"></div>
     </div>
   );
 };
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
         <ul className="xl:flex gap-x-[2.5rem] hidden f-mon">
           {navRoutes.map((item, i) => {
             return (
-              <li key={i} className="text-[14px]">
+              <li key={i} className="text-[18px]">
                 <Link href={item.path} className="text-white">
                   {item.name}
                 </Link>
@@ -83,8 +83,8 @@ const Navbar: React.FC = () => {
             sx={{
               color: "white",
               cursor: "pointer",
-              width: "24px",
-              height: "24px",
+              width: "26px",
+              height: "26px",
             }}
           />
           <span onClick={(e) => setNavRes(!navRes)}>
@@ -170,11 +170,11 @@ const Header: React.FC = () => {
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <Navbar />
         <div className="h-full justify-between container mx-auto">
-          <div className="xl:w-[60%] lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-[40px] text-3xl text-center sm:leading-[4rem] font-normal">
+          <div className="lg:w-[80%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
+            <h1 className="sm:text-[46px] text-3xl text-center sm:leading-[4rem] font-semibold">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-[16px] text-center w-[80%] mx-auto font-normal f-mon leading-[28px]">
+            <p className="sm:text-[22px] text-center w-[100%] mx-auto font-light f-mon leading-[32px]">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
               development company. Let&apos;s discuss your project and find{" "}

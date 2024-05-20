@@ -22,7 +22,7 @@ const ButtonComp: React.FC<Props> = ({
       <button
         onClick={onClick}
         type={type}
-        className={`bg-[#0C8CE9] text-white px-14 py-[0.8rem] rounded-[22px]`}
+        className={`bg-[#0C8CE9] text-white leading-none text-[20px] py-[22px] font-medium f-mon w-[250px] rounded-full`}
       >
         {text}
       </button>

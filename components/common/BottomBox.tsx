@@ -21,20 +21,21 @@ const Button: React.FC<{ blue: boolean }> = ({ blue }) => {
     <button
       className={`${
         blue ? "bg-[#0C8CE9]" : ""
-      } w-[2rem] h-[1.3rem] rounded-[22px]`}
+      } w-[2rem] h-[1.3rem] rounded-[22px] flex justify-center items-center`}
     >
-      &gt;
+      <img src="/arrow.svg" width={"10"} alt="" />
     </button>
   );
 };
 
 const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
   const completed = (time / 7) * 100;
+
   return (
     <div
       className={`${
         expand == i ? "w-[34%]" : "w-[22%]"
-      } h-full border-[0.1px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000`}
+      } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000`}
       onClick={(e) => onHover(i)}
     >
       {expand == i ? (
@@ -54,7 +55,7 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
       )}
       <div>
         <img src={`/header-files/${title}`} width={"137px"} alt="" />
-        {expand == i && <p className="text-[14px] w-[90%] ms-2">{desc}</p>}
+        {expand == i && <p className="text-[16px] w-[90%] ms-2">{desc}</p>}
       </div>
       <div className="flex justify-between">
         {expand == i && <button>View case study</button>}
