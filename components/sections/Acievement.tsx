@@ -26,7 +26,7 @@ const Ci: React.FC = () => {
   return (
     <span className="w-[50.35px] h-[50px] flex items-center justify-center bg-black rounded-full relative">
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-gray-300 bg-clip-text bg-gradient-to-br from-black to-transparent text-[40px] font-bold">
+        <div className="text-white bg-clip-text bg-gradient-to-br from-black to-transparent text-[40px] font-bold">
           C
         </div>
       </div>
@@ -46,12 +46,12 @@ const UpperSection: React.FC = () => {
       </div>
       <div className="w-[50%] md:flex hidden justify-end items-center f-mon">
         <div className="box w-[360px] h-[258.19px] bg-[#FFFFFF] rounded-[40px] p-[3rem] flex-col justify-between items-center flex">
-          <div className="text-center font-medium text-[18px]">
+          <div className="text-center font-medium text-[18px] f-mon">
             43 reviews in Clutch
           </div>
           <div className="text-center font-semibold flex justify-center items-center gap-x-5">
             <Ci />
-            <span className="text-[34px]">4.93</span>
+            <span className="text-[34px] f-mon">4.93</span>
           </div>
           <div className="stars flex justify-between items-center">
             <Star />

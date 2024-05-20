@@ -5,16 +5,14 @@ import BlogCard from "../common/BlogCard";
 const Top: React.FC = () => {
   return (
     <div className="items-center flex justify-between w-[73vw] mx-auto">
-      <h1 className="w-1/2 text-left text-[38px] font-semibold">
+      <div className="w-1/3" />
+      <h1 className="w-1/3 text-center text-[38px] font-semibold">
         Latest insights
       </h1>
-      <div className="w-1/2 flex justify-end gap-x-2">
-        <ButtonComp
-          text="Read more →"
-          variant="text"
-          edges="rounded"
-          type="button"
-        />
+      <div className="w-1/3 flex justify-end gap-x-2">
+        <button className="text-[#423ED6] bg-[#F7F7F7] py-3 rounded-full w-[165.03px]">
+          {"Read more →"}
+        </button>
       </div>
     </div>
   );
