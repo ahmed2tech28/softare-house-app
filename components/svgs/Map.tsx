@@ -14,7 +14,7 @@ const Map = () => {
   return (
     <svg
       version="1.1"
-      viewBox="0 0 1600 800"
+      viewBox="0 0 1600 600"
       className="xl:w-[1280] xl:h-[1280]"
       xmlns="http://www.w3.org/2000/svg"
     >

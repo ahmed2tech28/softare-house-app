@@ -137,7 +137,7 @@ const CoreIndustries: React.FC = () => {
       <h1 className="text-center text-white text-[36px]">
         Core Industries we Serve
       </h1>
-      <p className="text-center text-white text-[16px] font-light lg:w-[684px] w-[80vw] mx-auto leading-[28px]">
+      <p className="text-center text-white text-[16px] font-light f-mon lg:w-[684px] w-[80vw] mx-auto leading-[28px]">
         We provide web and mobile app development services to a wide range of
         industries based on the latest industry trends.
       </p>

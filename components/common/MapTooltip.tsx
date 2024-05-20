@@ -16,8 +16,8 @@ const MapTooltip: React.FC = () => {
         <div
           className="absolute p-5 bg-white"
           style={{
-            left: `${state.x && state.x + 10}px`,
-            top: `${state.y && state.y - 60}px`,
+            left: `${state.x && state.x}px`,
+            top: `${state.y && state.y}px`,
           }}
         >
           {state.city}

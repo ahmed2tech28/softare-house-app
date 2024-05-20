@@ -33,9 +33,9 @@ const Line: React.FC = () => {
 
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
   return (
-    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
+    <div className="w-[389px] h-[400px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
       <img src={img} alt="img" width={"100%"} height={"276px"} />
-      <div className="w-full h-[250px] px-4 py-4 flex flex-col justify-between">
+      <div className="w-full h-[146px] px-4 py-4 flex flex-col justify-between">
         <h1>{projectname}</h1>
         <svg
           width="349"
