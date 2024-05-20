@@ -23,7 +23,7 @@ const CardCircle: React.FC = () => {
 
 const Card: React.FC<CardProps> = ({ category, desc, title }) => {
   return (
-    <div className="w-[407px] hover-shadow-custom h-[509px] rounded-[2rem] border border-gray-300 p-5 py-10 flex flex-col justify-between group cursor-pointer">
+    <div className="w-[407px] hover-shadow-custom h-[509px] rounded-[2rem] border-[0.5px] border-[#CBD1DC] p-5 py-10 flex flex-col justify-between group cursor-pointer">
       <div className="top flex justify-start gap-x-2 items-center">
         <CardCircle />
         <div>{category}</div>

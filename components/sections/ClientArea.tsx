@@ -87,7 +87,7 @@ const ClientArea: React.FC = () => {
     customPaging: (i: any) => {
       return (
         <div
-          className={`w-[0.8rem] h-[0.8rem] bg-[#CBD1DC] rounded-[0.3rem] cursor-pointer`}
+          className={`w-[0.8rem] h-[0.8rem] bg-[#CBD1DC] rounded-full cursor-pointer mt-[2rem]`}
         />
       );
     },

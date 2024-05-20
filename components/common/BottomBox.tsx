@@ -34,16 +34,26 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
     <div
       className={`${
         expand == i ? "w-[34%]" : "w-[22%]"
-      } h-full border-[0.1px] border-white p-5 flex flex-col justify-between transition-[width] duration-1000`}
+      } h-full border-[0.1px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000`}
       onClick={(e) => onHover(i)}
     >
       {expand == i ? (
-        <LinearProgress variant="determinate" value={completed} />
+        <LinearProgress
+          variant="determinate"
+          value={completed}
+          sx={{
+            borderRadius: "2rem",
+            overflow: "hidden",
+            "& .MuiLinearProgress-bar": {
+              borderRadius: "2rem",
+            },
+          }}
+        />
       ) : (
         <div className="h-[3px]"></div>
       )}
       <div>
-        <img src={`/header-files/${title}`} width={"200"} alt="" />
+        <img src={`/header-files/${title}`} width={"137px"} alt="" />
         {expand == i && <p className="text-[14px] w-[90%] ms-2">{desc}</p>}
       </div>
       <div className="flex justify-between">
@@ -130,7 +140,7 @@ const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
   ];
   return (
     <div className="w-full mx-auto h-60 mt-36">
-      <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[10px] border-[0.1px] border-white">
+      <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.1px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (
             <Box

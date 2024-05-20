@@ -97,8 +97,8 @@ const Industry: React.FC<industry> = ({ title, desc, img }) => {
         <button className="px-3 rounded-2xl fill-black">
           <svg
             fill="white"
-            height="15px"
-            width="15px"
+            height="12px"
+            width="12px"
             version="1.1"
             id="Layer_1"
             viewBox="0 0 330 330"
