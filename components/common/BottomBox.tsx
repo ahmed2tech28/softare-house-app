@@ -104,7 +104,7 @@ const BottomBox: React.FC<{
       } else {
         setExpand(expand + 1);
       }
-    }, 7500);
+    }, 7900);
     setImg(`${expand}.png`);
     return () => clearInterval(intervalId);
   }, [expand]);
