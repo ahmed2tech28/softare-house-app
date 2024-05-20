@@ -65,7 +65,7 @@ const Industry: React.FC<industry> = ({ title, desc, img }) => {
   return (
     <div className="border-[0.4px] border-[#eeececd6] p-4 w-[240px] h-[283px] flex flex-col justify-between lg:mx-0 mx-auto hover:bg-[#0C8CE9] transition-colors duration-100 ease-linear cursor-pointer group">
       <div className="lg:hidden flex-col gap-y-4 group-hover:flex flex">
-        <h1 className="text-white font-normal text-[16px]">{title}</h1>
+        <h1 className="text-white font-medium text-[16px]">{title}</h1>
         <p className="text-white text-[14px] font-light f-mon">{desc}</p>
       </div>
       <div className="lg:hidden justify-between w-full group-hover:flex flex">
@@ -91,7 +91,7 @@ const Industry: React.FC<industry> = ({ title, desc, img }) => {
       </div>
       <div className="lg:flex hidden flex-col w-full h-full group-hover:hidden gap-y-4">
         {img && <img width={"80"} src={img} className="industry-img" />}
-        <h1 className="text-white text-[16px]">{title}</h1>
+        <h1 className="text-white text-[16px] font-medium">{title}</h1>
       </div>
       <div className="lg:flex justify-end w-full group-hover:hidden hidden">
         <button className="px-3 rounded-2xl fill-black">

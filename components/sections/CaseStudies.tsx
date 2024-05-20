@@ -5,6 +5,7 @@ interface CaseStudy {
   projectname: string;
   percent1: string;
   percent2: string;
+  img: string;
 }
 
 const TopSection: React.FC = () => {
@@ -30,66 +31,38 @@ const Line: React.FC = () => {
   return <div className="border-0 outline-none h-[0.1rem] bg-white w-full" />;
 };
 
-const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
-  const [blur, setBlur] = useState(false);
+const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
   return (
-    <div className="w-[489px] h-[302px] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
-      {blur ? (
-        <img
-          src="/case-studies/1.png"
-          style={{ filter: "blur(5px)", transition: "all 0.3s" }}
-          alt=""
-        />
-      ) : (
-        <img src="/case-studies/1.png" alt="" />
-      )}
-
-      <div
-        className="absolute top-0 z-20 h-full w-full bg-[#0000002a] hover:bg-[#00000045] flex flex-col items-start gap-y-4 justify-end p-5 transition-colors duration-300 ease-linear"
-        onMouseEnter={(e) => setBlur(true)}
-        onMouseLeave={(e) => setBlur(false)}
-      >
-        <h1 className="text-[18px] font-bold text-white">{projectname}</h1>
-        <Line />
-        <div className="flex h-[3rem] justify-between w-full group-hover:hidden transition-all duration-100 ease-out">
-          <div className="w-[70%]">
-            <img src="/devLogo.png" width={"80"} height={"30"} alt="DevLogo" />
+    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
+      <img src={img} alt="img" width={"100%"} height={"276px"} />
+      <div className="w-full h-[250px] px-4 py-4 flex flex-col justify-between">
+        <h1>{projectname}</h1>
+        <svg
+          width="349"
+          height="1"
+          viewBox="0 0 349 1"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="0.25"
+            y1="0.75"
+            x2="348.75"
+            y2="0.750031"
+            stroke="#CBD1DC"
+            stroke-width="0.5"
+            stroke-linecap="round"
+          />
+        </svg>
+        <div className="h-[30px] flex justify-between items-center">
+          <div className="invert w-[50%]">
+            <img src="/devLogo.png" width={"49px"} alt="logo" />
           </div>
-          <div className="right flex w-[30%] gap-x-2 items-center text-white">
-            <span className="text-[25px] font-bold">{percent1}</span>
-            <span className="text-[10px]">Lorem ipsum dolor sit.</span>
-          </div>
-        </div>
-        <div className="hidden group-hover:flex translate-y-full group-hover:translate-y-0 h-[50%] flex-col w-full transition-all duration-100 ease-out">
-          <div className="flex h-[50%] justify-between w-full gap-x-4">
-            <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-[25px] font-bold">{percent1}</span>
-              <span className="text-[10px]">Lorem ipsum dolor sit.</span>
-            </div>
-            <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-[25px] font-bold">{percent2}</span>
-              <span className="text-[10px]">Lorem ipsum dolor sit.</span>
-            </div>
-          </div>
-          <div className="flex h-[50%] w-full items-center">
-            <div className="w-1/2 flex gap-x-3">
-              <button className="font-bold bg-white px-3 rounded-3xl text-[12px] h-[32px] w-[106px]">
-                See Design
-              </button>
-              <div className="w-[30%]">
-                <img
-                  src="/devLogo.png"
-                  width={"100"}
-                  height={"20"}
-                  alt="DevLogo"
-                />
-              </div>
-            </div>
-            <div className="w-1/2 flex justify-end h-full items-center">
-              <button className="bg-white h-[21px] w-[21px] text-[10px] rounded-md">
-                →
-              </button>
-            </div>
+          <div className="flex w-[50%] justify-end items-center">
+            <span className="text-black text-[25px] font-bold">{percent1}</span>
+            <span className="">
+              Lorem <br /> ipsum dolor sit.
+            </span>
           </div>
         </div>
       </div>
@@ -104,22 +77,32 @@ const CaseStudies: React.FC = () => {
         "Developed Customized CSR System, Improved Workflow and Reporting",
       percent1: "31%",
       percent2: "23%",
+      img: "/case-studies/1.png",
     },
     {
       projectname:
         "Developed Customized CSR System, Improved Workflow and Reporting",
       percent1: "31%",
       percent2: "23%",
+      img: "/case-studies/2.png",
     },
     {
       projectname:
         "Developed Customized CSR System, Improved Workflow and Reporting",
       percent1: "31%",
       percent2: "23%",
+      img: "/case-studies/3.png",
+    },
+    {
+      projectname:
+        "Developed Customized CSR System, Improved Workflow and Reporting",
+      percent1: "31%",
+      percent2: "23%",
+      img: "/case-studies/4.png",
     },
   ];
   return (
-    <section className="w-screen h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
+    <section className="w-[90vw] h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
       <TopSection />
       <div className="overflow-x-auto w-full ms-[10vw]">
         <div className="flex gap-x-3 w-fit">
@@ -129,6 +112,7 @@ const CaseStudies: React.FC = () => {
                 projectname={item.projectname}
                 percent1={item.percent1}
                 percent2={item.percent2}
+                img={item.img}
                 key={i}
               />
             );
