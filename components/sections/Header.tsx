@@ -45,10 +45,15 @@ const navRoutes: Path[] = [
   },
 ];
 
-const BlurBg: React.FC<{ img: string }> = ({ img }) => {
+const BlurBg: React.FC<{ img: string; isFading?: boolean }> = ({
+  img,
+  isFading,
+}) => {
   return (
     <div
-      className="h-full w-full header-img"
+      className={`h-full w-full header-img ${
+        isFading ? "fade-out" : "fade-in"
+      }`}
       style={{
         backgroundImage: `url('/header-images/${img}')`,
         // background: `url('/header-images/1.png')`,
@@ -161,12 +166,13 @@ const Navbar: React.FC = () => {
 
 const Header: React.FC = () => {
   const [img, setImg] = useState("1.png");
+  const [faiding, setFaiding] = useState(false);
   return (
     <header
       className="sm:h-[57rem] h-[60rem] w-screen relative text-white"
       id="home"
     >
-      <BlurBg img={img} />
+      <BlurBg img={img} isFading={faiding} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <Navbar />
         <div className="h-full justify-between container mx-auto">
@@ -192,7 +198,11 @@ const Header: React.FC = () => {
               />
             </Link>
           </div>
-          <BottomBox setImg={setImg} />
+          <BottomBox
+            setImg={setImg}
+            setIsFaiding={setFaiding}
+            isFading={faiding}
+          />
         </div>
       </div>
     </header>

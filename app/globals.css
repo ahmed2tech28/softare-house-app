@@ -127,6 +127,37 @@ li.slick-active>div {
 
 .hover-shadow-custom:hover {
     box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.194);
+    transition: box-shadow 0.3s ease-in-out;
     /* -webkit-box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.68);
     -moz-box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.68); */
+}
+
+.inner-progress {
+    width: 0%;
+    animation: progress-animation 8s linear infinite;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+        /* Start width */
+    }
+
+    100% {
+        width: 100%;
+        /* End width */
+    }
+}
+
+.header-img {
+    transition: background-image 1s ease-in-out;
+}
+
+.header-img.fade-in {
+    opacity: 1;
+}
+
+.header-img.fade-out {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-out;
 }

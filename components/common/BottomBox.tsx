@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
+import ProgressBar from "./ProgressBar";
 
 interface Boxes {
   title: string;
@@ -13,7 +14,7 @@ interface BoxProps {
   i: number;
   expand?: number;
   onHover: (i: number) => void;
-  time: number;
+  animate: boolean;
 }
 
 const Button: React.FC<{ blue: boolean }> = ({ blue }) => {
@@ -28,9 +29,14 @@ const Button: React.FC<{ blue: boolean }> = ({ blue }) => {
   );
 };
 
-const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
-  const completed = (time / 7) * 100;
-
+const Box: React.FC<BoxProps> = ({
+  i,
+  desc,
+  title,
+  expand,
+  onHover,
+  animate,
+}) => {
   return (
     <div
       className={`${
@@ -38,20 +44,10 @@ const Box: React.FC<BoxProps> = ({ i, desc, title, expand, onHover, time }) => {
       } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000`}
       onClick={(e) => onHover(i)}
     >
-      {expand == i ? (
-        <LinearProgress
-          variant="determinate"
-          value={completed}
-          sx={{
-            borderRadius: "2rem",
-            overflow: "hidden",
-            "& .MuiLinearProgress-bar": {
-              borderRadius: "2rem",
-            },
-          }}
-        />
+      {expand == i && animate ? (
+        <ProgressBar />
       ) : (
-        <div className="h-[3px]"></div>
+        <div className="h-[4px]"></div>
       )}
       <div>
         <img src={`/header-files/${title}`} width={"137px"} alt="" />
@@ -70,16 +66,14 @@ const MobileBox: React.FC<BoxProps> = ({
   desc,
   i,
   onHover,
-  time,
+  animate,
   title,
   expand,
 }) => {
-  const completed = (time / 7) * 100;
-
   if (expand == i) {
     return (
       <div className="w-full h-full flex flex-col justify-between p-5">
-        <LinearProgress variant="determinate" value={completed} />
+        <ProgressBar />
         <div>
           <img src={`/header-files/${title}`} width={"200"} alt="" />
           <p className="text-[14px] w-[90%] ms-2">{desc}</p>
@@ -95,12 +89,16 @@ const MobileBox: React.FC<BoxProps> = ({
   }
 };
 
-const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
+const BottomBox: React.FC<{
+  setImg: (data: any) => void;
+  setIsFaiding: (data: any) => void;
+  isFading: boolean;
+}> = ({ setImg, setIsFaiding, isFading }) => {
   const [expand, setExpand] = useState(0);
-  const [time, setTime] = useState(0);
+  const [animate, setAnimate] = useState(false);
   useEffect(() => {
-    setTime(0);
     const intervalId = setInterval(() => {
+      setIsFaiding(true);
       if (expand == 3) {
         setExpand(0);
       } else {
@@ -110,12 +108,21 @@ const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
     setImg(`${expand}.png`);
     return () => clearInterval(intervalId);
   }, [expand]);
+
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime(time + 0.5);
-    }, 500);
-    return () => clearInterval(intervalId);
-  }, [time]);
+    if (isFading) {
+      setTimeout(() => {
+        setImg(`${expand}.png`);
+        setIsFaiding(false); // Start fading in
+      }, 500); // Time to match the fade-out transition duration
+    } else {
+      setImg(`${expand}.png`);
+    }
+  }, [expand, isFading]);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, [animate]);
 
   const onHover = (i: number) => {
     setExpand(i);
@@ -124,19 +131,19 @@ const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
   const boxes: Boxes[] = [
     {
       title: "1.png",
-      desc: "Reduced time to market for a suite of enterprise apps .",
+      desc: "Reduced animate to market for a suite of enterprise apps .",
     },
     {
       title: "2.png",
-      desc: "Reduced time to market for a suite of enterprise apps ",
+      desc: "Reduced animate to market for a suite of enterprise apps ",
     },
     {
       title: "3.png",
-      desc: "Reduced time to market for a suite of enterprise apps .",
+      desc: "Reduced animate to market for a suite of enterprise apps .",
     },
     {
       title: "4.png",
-      desc: "Reduced time to market for a suite of enterprise apps ",
+      desc: "Reduced animate to market for a suite of enterprise apps ",
     },
   ];
   return (
@@ -151,7 +158,7 @@ const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
               key={i}
               expand={expand}
               onHover={onHover}
-              time={time}
+              animate={animate}
             />
           );
         })}
@@ -166,7 +173,7 @@ const BottomBox: React.FC<{ setImg: (data: any) => void }> = ({ setImg }) => {
               key={i}
               expand={expand}
               onHover={onHover}
-              time={time}
+              animate={animate}
             />
           );
         })}

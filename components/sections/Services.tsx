@@ -10,7 +10,7 @@ interface CardProps {
 
 const SpecialBtn: React.FC = () => {
   return (
-    <button className="group-hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-75 ease-in group-hover:text-white text-left h-[65px] rounded-[4rem] px-8 font-semibold inline-flex justify-between items-center">
+    <button className="group-hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-300 ease-in-out group-hover:text-white text-left h-[65px] rounded-[4rem] px-8 font-semibold inline-flex justify-between items-center">
       <span className="text-xl">Explore more</span>
       <span className="text-xl">→</span>
     </button>
