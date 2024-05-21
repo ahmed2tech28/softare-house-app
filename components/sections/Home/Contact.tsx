@@ -1,6 +1,6 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
-import ButtonComp from "../common/ButtonComp";
+import ButtonComp from "../../common/ButtonComp";
 
 const Form: React.FC = () => {
   return (

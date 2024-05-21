@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ButtonComp from "../common/ButtonComp";
+import ButtonComp from "../../common/ButtonComp";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import Slider from "react-slick";
 

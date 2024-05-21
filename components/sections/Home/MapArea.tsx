@@ -1,7 +1,7 @@
 import React from "react";
-import MapDetailBox from "../common/MapDetailBox";
-import MapTooltip from "../common/MapTooltip";
-import Map from "../svgs/Map";
+import MapDetailBox from "../../common/MapDetailBox";
+import MapTooltip from "../../common/MapTooltip";
+import Map from "../../svgs/Map";
 
 const MapArea: React.FC = () => {
   return (

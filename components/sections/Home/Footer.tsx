@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonComp from "../common/ButtonComp";
+import ButtonComp from "../../common/ButtonComp";
 import Link from "next/link";
 
 const MobileFooter: React.FC = () => {

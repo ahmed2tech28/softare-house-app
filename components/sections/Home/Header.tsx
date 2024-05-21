@@ -6,8 +6,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-import ButtonComp from "../common/ButtonComp";
-import BottomBox from "../common/BottomBox";
+import ButtonComp from "../../common/ButtonComp";
+import BottomBox from "../../common/BottomBox";
 
 interface Path {
   path: string;
