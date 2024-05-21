@@ -130,6 +130,11 @@ li.slick-active>div {
     }
 }
 
+.hover-able-map,
+svg a {
+    padding: 1rem;
+}
+
 .hover-able-map:hover text {
     visibility: visible;
     display: block;

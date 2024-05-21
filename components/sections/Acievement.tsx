@@ -24,13 +24,25 @@ const Star: React.FC = () => {
 
 const Ci: React.FC = () => {
   return (
-    <span className="w-[50.35px] h-[50px] flex items-center justify-center bg-black rounded-full relative">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-white bg-clip-text bg-gradient-to-br from-black to-transparent text-[40px] font-bold">
-          C
-        </div>
-      </div>
-    </span>
+    // <span className="w-[50.35px] h-[50px] flex items-center justify-center bg-black rounded-full relative">
+    //   <div className="absolute inset-0 flex items-center justify-center">
+    //     <div className="text-white bg-clip-text bg-gradient-to-br from-black to-transparent text-[40px] font-bold">
+    //       C
+    //     </div>
+    //   </div>
+    // </span>
+    <svg
+      width="49"
+      height="49"
+      viewBox="0 0 49 49"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M24.6453 0.03125C37.9266 0.03125 48.8641 10.9688 48.8641 24.25C48.8641 37.6289 37.9266 48.4688 24.6453 48.4688C11.2664 48.4688 0.426563 37.6289 0.426563 24.25C0.426563 10.9688 11.2664 0.03125 24.6453 0.03125ZM36.0711 33.918C36.1688 33.7227 36.2664 33.4297 36.2664 33.1367C36.2664 32.9414 36.2664 32.6484 36.0711 32.4531L33.7273 29.2305C33.2391 28.6445 32.3602 28.5469 31.8719 29.1328C31.8719 29.1328 29.2352 31.8672 25.5242 31.8672C20.7391 31.8672 18.2 27.9609 18.2 24.1523C18.2 19.9531 20.9344 16.7305 25.4266 16.7305C28.9422 16.7305 31.4813 18.9766 31.4813 18.9766C32.0672 19.5625 32.8484 19.3672 33.2391 18.7812L35.4852 15.4609C35.5828 15.2656 35.6805 14.9727 35.6805 14.7773C35.6805 14.4844 35.4852 14.1914 35.2898 13.9961C35.1922 13.8008 31.7742 10.1875 25.2313 10.1875C17.2234 10.1875 11.1688 16.2422 11.1688 24.1523C11.1688 32.2578 17.0281 38.4102 25.3289 38.4102C32.1648 38.4102 35.8758 34.1133 36.0711 33.918Z"
+        fill="black"
+      />
+    </svg>
   );
 };
 
@@ -51,7 +63,7 @@ const UpperSection: React.FC = () => {
           </div>
           <div className="text-center font-semibold flex justify-center items-center gap-x-5">
             <Ci />
-            <span className="text-[34px] f-mon">4.93</span>
+            <span className="text-[34px] f-mon font-semibold">4.93</span>
           </div>
           <div className="stars flex justify-between items-center">
             <Star />
