@@ -169,7 +169,7 @@ const Header: React.FC = () => {
   const [faiding, setFaiding] = useState(false);
   return (
     <header
-      className="sm:max-h-[46.875rem] sm:min-h-[40rem] h-[60rem] w-screen relative text-white"
+      className="sm:max-h-[100vh] sm:min-h-[40rem] h-[60rem] w-screen relative text-white"
       id="home"
     >
       <BlurBg img={img} isFading={faiding} />

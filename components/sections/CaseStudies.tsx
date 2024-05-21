@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface CaseStudy {
   projectname: string;
@@ -83,9 +83,9 @@ const DevLogo: React.FC = () => {
 
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
   return (
-    <div className="w-[389px] h-[400px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
+    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
       <img src={img} alt="img" width={"100%"} height={"276px"} />
-      <div className="w-full h-[146px] px-4 py-4 flex flex-col justify-between">
+      <div className="w-full h-[160px] px-4 py-4 flex flex-col justify-between">
         <h1>{projectname}</h1>
         <svg
           width="349"
@@ -121,6 +121,54 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
 };
 
 const CaseStudies: React.FC = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  useEffect(() => {
+    const handleMouseDown = (e: MouseEvent) => {
+      if (contentRef.current) {
+        setIsDragging(true);
+        setStartX(e.pageX - contentRef.current.offsetLeft);
+        setScrollLeft(contentRef.current.scrollLeft);
+      }
+    };
+
+    const handleMouseLeave = () => {
+      setIsDragging(false);
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging || !contentRef.current) return;
+      e.preventDefault();
+      const x = e.pageX - contentRef.current.offsetLeft;
+      const walk = (x - startX) * 2; // scroll-fast
+      contentRef.current.scrollLeft = scrollLeft - walk;
+    };
+
+    const refCurrent = contentRef.current;
+    if (refCurrent) {
+      refCurrent.addEventListener("mousedown", handleMouseDown);
+      refCurrent.addEventListener("mouseleave", handleMouseLeave);
+      refCurrent.addEventListener("mouseup", handleMouseUp);
+      refCurrent.addEventListener("mousemove", handleMouseMove);
+    }
+
+    return () => {
+      if (refCurrent) {
+        refCurrent.removeEventListener("mousedown", handleMouseDown);
+        refCurrent.removeEventListener("mouseleave", handleMouseLeave);
+        refCurrent.removeEventListener("mouseup", handleMouseUp);
+        refCurrent.removeEventListener("mousemove", handleMouseMove);
+      }
+    };
+  }, [isDragging, startX, scrollLeft]);
+
   const casestudies: CaseStudy[] = [
     {
       projectname:
@@ -151,11 +199,13 @@ const CaseStudies: React.FC = () => {
       img: "/case-studies/4.png",
     },
   ];
-  const ref = useRef<HTMLDivElement>(null);
   return (
     <section className="w-[90vw] h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
-      <TopSection functions={ref} />
-      <div className="overflow-x-auto w-full ms-[10vw]" ref={ref}>
+      <TopSection functions={contentRef} />
+      <div
+        className="overflow-x-auto w-full ms-[10vw] services-over"
+        ref={contentRef}
+      >
         <div className="flex gap-x-3 w-fit">
           {casestudies.map((item, i) => {
             return (

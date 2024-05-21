@@ -41,7 +41,7 @@ const Box: React.FC<BoxProps> = ({
     <div
       className={`${
         expand == i ? "w-[34%]" : "w-[22%]"
-      } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000`}
+      } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000 cursor-pointer`}
       onClick={(e) => onHover(i)}
     >
       {expand == i && animate ? (

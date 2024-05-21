@@ -192,3 +192,18 @@ svg a {
     opacity: 0.3;
     transition: opacity 0.5s ease-out;
 }
+
+.services,
+.services *,
+.services-over,
+.services-over * {
+    user-select: none;
+    /* Disables text selection */
+    -webkit-user-select: none;
+    /* For Safari */
+    -moz-user-select: none;
+    /* For Firefox */
+    -ms-user-select: none;
+    /* For IE */
+    cursor: grab;
+}

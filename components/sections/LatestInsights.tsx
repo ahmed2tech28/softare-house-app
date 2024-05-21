@@ -25,7 +25,7 @@ const LatestInsights: React.FC = () => {
       id="blog"
     >
       <Top />
-      <div className="w-fit mx-auto flex flex-wrap gap-x-4">
+      <div className="w-[90vw] xl:w-[80vw] mx-auto flex justify-between flex-wrap gap-y-5">
         <BlogCard />
         <BlogCard />
         <BlogCard />
