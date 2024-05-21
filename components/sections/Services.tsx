@@ -28,8 +28,11 @@ const Card: React.FC<CardProps> = ({ category, desc, title }) => {
         <CardCircle />
         <div>{category}</div>
       </div>
-      <div className="bottom flex flex-col gap-y-2">
-        <h1 className="text-[30px] font-semibold">{title}</h1>
+      <div className="bottom flex flex-col gap-y-2 justify-start h-52">
+        <h1
+          className="text-[30px] font-semibold"
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></h1>
         <p className="text-[16px] text-[#969FAF] leading-[30.4px] f-mon">
           {desc}
         </p>
@@ -55,17 +58,17 @@ const Services: React.FC = () => {
     },
     {
       title: "Mobile App Development Services",
-      desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
+      desc: "We are providing steller native mobile app development, hybrid mobile application development and cross platform mobile app development services.",
       category: "Development",
     },
     {
-      title: "UI/UX Design Services",
-      desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
+      title: "UI/UX <br> Design Services",
+      desc: "Want to turn your idea into a reality? We are providing UI/UX design services because a design without vision is just a painting.",
       category: "Design",
     },
     {
-      title: "Custom Web App Development Services",
-      desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
+      title: "Hire a <br> Dedicated Team",
+      desc: "Looking for a solution related to a startup or established business? Hire a developer for web and mobile development services.",
       category: "Design",
     },
   ];

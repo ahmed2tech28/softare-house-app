@@ -50,7 +50,7 @@ const Box: React.FC<BoxProps> = ({
         <div className="h-[4px]"></div>
       )}
       <div>
-        <img src={`/header-files/${title}`} width={"187px"} alt="" />
+        <img src={`/header-files/${title}`} width={"137px"} alt="" />
         {expand == i && <p className="text-[16px] w-[90%] ms-2">{desc}</p>}
       </div>
       <div className="flex justify-between">
@@ -147,7 +147,7 @@ const BottomBox: React.FC<{
     },
   ];
   return (
-    <div className="w-full mx-auto h-60 mt-36">
+    <div className="w-full mx-auto h-[178px] mt-36">
       <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.1px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (

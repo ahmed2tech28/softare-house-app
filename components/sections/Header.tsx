@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
         <ul className="xl:flex gap-x-[2.5rem] hidden f-mon">
           {navRoutes.map((item, i) => {
             return (
-              <li key={i} className="text-[18px]">
+              <li key={i} className="text-[0.875rem]">
                 <Link href={item.path} className="text-white">
                   {item.name}
                 </Link>
@@ -169,18 +169,18 @@ const Header: React.FC = () => {
   const [faiding, setFaiding] = useState(false);
   return (
     <header
-      className="sm:max-h-screen sm:min-h-[40rem] h-[60rem] w-screen relative text-white"
+      className="sm:max-h-[46.875rem] sm:min-h-[40rem] h-[60rem] w-screen relative text-white"
       id="home"
     >
       <BlurBg img={img} isFading={faiding} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <Navbar />
         <div className="h-full flex flex-col justify-center w-[90vw] mx-auto">
-          <div className="lg:w-[70%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-[42px] text-3xl text-center sm:leading-[4rem] font-semibold">
+          <div className="lg:w-[60%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
+            <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-semibold">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-[18px] text-center w-[100%] mx-auto font-light f-mon leading-[32px]">
+            <p className="sm:text-[1rem] text-center w-[100%] mx-auto font-light f-mon leading-[28px]">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
               development company. Let&apos;s discuss your project and find{" "}
