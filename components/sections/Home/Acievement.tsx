@@ -122,7 +122,7 @@ const BottomSection: React.FC = () => {
                 className="text-center"
               />
             </div>
-            <div className="h-[40%] flex flex-col gap-y-2 lg:w-auto w-[70%]">
+            <div className="h-[40%] flex flex-col gap-y-2 lg:w-auto w-[70%] px-5">
               <h1 className="text-[18px] font-semibold lg:text-center text-start w-full">
                 {item.name}
               </h1>
