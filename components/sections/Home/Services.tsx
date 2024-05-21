@@ -129,7 +129,7 @@ const Services: React.FC = () => {
         Our Services
       </h1>
       <div
-        className="services ms-[10vw] overflow-x-auto py-[1rem] cursor-grab"
+        className="services ms-[4vw] overflow-x-auto py-[1rem] cursor-grab"
         ref={contentRef}
       >
         <div className="w-fit flex gap-x-5 h-full px-4">

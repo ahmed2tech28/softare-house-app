@@ -6,7 +6,7 @@ import Map from "../../svgs/Map";
 const MapArea: React.FC = () => {
   return (
     <div
-      className="container mx-auto xl:max-h-screen min-h-[800px] h-screen flex flex-col gap-y-3"
+      className="container mx-auto h-fit py-4 flex flex-col gap-y-3"
       id="industries"
     >
       <div className="xl:w-full w-[70vh] xl:mt-0 mt-[5rem] xl:ml-0 ml-[-10rem] xl:h-[599px] h-[90vw] xl:rotate-0 rotate-45 flex flex-col justify-start items-center relative">

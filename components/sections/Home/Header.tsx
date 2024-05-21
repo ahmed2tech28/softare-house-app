@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
   const [navRes, setNavRes] = useState(false);
   return (
     <>
-      <nav className="flex md:w-[95vw] w-[95vw] mx-auto justify-between items-center h-44">
+      <nav className="flex xl:container w-[95vw] mx-auto justify-between items-center h-[8.6rem]">
         <div className="logo">
           <img src="/devLogo.png" width={"75px"} alt="logo" />
         </div>
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
             );
           })}
         </ul>
-        <div className="seacrh-icon flex gap-x-2">
+        <div className="seacrh-icon flex justify-end xl:gap-x-0 gap-x-2">
           <SearchIcon
             sx={{
               color: "white",
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
 };
 
 const Header: React.FC = () => {
-  const [img, setImg] = useState("1.png");
+  const [img, setImg] = useState("0.png");
   const [faiding, setFaiding] = useState(false);
   return (
     <header
@@ -175,12 +175,12 @@ const Header: React.FC = () => {
       <BlurBg img={img} isFading={faiding} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
         <Navbar />
-        <div className="h-full flex flex-col justify-center w-[90vw] mx-auto">
-          <div className="lg:w-[60%] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-5">
-            <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-semibold">
+        <div className="h-[calc(100%-8.6rem)] flex flex-col justify-center w-[90vw] mx-auto">
+          <div className="lg:w-[60%] h-[clac(100%-178px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
+            <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-normal">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-[1rem] text-center w-[100%] mx-auto font-light f-mon leading-[28px]">
+            <p className="sm:text-[1rem] text-center w-[90%] mx-auto font-light f-mon leading-[28px]">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
               development company. Let&apos;s discuss your project and find{" "}

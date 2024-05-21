@@ -95,7 +95,7 @@ const ClientArea: React.FC = () => {
     },
   };
   return (
-    <section className=" w-screen lg:h-[40rem] h-fit" id="portfolio">
+    <section className="w-screen lg:h-[40rem] h-fit" id="portfolio">
       <div className="container mx-auto">
         <div className="flex md:flex-row flex-col md:justify-between justify-center gap-y-3 items-center h-36">
           <h1 className="font-semibold sm:text-[38px] text-[28px] sm:w-auto w-[95vw] sm:text-left text-center">

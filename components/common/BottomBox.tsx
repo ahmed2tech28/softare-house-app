@@ -51,7 +51,9 @@ const Box: React.FC<BoxProps> = ({
       )}
       <div>
         <img src={`/header-files/${title}`} width={"137px"} alt="" />
-        {expand == i && <p className="text-[16px] w-[90%] ms-2">{desc}</p>}
+        {expand == i && (
+          <p className="text-[16px] w-[90%] ms-2 f-mon">{desc}</p>
+        )}
       </div>
       <div className="flex justify-between">
         {expand == i && <button>View case study</button>}
@@ -76,7 +78,7 @@ const MobileBox: React.FC<BoxProps> = ({
         <ProgressBar />
         <div>
           <img src={`/header-files/${title}`} width={"200"} alt="" />
-          <p className="text-[14px] w-[90%] ms-2">{desc}</p>
+          <p className="text-[14px] w-[90%] ms-2 f-mon">{desc}</p>
         </div>
         <div className="flex justify-between">
           <button>View case study</button>
@@ -147,7 +149,7 @@ const BottomBox: React.FC<{
     },
   ];
   return (
-    <div className="w-full mx-auto h-[178px] mt-36">
+    <div className="w-full mx-auto h-[178px] mt-[7rem]">
       <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.1px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (
