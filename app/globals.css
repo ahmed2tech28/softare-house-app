@@ -205,5 +205,10 @@ svg a {
     /* For Firefox */
     -ms-user-select: none;
     /* For IE */
+}
+
+.services,
+.services-over {
     cursor: grab;
+
 }

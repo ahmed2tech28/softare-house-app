@@ -83,8 +83,15 @@ const DevLogo: React.FC = () => {
 
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
   return (
-    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden">
-      <img src={img} alt="img" width={"100%"} height={"276px"} />
+    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden group">
+      <div className="w-[100%] h-[276px] relative ">
+        <img src={img} alt="img" width={"100%"} height={"100%"} />
+        <div className="bg-[rgba(0,0,0,0.33)] absolute top-0 left-0 h-full w-full group-hover:flex hidden justify-center items-center">
+          <button className="bg-blue-500 text-white py-3 px-3 rounded-full">
+            See Detail
+          </button>
+        </div>
+      </div>
       <div className="w-full h-[160px] px-4 py-4 flex flex-col justify-between">
         <h1>{projectname}</h1>
         <svg
