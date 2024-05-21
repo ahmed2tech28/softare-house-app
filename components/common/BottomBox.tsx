@@ -13,6 +13,8 @@ interface BoxProps {
   desc: string;
   i: number;
   expand?: number;
+  onClick: (i: number) => void;
+  hovered: number;
   onHover: (i: number) => void;
   animate: boolean;
 }
@@ -34,15 +36,25 @@ const Box: React.FC<BoxProps> = ({
   desc,
   title,
   expand,
-  onHover,
+  onClick,
   animate,
+  hovered,
+  onHover,
 }) => {
   return (
     <div
       className={`${
-        expand == i ? "w-[34%]" : "w-[22%]"
+        expand == i
+          ? hovered >= 0 && hovered != i
+            ? "w-[30%]"
+            : "w-[34%]"
+          : hovered == i
+          ? "w-[26%]"
+          : "w-[22%]"
       } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000 cursor-pointer`}
-      onClick={(e) => onHover(i)}
+      onClick={(e) => onClick(i)}
+      onMouseEnter={(e) => onHover(i)}
+      onMouseLeave={(e) => onHover(-1)}
     >
       {expand == i && animate ? (
         <ProgressBar />
@@ -51,7 +63,7 @@ const Box: React.FC<BoxProps> = ({
       )}
       <div>
         <img src={`/header-files/${title}`} width={"137px"} alt="" />
-        {expand == i && (
+        {(expand == i || hovered == i) && (
           <p className="text-[16px] w-[90%] ms-2 f-mon">{desc}</p>
         )}
       </div>
@@ -67,10 +79,11 @@ const Box: React.FC<BoxProps> = ({
 const MobileBox: React.FC<BoxProps> = ({
   desc,
   i,
-  onHover,
+  onClick,
   animate,
   title,
   expand,
+  onHover,
 }) => {
   if (expand == i) {
     return (
@@ -98,6 +111,7 @@ const BottomBox: React.FC<{
 }> = ({ setImg, setIsFaiding, isFading }) => {
   const [expand, setExpand] = useState(0);
   const [animate, setAnimate] = useState(false);
+  const [hovered, setHovered] = useState(-1);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIsFaiding(true);
@@ -126,8 +140,12 @@ const BottomBox: React.FC<{
     setAnimate(true);
   }, [animate]);
 
-  const onHover = (i: number) => {
+  const onClick = (i: number) => {
     setExpand(i);
+  };
+
+  const onHover = (i: number) => {
+    setHovered(i);
   };
 
   const boxes: Boxes[] = [
@@ -159,6 +177,8 @@ const BottomBox: React.FC<{
               i={i}
               key={i}
               expand={expand}
+              onClick={onClick}
+              hovered={hovered}
               onHover={onHover}
               animate={animate}
             />
@@ -174,6 +194,8 @@ const BottomBox: React.FC<{
               i={i}
               key={i}
               expand={expand}
+              onClick={onClick}
+              hovered={hovered}
               onHover={onHover}
               animate={animate}
             />
