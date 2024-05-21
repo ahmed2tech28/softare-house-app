@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface CaseStudy {
   projectname: string;
@@ -8,7 +8,7 @@ interface CaseStudy {
   img: string;
 }
 
-const TopSection: React.FC = () => {
+const TopSection: React.FC<{ functions: any }> = ({ functions }) => {
   return (
     <div className="items-center flex justify-between container mx-auto">
       <h1 className="w-1/3 md:block hidden"></h1>
@@ -16,10 +16,26 @@ const TopSection: React.FC = () => {
         Case studies
       </h1>
       <div className="w-1/3 flex justify-end gap-x-2">
-        <button className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md">
+        <button
+          className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md"
+          onClick={(e) =>
+            functions.current.scrollBy({
+              left: -80,
+              behavior: "smooth",
+            })
+          }
+        >
           ←
         </button>
-        <button className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md">
+        <button
+          className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md"
+          onClick={(e) =>
+            functions.current.scrollBy({
+              left: 80,
+              behavior: "smooth",
+            })
+          }
+        >
           →
         </button>
       </div>
@@ -58,7 +74,7 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
           <div className="invert w-[50%]">
             <img src="/devLogo.png" width={"49px"} alt="logo" />
           </div>
-          <div className="flex w-[50%] justify-end items-center">
+          <div className="flex w-[50%] justify-end items-center gap-x-1">
             <span className="text-black text-[25px] font-bold">{percent1}</span>
             <span className="">
               Lorem <br /> ipsum dolor sit.
@@ -101,10 +117,11 @@ const CaseStudies: React.FC = () => {
       img: "/case-studies/4.png",
     },
   ];
+  const ref = useRef<HTMLDivElement>(null);
   return (
     <section className="w-[90vw] h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
-      <TopSection />
-      <div className="overflow-x-auto w-full ms-[10vw]">
+      <TopSection functions={ref} />
+      <div className="overflow-x-auto w-full ms-[10vw]" ref={ref}>
         <div className="flex gap-x-3 w-fit">
           {casestudies.map((item, i) => {
             return (

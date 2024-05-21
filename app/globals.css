@@ -76,9 +76,35 @@ body,
     overflow-y: auto;
 }
 
-::-webkit-scrollbar {
-    /* width: 0px; */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+/* * {
+    scrollbar-width: thin;
+    scrollbar-color: #0c9ce9 #ffffff;
+} */
+
+/* Chrome, Edge, and Safari */
+/* *::-webkit-scrollbar {
+    width: 16px;
     height: 0px;
+    color: #0C8CE9;
+
+} */
+
+/* *::-webkit-scrollbar-track {
+    background: #ffffff;
+} */
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0c9ce9;
+    border-radius: 0px;
+    border: 0px none #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 0px;
+    color: #0C8CE9;
 }
 
 footer td {
