@@ -55,7 +55,7 @@ const LatestInsightCrowsel: React.FC = () => {
       className="container mx-auto overflow-x-auto gap-y-5 latest-insights"
       ref={contentRef}
     >
-      <div className="w-fit flex justify-center gap-x-5">
+      <div className="w-fit flex justify-center gap-x-5 mx-auto">
         <BlogCard />
         <BlogCard />
         <BlogCard />
