@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ButtonComp from "../../common/ButtonComp";
 import BlogCard from "../../common/BlogCard";
+import LatestInsightCrowsel from "@/components/common/LatestInsightCrowsel";
 
 const Top: React.FC = () => {
   return (
@@ -25,11 +26,7 @@ const LatestInsights: React.FC = () => {
       id="blog"
     >
       <Top />
-      <div className="container mx-auto flex justify-center gap-x-5 flex-wrap gap-y-5">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-      </div>
+      <LatestInsightCrowsel />
     </section>
   );
 };

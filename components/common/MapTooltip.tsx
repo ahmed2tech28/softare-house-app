@@ -14,7 +14,7 @@ const MapTooltip: React.FC = () => {
   const [state, setState] = useContext(MapContext);
   useEffect(() => {
     const handleMouseMove = (event: any) => {
-      console.log(event.clientX, event.clientY);
+      // console.log(event.clientX, event.clientY);
       setMousePositionX(event.clientX);
       setMousePositionY(event.clientY);
     };

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { Company, Industries, Services } from "./NavbarHoveredItems";
+import { Company, Experties, Industries, Services } from "./NavbarHoveredItems";
 
 interface Path {
   path: string;
@@ -53,7 +53,7 @@ const HoveredItems: React.FC<HoveredProps> = ({
   setlinkHovered,
 }) => {
   return (
-    <div className="w-screen h-fit pb-4 absolute top-[83px] bg-white">
+    <div className="w-screen pb-4 absolute top-[83px] bg-white">
       <hr />
       <div
         className="transition-[height] duration-1000 flex w-full"
@@ -62,24 +62,25 @@ const HoveredItems: React.FC<HoveredProps> = ({
             linkHovered == "Home"
               ? "fit-content"
               : linkHovered == "Services"
-              ? "fit-content"
+              ? "20rem"
               : linkHovered == "Company"
-              ? "fit-content"
+              ? "10rem"
               : linkHovered == "Expertise"
-              ? "fit-content"
+              ? "20rem"
               : linkHovered == "Industries"
-              ? "fit-content"
+              ? "7rem"
               : linkHovered == "Portfolio"
               ? "fit-content"
               : linkHovered == "Blog"
               ? "fit-content"
-              : ""
+              : "0rem"
           }`,
         }}
       >
         {linkHovered == "Industries" && <Industries />}
         {linkHovered == "Services" && <Services />}
         {linkHovered == "Company" && <Company />}
+        {linkHovered == "Expertise" && <Experties />}
       </div>
     </div>
   );
@@ -96,7 +97,7 @@ const Navbar: React.FC<{
         className={`w-full h-fit`}
         style={{ backgroundColor: `${linkHovered ? "white" : "transparent"}` }}
       >
-        <nav className="flex xl:container w-[95vw] mx-auto justify-between items-center h-[83px]">
+        <nav className="flex container mx-auto justify-between items-center h-[83px]">
           <div
             className="logo"
             style={{ filter: `invert(${linkHovered ? "1" : "0"})` }}

@@ -4,7 +4,7 @@ import ButtonComp from "../../common/ButtonComp";
 
 const Form: React.FC = () => {
   return (
-    <form className="flex flex-col gap-y-10">
+    <form className="flex flex-col gap-y-10 f-mon">
       <div className="flex w-full gap-x-2">
         <div className="w-1/2 flex flex-col gap-y-10">
           <TextField
@@ -16,7 +16,9 @@ const Form: React.FC = () => {
             variant="standard"
             InputLabelProps={{
               style: {
-                opacity: "0.3",
+                opacity: "0.1",
+                fontSize: "18px",
+                marginTop: "-0.5rem",
               },
             }}
             InputProps={{
@@ -36,7 +38,9 @@ const Form: React.FC = () => {
             variant="standard"
             InputLabelProps={{
               style: {
-                opacity: "0.3",
+                opacity: "0.1",
+                fontSize: "18px",
+                marginTop: "-0.5rem",
               },
             }}
             InputProps={{
@@ -58,7 +62,9 @@ const Form: React.FC = () => {
             variant="standard"
             InputLabelProps={{
               style: {
-                opacity: "0.3",
+                opacity: "0.1",
+                fontSize: "18px",
+                marginTop: "-0.5rem",
               },
             }}
             InputProps={{
@@ -78,7 +84,9 @@ const Form: React.FC = () => {
             variant="standard"
             InputLabelProps={{
               style: {
-                opacity: "0.3",
+                opacity: "0.1",
+                fontSize: "18px",
+                marginTop: "-0.5rem",
               },
             }}
             InputProps={{
@@ -100,7 +108,9 @@ const Form: React.FC = () => {
         variant="standard"
         InputLabelProps={{
           style: {
-            opacity: "0.3",
+            opacity: "0.1",
+            fontSize: "18px",
+            marginTop: "-0.5rem",
           },
         }}
         InputProps={{
@@ -120,7 +130,9 @@ const Form: React.FC = () => {
         variant="standard"
         InputLabelProps={{
           style: {
-            opacity: "0.3",
+            opacity: "0.1",
+            fontSize: "18px",
+            marginTop: "-0.5rem",
           },
         }}
         InputProps={{

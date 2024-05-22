@@ -42,7 +42,7 @@ export const Services: React.FC = () => {
   return (
     <div className="container py-5 mx-auto text-black h-full">
       <h1 className="text-2xl font-semibold">Services</h1>
-      <ul className="flex gap-x-10 py-6">
+      <ul className="flex flex-col gap-y-7 py-6">
         {services.map((item, i) => {
           return (
             <li key={i}>
@@ -81,6 +81,57 @@ export const Company: React.FC = () => {
           );
         })}
       </ul>
+    </div>
+  );
+};
+
+interface expert {
+  name: string;
+  techs: string[];
+}
+
+export const Experties: React.FC = () => {
+  const experties: expert[] = [
+    {
+      name: "Web Application Development",
+      techs: ["Mern Stack", "Next js", "React js", "Php & Laravel", "Node js"],
+    },
+    {
+      name: "Mobile App Development",
+      techs: ["React Native", "Flutter", "Ionic", "Android", "iOS"],
+    },
+    {
+      name: "UI/UX Design Services",
+      techs: ["Figma", "Adobe XD", "Adobe Photoshop", "Adobe Illustrator"],
+    },
+    {
+      name: "Desktop Application Development",
+      techs: ["Javascript", "Python", "Android", "iOS"],
+    },
+  ];
+
+  return (
+    <div className="container py-5 mx-auto text-black h-full">
+      <div className="flex gap-x-5">
+        {experties.map((item, i) => {
+          return (
+            <div key={i} className="flex flex-col gap-y-2">
+              <h1 className="text-xl font-semibold">{item.name}</h1>
+              <ul className="flex flex-col gap-y-5">
+                {item.techs.map((tech, i) => {
+                  return (
+                    <li key={i}>
+                      <Link href={"#"} className={`hover:text-blue-600`}>
+                        {tech}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

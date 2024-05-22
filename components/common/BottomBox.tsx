@@ -51,7 +51,7 @@ const Box: React.FC<BoxProps> = ({
           : hovered == i
           ? "w-[26%]"
           : "w-[22%]"
-      } h-full border-[0.05px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000 cursor-pointer`}
+      } h-full border-[0.02px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000 cursor-pointer`}
       onClick={(e) => onClick(i)}
       onMouseEnter={(e) => onHover(i)}
       onMouseLeave={(e) => onHover(-1)}
@@ -168,7 +168,7 @@ const BottomBox: React.FC<{
   ];
   return (
     <div className="w-full mx-auto h-[178px] mt-[7rem]">
-      <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.1px] border-[#54575E]">
+      <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.02px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (
             <Box

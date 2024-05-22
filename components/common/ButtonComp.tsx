@@ -7,6 +7,7 @@ interface Props {
   edges?: "boxy" | "rounded";
   type?: "submit" | "button" | "reset";
   padding?: string;
+  bg?: string;
 }
 
 const ButtonComp: React.FC<Props> = ({
@@ -16,6 +17,7 @@ const ButtonComp: React.FC<Props> = ({
   variant,
   edges,
   padding,
+  bg,
 }) => {
   if (variant == "contained") {
     return (

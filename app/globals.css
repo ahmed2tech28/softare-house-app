@@ -152,7 +152,8 @@ svg a {
     filter: blur(1px);
 }
 
-.f-mon {
+.f-mon,
+.f-mon form * {
     font-family: "Montserrat", sans-serif !important;
 }
 
@@ -189,14 +190,16 @@ svg a {
 }
 
 .header-img.fade-out {
-    opacity: 0.3;
+    opacity: 0.8;
     transition: opacity 0.5s ease-out;
 }
 
 .services,
 .services *,
 .services-over,
-.services-over * {
+.services-over *,
+.latest-insights,
+.latest-insights * {
     user-select: none;
     /* Disables text selection */
     -webkit-user-select: none;
@@ -210,5 +213,10 @@ svg a {
 .services,
 .services-over {
     cursor: grab;
+}
 
+@media screen and (max-width:1500px) {
+    .container {
+        width: 90vw !important;
+    }
 }
