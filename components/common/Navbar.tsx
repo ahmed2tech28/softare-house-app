@@ -56,7 +56,7 @@ const HoveredItems: React.FC<HoveredProps> = ({
     <div className="w-screen pb-4 absolute top-[83px] bg-white">
       <hr />
       <div
-        className="transition-[height] duration-1000 flex w-full"
+        className=" flex w-full"
         style={{
           height: `${
             linkHovered == "Home"

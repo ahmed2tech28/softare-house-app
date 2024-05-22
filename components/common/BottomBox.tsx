@@ -151,19 +151,19 @@ const BottomBox: React.FC<{
   const boxes: Boxes[] = [
     {
       title: "1.png",
-      desc: "Reduced animate to market for a suite of enterprise apps .",
+      desc: "Reduced animate to market for a\n suite of enterprise apps .",
     },
     {
       title: "2.png",
-      desc: "Reduced animate to market for a suite of enterprise apps ",
+      desc: "Reduced animate to market for a\n suite of enterprise apps ",
     },
     {
       title: "3.png",
-      desc: "Reduced animate to market for a suite of enterprise apps .",
+      desc: "Reduced animate to market for a\n suite of enterprise apps .",
     },
     {
       title: "4.png",
-      desc: "Reduced animate to market for a suite of enterprise apps ",
+      desc: "Reduced animate to market for a\n suite of enterprise apps ",
     },
   ];
   return (
