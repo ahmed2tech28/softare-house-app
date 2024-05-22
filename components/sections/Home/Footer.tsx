@@ -1,16 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ButtonComp from "../../common/ButtonComp";
 import Link from "next/link";
-
-const MobileFooter: React.FC = () => {
-  return (
-    <footer className="w-screen justify-center items-center bg-[#111827] py-[6rem] flex flex-col xl:hidden">
-      <div className="text-white text-xl">
-        &copy; 2023 DevHouse All rights reserved
-      </div>
-    </footer>
-  );
-};
 
 const services: string[] = [
   "Web Application Development",
@@ -48,6 +39,62 @@ const offices: string[] = [
   "Faisalabad <br> +92 322 7946794",
   "Lahore <br> +92 321 8351765",
 ];
+
+const MobileFooter: React.FC = () => {
+  const [accordionOpened, setAccordionOpened] = useState("");
+  const accordionItems: string[] = [
+    "services",
+    "solutions",
+    "industries",
+    "offices",
+  ];
+  return (
+    <footer className="w-screen justify-end items-center bg-[#111827] h-[25rem] py-2 flex flex-col xl:hidden text-white">
+      <div className="h-[80%] w-full px-3 flex flex-col gap-y-1 py-3">
+        {accordionItems.map((item, i) => (
+          <>
+            <div key={i} onClick={(e) => setAccordionOpened(item)}>
+              {item}
+            </div>
+            <div className="w-full flex flex-col">
+              {accordionOpened == "services" &&
+                item == "services" &&
+                services.map((item, i) => (
+                  <Link href={"#"} className="ms-2" key={i}>
+                    {item}
+                  </Link>
+                ))}
+              {accordionOpened == "solutions" &&
+                item == "solutions" &&
+                solutions.map((item, i) => (
+                  <Link href={"#"} className="ms-2" key={i}>
+                    {item}
+                  </Link>
+                ))}
+              {accordionOpened == "industries" &&
+                item == "industries" &&
+                industries.map((item, i) => (
+                  <Link href={"#"} className="ms-2" key={i}>
+                    {item}
+                  </Link>
+                ))}
+              {accordionOpened == "offices" &&
+                item == "offices" &&
+                offices.map((item, i) => (
+                  <Link href={"#"} className="ms-2" key={i}>
+                    {item.replace("<br>", " - ")}
+                  </Link>
+                ))}
+            </div>
+          </>
+        ))}
+      </div>
+      <div className="text-xl h-[20%]">
+        &copy; 2023 DevHouse All rights reserved
+      </div>
+    </footer>
+  );
+};
 
 const PcFooter: React.FC = () => {
   return (
