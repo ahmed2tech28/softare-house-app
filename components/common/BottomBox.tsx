@@ -56,17 +56,17 @@ const Box: React.FC<BoxProps> = ({
       onMouseEnter={(e) => onHover(i)}
       onMouseLeave={(e) => onHover(-1)}
     >
-      {expand == i && animate ? (
-        <ProgressBar />
-      ) : (
-        <div className="h-[4px]"></div>
-      )}
       <div>
         <img src={`/header-files/${title}`} width={"137px"} alt="" />
         {(expand == i || hovered == i) && (
-          <p className="text-[16px] w-[90%] ms-2 f-mon">{desc}</p>
+          <p className="text-[12px] w-[90%] ms-2 f-mon">{desc}</p>
         )}
       </div>
+      {expand == i && animate ? (
+        <ProgressBar />
+      ) : (
+        <div className="h-[2px]"></div>
+      )}
       <div className="flex justify-between">
         {expand == i && <button>View case study</button>}
         {!(expand == i) && <span></span>}
@@ -167,7 +167,7 @@ const BottomBox: React.FC<{
     },
   ];
   return (
-    <div className="w-full mx-auto h-[178px] mt-[7rem]">
+    <div className="w-full mx-auto h-[200px] mt-[7rem]">
       <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.02px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (

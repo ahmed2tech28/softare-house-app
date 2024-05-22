@@ -1,17 +1,62 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import MapDetailBox from "../../common/MapDetailBox";
 import MapTooltip from "../../common/MapTooltip";
 import Map from "../../svgs/Map";
 
 const MapArea: React.FC = () => {
+  const [mousePositionX, setMousePositionX] = useState(0);
+  const [mousePositionY, setMousePositionY] = useState(0);
+  useEffect(() => {
+    const handleMouseMove = (event: any) => {
+      // Get the element reference
+      const mapSvg = document.querySelector(".map-svg");
+
+      // Check if the element exists
+      if (mapSvg) {
+        // Get the position of the element
+        const rect = mapSvg.getBoundingClientRect();
+
+        // Calculate mouse position relative to the element
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        // Log or use the relative mouse positions
+        // console.log(mouseX, mouseY);
+        setMousePositionX(mouseX);
+        setMousePositionY(mouseY);
+      }
+    };
+
+    document
+      .querySelector(".map-svg")
+      ?.addEventListener("mousemove", handleMouseMove);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document
+        .querySelector(".map-svg")
+        ?.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [mousePositionX, mousePositionY]);
   return (
     <div
       className="container mx-auto h-fit py-4 flex flex-col gap-y-3"
       id="industries"
     >
-      <div className="w-full xl:mt-0 mt-[5rem] h-[599px] flex flex-col justify-start items-center relative">
+      <div
+        className="w-full xl:mt-0 mt-[5rem] h-[599px] flex flex-col justify-start items-center relative map-svg"
+        // onMouseEnter={(e) => {
+        //   console.log(e.clientX, e.clientY);
+        //   setMousePositionX(e.clientX);
+        //   setMousePositionY(e.clientY);
+        // }}
+      >
         <Map />
-        <MapTooltip />
+        <MapTooltip
+          mousePositionX={mousePositionX}
+          mousePositionY={mousePositionY}
+        />
       </div>
       <div className="h-[277px] 2xl:w-[80%] xl:w-[90%] hidden xl:block mx-auto relative">
         <MapDetailBox

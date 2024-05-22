@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           className="h-[calc(100%-8.6rem)] flex flex-col justify-center w-[90vw] mx-auto"
           onMouseEnter={(e) => setlinkHovered("")}
         >
-          <div className="lg:w-[60%] h-[clac(100%-178px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
+          <div className="lg:w-[60%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
             <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-normal">
               Custom Software Development Company
             </h1>
