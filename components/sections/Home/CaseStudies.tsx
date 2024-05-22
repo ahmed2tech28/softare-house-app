@@ -81,45 +81,66 @@ const DevLogo: React.FC = () => {
   );
 };
 
-const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
+const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
+  const [blur, setBlur] = useState(false);
   return (
-    <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden group">
-      <div className="w-[100%] h-[276px] relative ">
-        <img src={img} alt="img" width={"100%"} height={"100%"} />
-        <div className="bg-[rgba(0,0,0,0.33)] absolute top-0 left-0 h-full w-full group-hover:flex hidden justify-center items-center">
-          <button className="bg-blue-500 text-white py-3 px-3 rounded-full">
-            See Detail
-          </button>
-        </div>
-      </div>
-      <div className="w-full h-[160px] px-4 py-4 flex flex-col justify-between">
-        <h1>{projectname}</h1>
-        <svg
-          width="349"
-          height="1"
-          viewBox="0 0 349 1"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            x1="0.25"
-            y1="0.75"
-            x2="348.75"
-            y2="0.750031"
-            stroke="#CBD1DC"
-            stroke-width="0.5"
-            stroke-linecap="round"
-          />
-        </svg>
-        <div className="h-[30px] flex justify-between items-center">
-          <div className="w-[50%]">
-            <DevLogo />
+    <div className="w-[40rem] h-fit bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
+      {blur ? (
+        <img
+          src="/case-studies/1.png"
+          style={{ filter: "blur(5px)", transition: "all 0.3s" }}
+          alt=""
+        />
+      ) : (
+        <img src="/case-studies/1.png" alt="" />
+      )}
+
+      <div
+        className="absolute top-0 z-20 h-full w-full bg-[#0000002a] hover:bg-[#00000045] flex flex-col items-start gap-y-4 justify-end p-5 transition-colors duration-300 ease-linear"
+        onMouseEnter={(e) => setBlur(true)}
+        onMouseLeave={(e) => setBlur(false)}
+      >
+        <h1 className="text-2xl font-bold text-white">{projectname}</h1>
+        <Line />
+        <div className="flex h-[3rem] justify-between w-full group-hover:hidden transition-all duration-100 ease-out">
+          <div className="w-[70%]">
+            <img src="/devLogo.png" width={"80"} height={"30"} alt="DevLogo" />
           </div>
-          <div className="flex w-[50%] justify-end items-center gap-x-1">
-            <span className="text-black text-[25px] font-bold">{percent1}</span>
-            <span className="">
-              Lorem <br /> ipsum dolor sit.
-            </span>
+          <div className="right flex w-[30%] gap-x-2 items-center text-white">
+            <span className="text-3xl font-bold">{percent1}</span>
+            <span className="">Lorem ipsum dolor sit.</span>
+          </div>
+        </div>
+        <div className="hidden group-hover:flex h-[50%] flex-col w-full transition-all duration-100 ease-out">
+          <div className="flex h-[50%] justify-between w-full gap-x-4">
+            <div className="flex w-[50%] items-center text-white gap-x-2">
+              <span className="text-4xl font-bold">{percent1}</span>
+              <span className="">Lorem ipsum dolor sit.</span>
+            </div>
+            <div className="flex w-[50%] items-center text-white gap-x-2">
+              <span className="text-4xl font-bold">{percent2}</span>
+              <span className="">Lorem ipsum dolor sit.</span>
+            </div>
+          </div>
+          <div className="flex h-[50%] w-full items-center">
+            <div className="w-1/2 flex gap-x-3">
+              <button className="font-bold bg-white px-3 rounded-3xl h-9">
+                See Design
+              </button>
+              <div className="w-[30%]">
+                <img
+                  src="/devLogo.png"
+                  width={"100"}
+                  height={"20"}
+                  alt="DevLogo"
+                />
+              </div>
+            </div>
+            <div className="w-1/2 flex justify-end h-full items-center">
+              <button className="bg-white h-10 w-10 text-2xl rounded-md">
+                →
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -232,3 +253,49 @@ const CaseStudies: React.FC = () => {
 };
 
 export default CaseStudies;
+
+// const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname, img }) => {
+//   return (
+//     <div className="w-[389px] h-[422px] flex flex-col gap-y-2 bg-[#F9F9F9] rounded-lg overflow-hidden group">
+//       <div className="w-[100%] h-[276px] relative ">
+//         <img src={img} alt="img" width={"100%"} height={"100%"} />
+//         <div className="bg-[rgba(0,0,0,0.33)] absolute top-0 left-0 h-full w-full group-hover:flex hidden justify-center items-center">
+//           <button className="bg-blue-500 text-white py-3 px-3 rounded-full">
+//             See Detail
+//           </button>
+//         </div>
+//       </div>
+//       <div className="w-full h-[160px] px-4 py-4 flex flex-col justify-between">
+//         <h1>{projectname}</h1>
+//         <svg
+//           width="349"
+//           height="1"
+//           viewBox="0 0 349 1"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//         >
+//           <line
+//             x1="0.25"
+//             y1="0.75"
+//             x2="348.75"
+//             y2="0.750031"
+//             stroke="#CBD1DC"
+//             stroke-width="0.5"
+//             stroke-linecap="round"
+//           />
+//         </svg>
+//         <div className="h-[30px] flex justify-between items-center">
+//           <div className="w-[50%]">
+//             <DevLogo />
+//           </div>
+//           <div className="flex w-[50%] justify-end items-center gap-x-1">
+//             <span className="text-black text-[25px] font-bold">{percent1}</span>
+//             <span className="">
+//               Lorem <br /> ipsum dolor sit.
+//             </span>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

@@ -101,7 +101,9 @@ const Navbar: React.FC<{
             className="logo"
             style={{ filter: `invert(${linkHovered ? "1" : "0"})` }}
           >
-            <img src="/devLogo.png" width={"75px"} alt="logo" />
+            <Link href={"/"}>
+              <img src="/devLogo.png" width={"75px"} alt="logo" />
+            </Link>
           </div>
           <ul className="xl:flex gap-x-[2.5rem] hidden f-mon h-full">
             {navRoutes.map((item, i) => {
