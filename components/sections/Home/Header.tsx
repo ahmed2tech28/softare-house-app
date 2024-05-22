@@ -2,9 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import SearchIcon from "@mui/icons-material/Search";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
+import Navbar from "@/components/common/Navbar";
 
 import ButtonComp from "../../common/ButtonComp";
 import BottomBox from "../../common/BottomBox";
@@ -64,109 +62,11 @@ const BlurBg: React.FC<{ img: string; isFading?: boolean }> = ({
   );
 };
 
-const Navbar: React.FC = () => {
-  const [navRes, setNavRes] = useState(false);
-  return (
-    <>
-      <nav className="flex xl:container w-[95vw] mx-auto justify-between items-center h-[8.6rem]">
-        <div className="logo">
-          <img src="/devLogo.png" width={"75px"} alt="logo" />
-        </div>
-        <ul className="xl:flex gap-x-[2.5rem] hidden f-mon">
-          {navRoutes.map((item, i) => {
-            return (
-              <li key={i} className="text-[0.875rem]">
-                <Link href={item.path} className="text-white">
-                  {item.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <div className="seacrh-icon flex justify-end xl:gap-x-0 gap-x-2">
-          <SearchIcon
-            sx={{
-              color: "white",
-              cursor: "pointer",
-              width: "26px",
-              height: "26px",
-            }}
-          />
-          <span onClick={(e) => setNavRes(!navRes)}>
-            {navRes ? (
-              <CloseIcon
-                sx={{ color: "white", cursor: "pointer" }}
-                className="xl:hidden inline"
-              />
-            ) : (
-              <MenuIcon
-                sx={{ color: "white", cursor: "pointer" }}
-                className="xl:hidden inline"
-              />
-            )}
-          </span>
-        </div>
-      </nav>
-      {!navRes ? (
-        <div className="w-[90vw] h-screen bg-white fixed right-0 z-30 top-0 transition-transform duration-100 translate-x-full">
-          <div className="top flex h-[20%] justify-end px-3 py-3">
-            <span onClick={(e) => setNavRes(!navRes)}>
-              {navRes ? (
-                <CloseIcon
-                  sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
-                />
-              ) : (
-                <MenuIcon
-                  sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
-                />
-              )}
-            </span>
-          </div>
-        </div>
-      ) : (
-        <div className="w-[90vw] h-screen bg-white fixed right-0 z-30 top-0 transition-transform duration-100 translate-x-0">
-          <div className="top flex h-[20%] justify-end px-3 py-3">
-            <span onClick={(e) => setNavRes(!navRes)}>
-              {navRes ? (
-                <CloseIcon
-                  sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
-                />
-              ) : (
-                <MenuIcon
-                  sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
-                />
-              )}
-            </span>
-          </div>
-          <div className="h-[80%] flex flex-col justify-start items-start w-full">
-            <ul className="gap-x-4 flex flex-col border-collapse w-full f-mon">
-              {navRoutes.map((item, i) => {
-                return (
-                  <li
-                    key={i}
-                    className="text-[1.15rem] border-b-2 border-black w-full py-3 px-3"
-                  >
-                    <Link href={item.path} className="text-black">
-                      {item.name}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
-
 const Header: React.FC = () => {
   const [img, setImg] = useState("0.png");
   const [faiding, setFaiding] = useState(false);
+  const [linkHovered, setlinkHovered] = useState("");
+
   return (
     <header
       className="sm:max-h-[100vh] sm:min-h-[40rem] h-[60rem] w-screen relative text-white"
@@ -174,8 +74,11 @@ const Header: React.FC = () => {
     >
       <BlurBg img={img} isFading={faiding} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
-        <Navbar />
-        <div className="h-[calc(100%-8.6rem)] flex flex-col justify-center w-[90vw] mx-auto">
+        <Navbar linkHovered={linkHovered} setlinkHovered={setlinkHovered} />
+        <div
+          className="h-[calc(100%-8.6rem)] flex flex-col justify-center w-[90vw] mx-auto"
+          onMouseEnter={(e) => setlinkHovered("")}
+        >
           <div className="lg:w-[60%] h-[clac(100%-178px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
             <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-normal">
               Custom Software Development Company

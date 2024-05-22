@@ -207,10 +207,10 @@ const CaseStudies: React.FC = () => {
     },
   ];
   return (
-    <section className="container h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
+    <section className="container mx-auto h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
       <TopSection functions={contentRef} />
       <div
-        className="overflow-x-auto w-full ms-[5.5vw] services-over"
+        className="overflow-x-auto w-full ms-[5.5vw] 3xl:ms-0 services-over"
         ref={contentRef}
       >
         <div className="flex gap-x-3 w-fit">
