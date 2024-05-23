@@ -84,7 +84,7 @@ const DevLogo: React.FC = () => {
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
   const [blur, setBlur] = useState(false);
   return (
-    <div className="w-[40rem] h-fit bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
+    <div className="md:w-[40rem] mb:w-[85vw] w-[476px] h-fit bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
       {blur ? (
         <img
           src="/case-studies/1.png"
@@ -231,7 +231,7 @@ const CaseStudies: React.FC = () => {
     <section className="container mx-auto h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
       <TopSection functions={contentRef} />
       <div
-        className="overflow-x-auto w-full ms-[5.5vw] 3xl:ms-0 services-over"
+        className="overflow-x-auto w-full md:ms-[5.5vw] ms-0 3xl:ms-0 services-over"
         ref={contentRef}
       >
         <div className="flex gap-x-3 w-fit">

@@ -23,7 +23,7 @@ const CardCircle: React.FC = () => {
 
 const Card: React.FC<CardProps> = ({ category, desc, title }) => {
   return (
-    <div className="w-[407px] hover-shadow-custom h-[509px] rounded-[2rem] border-[0.5px] border-[#CBD1DC] p-5 py-10 flex flex-col justify-between group cursor-pointer">
+    <div className="mb:w-[407px] w-[95vw] hover-shadow-custom h-[509px] rounded-[2rem] border-[0.5px] border-[#CBD1DC] p-5 py-10 flex flex-col justify-between group cursor-pointer">
       <div className="top flex justify-start gap-x-2 items-center">
         <CardCircle />
         <div>{category}</div>
@@ -129,7 +129,7 @@ const Services: React.FC = () => {
         Our Services
       </h1>
       <div
-        className="services ms-[4vw] overflow-x-auto py-[1rem] cursor-grab 3xl:mx-auto"
+        className="services mb:ms-[4vw] ms-0 overflow-x-auto py-[1rem] cursor-grab 3xl:mx-auto"
         ref={contentRef}
       >
         <div className="w-fit flex gap-x-5 h-full px-4">
