@@ -6,6 +6,7 @@ interface casestudy {
   category: string;
   percent: number;
   varient: "expanded" | "collapsed";
+  img?: string;
 }
 
 const DevLogo: React.FC = () => {
@@ -24,22 +25,19 @@ export const ExpandedCaseStudy: React.FC<casestudy> = ({
   percent,
   category,
   desc,
+  img,
 }) => {
   return (
     <div className="w-[795px] h-[422px] bg-[#F9F9F9] overflow-hidden group rounded-md">
       <div className="h-[276px] group-hover:h-[100%] group-hover:relative overflow-hidden flex justify-center items-center">
-        <img
-          src="/case-studies-page/expand.png"
-          alt="expnaded-image"
-          className="object-cover"
-        />
+        <img src={img} alt="expnaded-image" className="object-cover" />
         <div className="bg-[#00000095] hidden group-hover:block h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
           <div className="flex w-full h-full flex-col">
             <div className="h-[30%] flex">
               <div className="w-1/2 text-white">
                 <div className="flex gap-x-2 justify-start items-center">
                   <span className="inline-block w-[25px] h-[12px] rounded-full bg-[#0C8CE9]" />
-                  <span className="text-[12px]">UI/UX design</span>
+                  <span className="text-[12px]">{category}</span>
                 </div>
               </div>
               <div className="w-1/2 flex justify-end items-start">
@@ -79,14 +77,16 @@ export const ExpandedCaseStudy: React.FC<casestudy> = ({
 export const CollapsedCaseStudy: React.FC<casestudy> = ({
   title,
   percent,
+  category,
   desc,
+  img,
 }) => {
   return (
     <div className="w-[389px] h-[422px] bg-[#F9F9F9] overflow-hidden group rounded-md">
       <div className="h-[276px] group-hover:h-[100%] group-hover:relative overflow-hidden flex justify-center items-center relative">
         <img
           className="absolute inset-0 h-full w-auto object-cover"
-          src="/case-studies-page/collapsed.png"
+          src={img}
           alt="collapsed-image"
         />
         <div className="bg-[#00000095] hidden group-hover:block h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
@@ -95,7 +95,7 @@ export const CollapsedCaseStudy: React.FC<casestudy> = ({
               <div className="w-1/2 text-white">
                 <div className="flex gap-x-2 justify-start items-center">
                   <span className="inline-block w-[25px] h-[12px] rounded-full bg-[#0C8CE9]" />
-                  <span className="text-[12px]">UI/UX design</span>
+                  <span className="text-[12px]">{category}</span>
                 </div>
               </div>
               <div className="w-1/2 flex justify-end items-start">

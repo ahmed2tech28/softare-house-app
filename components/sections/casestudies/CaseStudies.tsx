@@ -7,6 +7,7 @@ interface casestudy {
   category: string;
   percent: number;
   varient: "expanded" | "collapsed";
+  img?: string;
 }
 
 const casestudies: casestudy[] = [
@@ -16,6 +17,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "expanded",
+    img: "/case-studies-page/1.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -23,6 +25,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/2.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -30,6 +33,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/3.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -37,6 +41,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/4.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -44,6 +49,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/5.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -51,6 +57,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/6.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -58,6 +65,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "expanded",
+    img: "/case-studies-page/7.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -65,6 +73,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/8.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -72,6 +81,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/9.png",
   },
   {
     title: "Developed Customized CSR System, Improved Workflow and Reporting",
@@ -79,6 +89,7 @@ const casestudies: casestudy[] = [
     category: "UI/UX Design",
     percent: 31,
     varient: "collapsed",
+    img: "/case-studies-page/10.png",
   },
 ];
 
