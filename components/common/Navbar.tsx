@@ -6,6 +6,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Company, Experties, Industries, Services } from "./NavbarHoveredItems";
+import { usePathname } from "next/navigation";
 
 interface Path {
   path: string;
@@ -53,7 +54,7 @@ const HoveredItems: React.FC<HoveredProps> = ({
   setlinkHovered,
 }) => {
   return (
-    <div className="w-screen pb-4 absolute top-[83px] bg-white">
+    <div className="w-screen pb-4 absolute top-[83px] bg-white z-50">
       <hr />
       <div
         className=" flex w-full"
@@ -91,6 +92,7 @@ const Navbar: React.FC<{
   setlinkHovered: (item: any) => void;
 }> = ({ linkHovered, setlinkHovered }) => {
   const [navRes, setNavRes] = useState(false);
+  const path = usePathname();
   return (
     <>
       <div
@@ -98,14 +100,25 @@ const Navbar: React.FC<{
         style={{ backgroundColor: `${linkHovered ? "white" : "transparent"}` }}
       >
         <nav className="flex container mx-auto justify-between items-center h-[83px]">
-          <div
-            className="logo"
-            style={{ filter: `invert(${linkHovered ? "1" : "0"})` }}
-          >
-            <Link href={"/"}>
-              <img src="/devLogo.png" width={"75px"} alt="logo" />
-            </Link>
-          </div>
+          {path == "/" ? (
+            <div
+              className="logo"
+              style={{ filter: `invert(${linkHovered ? "1" : "0"})` }}
+            >
+              <Link href={"/"}>
+                <img src="/devLogo.png" width={"75px"} alt="logo" />
+              </Link>
+            </div>
+          ) : (
+            <div
+              className="logo"
+              style={{ filter: `invert(${linkHovered ? "1" : "1"})` }}
+            >
+              <Link href={"/"}>
+                <img src="/devLogo.png" width={"75px"} alt="logo" />
+              </Link>
+            </div>
+          )}
           <ul className="xl:flex gap-x-[2.5rem] hidden f-mon h-full">
             {navRoutes.map((item, i) => {
               return (

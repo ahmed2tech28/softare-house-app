@@ -170,9 +170,9 @@ const ClinetCard: React.FC = () => {
         <img src="/client2.png" alt="clinet2" />
       </div>
       <div className="w-2/3 flex flex-col gap-y-3">
-        <p>USASaudi Arabia</p>
-        <p className="font-semibold">Waleed J Sanchez</p>
-        <p>Disrupting Construction in the GCC</p>
+        <p className="f-mon">USASaudi Arabia</p>
+        <p className="font-semibold f-mon">Waleed J Sanchez</p>
+        <p className="f-mon">Disrupting Construction in the GCC</p>
       </div>
     </div>
   );
@@ -180,8 +180,8 @@ const ClinetCard: React.FC = () => {
 
 const ReviewBox: React.FC = () => {
   return (
-    <div className="w-[26rem] h-[35rem] bg-white px-7 py-14 flex-col justify-between flex rounded-xl">
-      <p className="leading-loose text-[18px]">
+    <div className="w-[26rem] h-[35rem] bg-white px-7 py-14 flex-col justify-between flex rounded-xl f-mon">
+      <p className="leading-loose text-[18px] f-mon">
         Devhouse&apos;s team has been instrumental in the success of our
         platform, Muqawiloon.com. Their programmers&apos; technical expertise
         and their designers&apos; creative flair have combined to make our

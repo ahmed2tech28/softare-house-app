@@ -153,7 +153,7 @@ svg a {
 }
 
 .f-mon,
-.f-mon form * {
+.f-mon * {
     font-family: "Montserrat", sans-serif !important;
 }
 
@@ -215,8 +215,24 @@ svg a {
     cursor: grab;
 }
 
+@media screen and (min-width: 1920px) and (max-width: 1930px) {
+    .container {
+        max-width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1535px) and (max-width: 1600px) {
+    .container {
+        max-width: 90vw;
+    }
+}
+
 @media screen and (max-width:1500px) {
     .container {
         width: 90vw !important;
     }
+}
+
+header.text-black nav * {
+    color: black !important;
 }
