@@ -36,8 +36,9 @@ export const ProjectIdea: React.FC = () => {
     "Create intuitive and fast-loading UI designs that ensure brand excellence and user engagement",
   ];
   return (
-    <div className="flex flex-col gap-y-3">
+    <div className="flex flex-col gap-y-3 group">
       <svg
+        className="hidden group-hover:inline-block"
         width="86"
         height="86"
         viewBox="0 0 86 86"
@@ -53,6 +54,28 @@ export const ProjectIdea: React.FC = () => {
           d="M27 66.0589V42.2942M27 42.2942V22.2942H47.9412L52.1765 30.7648H63.7059V50.0589H47.9412L43.2353 42.2942H27Z"
           stroke="#0C8CE9"
           stroke-width="5"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+        className="group-hover:hidden"
+        width="86"
+        height="86"
+        viewBox="0 0 86 86"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
+          stroke="#0C8CE9"
+          stroke-width="5"
+          stroke-opacity="0.1"
+        />
+        <path
+          d="M27 66.0589V42.2942M27 42.2942V22.2942H47.9412L52.1765 30.7648H63.7059V50.0589H47.9412L43.2353 42.2942H27Z"
+          stroke="#0C8CE9"
+          stroke-width="5"
+          stroke-opacity="0.1"
           stroke-linejoin="round"
         />
       </svg>
@@ -75,13 +98,39 @@ export const ProjectChallanges: React.FC = () => {
     "Designing a responsive on-demand video platform ensuring consistency across devices. Making a high-quality UI design to ensure solid groundwork for wide user adoption and high customer conversion.",
   ];
   return (
-    <div className="flex flex-col gap-y-3">
+    <div className="flex flex-col gap-y-3 group">
       <svg
         width="86"
         height="86"
         viewBox="0 0 86 86"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="group-hover:inline-block hidden"
+      >
+        <path
+          d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
+          stroke="#0C8CE9"
+          stroke-width="5"
+        />
+        <path
+          d="M31.5646 59.0937H54.6234M61.9176 34.6231C61.9176 24.2271 53.4898 15.7996 43.094 15.7996C32.6981 15.7996 24.2705 24.2271 24.2705 34.6231C24.2705 40.6752 27.1267 46.0602 31.5646 49.5036H54.6234C59.0616 46.0602 61.9176 40.6752 61.9176 34.6231Z"
+          stroke="#0C8CE9"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M37.9165 67.522C37.9165 67.2858 38.108 67.0942 38.3443 67.0942H47.8417C48.0779 67.0942 48.2694 67.2858 48.2694 67.522C48.2694 69.8848 46.3541 71.8001 43.9914 71.8001H42.1946C39.8318 71.8001 37.9165 69.8848 37.9165 67.522Z"
+          fill="#0C8CE9"
+        />
+      </svg>
+      <svg
+        width="86"
+        height="86"
+        viewBox="0 0 86 86"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="group-hover:hidden inline-block"
       >
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
@@ -127,13 +176,35 @@ export const Results: React.FC = () => {
     "The new UI design concept was approved by the customer and used in the frontend development of the VOD streaming platform. The high-quality user interface that meets the company's marketing and customer service objectives.",
   ];
   return (
-    <div className="flex flex-col gap-y-3">
+    <div className="flex flex-col gap-y-3 group">
       <svg
         width="86"
         height="86"
         viewBox="0 0 86 86"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className="group-hover:inline-block hidden"
+      >
+        <path
+          d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
+          stroke="#0C8CE9"
+          stroke-width="5"
+        />
+        <path
+          d="M24.1768 43.5958L39.0003 57.5885L66.0591 31.2356"
+          stroke="#0C8CE9"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+        width="86"
+        height="86"
+        viewBox="0 0 86 86"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="group-hover:hidden inline-block"
       >
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"

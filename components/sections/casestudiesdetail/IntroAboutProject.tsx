@@ -1,10 +1,22 @@
 import React from "react";
+import BreadCrumbComp from "@/components/common/BreadCrumbComp";
+
+interface Path {
+  label: string;
+  path: string;
+}
 
 const IntroAboutProject: React.FC = () => {
+  const path: Path[] = [
+    { label: "Home", path: "/" },
+    { label: "Case Studies", path: "/casestudies" },
+    { label: "Detail", path: "/casestudies/detail" },
+  ];
   return (
     <div className="h-[37rem] w-full border rounded-[3rem] overflow-hidden flex flex-col relative justify-center items-center">
       <img src="/case-studies-page/1.png" alt="bg-image" />
       <div className="absolute top-0 left-0 w-full h-full z-10 bg-[#00000092] p-10 flex flex-col justify-between items-start">
+        <BreadCrumbComp path={path} color="white" />
         <div>
           <h1 className="lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] mb:text-[2rem] text-[1.5rem] text-white font-semibold">
             Developed Customized CSR System, Improved Workflow and Reporting
