@@ -45,7 +45,7 @@ export const ExpandedCaseStudy: React.FC<casestudy> = ({
           </div>
         </div>
       </div>
-      <div className="bg-[#00000095] translate-y-full group-hover:translate-y-0 duration-75 h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
+      <div className="bg-[#00000095] translate-y-full group-hover:translate-y-0 duration-150 h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
         <div className="flex w-full h-full flex-col">
           <div className="h-[30%] flex">
             <div className="w-1/2 text-white">
@@ -89,7 +89,7 @@ export const CollapsedCaseStudy: React.FC<casestudy> = ({
           src={img}
           alt="collapsed-image"
         />
-        <div className="bg-[#00000095] translate-y-full group-hover:translate-y-0 group-hover:block transition-transform duration-75 h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
+        <div className="bg-[#00000095] translate-y-full group-hover:translate-y-0 group-hover:block transition-transform duration-150 h-full w-full absolute z-20 top-0 left-0 p-5 cursor-pointer">
           <div className="flex w-full h-full flex-col">
             <div className="h-[10%] flex">
               <div className="w-1/2 text-white">

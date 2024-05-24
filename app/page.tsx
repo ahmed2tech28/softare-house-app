@@ -9,8 +9,6 @@ import LatestInsights from "@/components/sections/Home/LatestInsights";
 import Contact from "@/components/sections/Home/Contact";
 import CoreIndustries from "@/components/sections/Home/CoreIndustries";
 import Footer from "@/components/sections/Home/Footer";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { ContextProvider } from "@/context/MapContext";
 
 const Home: React.FC = () => {
