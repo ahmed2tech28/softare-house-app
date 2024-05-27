@@ -9,9 +9,10 @@ import {
   BusinessArchitecture,
   ProductEssentials,
   DevelopmentDetail,
-  TechnologyStack,
   ResultObtained,
 } from "./AboutProjecttems";
+
+import TechnologyStack from "./TechnologyStack";
 
 const AboutProject: React.FC = () => {
   return (
