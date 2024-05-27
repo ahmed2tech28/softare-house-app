@@ -343,12 +343,13 @@ export const ProductEssentials: React.FC = () => {
     <div className="flex flex-col">
       <h1 className="text-[36px] font-semibold">Product Essentials</h1>
       <p className="leading-[28px] sm:block hidden">
-        We&apos;ve designed on-demand video streaming services, created a <br />
-        completely new UI, and ensured solution performance across the devices
+        The system modules developed are integrated with each other to ensure
+        <br />
+        the smooth and logical flow of movie renting and purchasing for viewers.
       </p>
       <p className="leading-[28px] block sm:hidden">
-        We&apos;ve designed on-demand video streaming services, created a
-        completely new UI, and ensured solution performance across the devices
+        The system modules developed are integrated with each other to ensure
+        the smooth and logical flow of movie renting and purchasing for viewers.
       </p>
       <div className="flex gap-x-3 flex-wrap gap-y-2">
         <button className="bg-[#F9F9F9] hover:bg-[#0C8CE9] hover:text-white px-5 py-4 rounded-full transition-all duration-100">

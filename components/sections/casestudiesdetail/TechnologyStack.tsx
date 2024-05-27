@@ -52,7 +52,7 @@ const TechnologyStack: React.FC = () => {
           </div>
           <div className="right lg:w-[calc(100%-368px)] w-full flex justify-center items-center">
             {sideBarItemSelected == "Web App Development" && (
-              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem]">
+              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem] transition-all duration-75">
                 <NodeJsSvg />
                 <TypeScriptSvg />
                 <JavaSvg />
@@ -65,7 +65,7 @@ const TechnologyStack: React.FC = () => {
               </div>
             )}
             {sideBarItemSelected == "Mobile App Development" && (
-              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem]">
+              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem] transition-all duration-75">
                 <ReactSvg />
                 <NodeJsSvg />
                 <TypeScriptSvg />
@@ -78,7 +78,7 @@ const TechnologyStack: React.FC = () => {
               </div>
             )}
             {sideBarItemSelected == "IOS Development" && (
-              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem]">
+              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem] transition-all duration-75">
                 <RubySvg />
                 <NodeJsSvg />
                 <TypeScriptSvg />
@@ -91,7 +91,7 @@ const TechnologyStack: React.FC = () => {
               </div>
             )}
             {sideBarItemSelected == "Android Development" && (
-              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem]">
+              <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-wrap gap-x-[3rem] transition-all duration-75">
                 <NodeJsSvg />
                 <TypeScriptSvg />
                 <AngularSvg />
