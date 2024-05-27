@@ -51,7 +51,7 @@ const Box: React.FC<BoxProps> = ({
           : hovered == i
           ? "w-[26%]"
           : "w-[22%]"
-      } h-full border-[0.02px] border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-1000 cursor-pointer`}
+      } h-full border-[0.02px] border-r-0 border-[#54575E] p-5 flex flex-col justify-between transition-[width] duration-700 cursor-pointer`}
       onClick={(e) => onClick(i)}
       onMouseEnter={(e) => onHover(i)}
       onMouseLeave={(e) => onHover(-1)}
