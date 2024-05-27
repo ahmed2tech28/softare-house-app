@@ -26,10 +26,10 @@ const TechnologyStack: React.FC = () => {
     <div className="flex flex-col w-full">
       <div className="lg:h-[138px] h-fit lg:w-[50%] w-full">
         <h1 className="text-[30px] font-semibold">Technology Stack</h1>
-        <p>
-          We&apos;ve successfully developed a TVOD streaming service with
-          cross-platform capabilities that allows our customer to cater to a
-          large audience and achieve goals set
+        <p className="w-[86%]">
+          The development team working on a project uses only modern and
+          scalable technologies to implement mobile and web applications the way
+          you mean it
         </p>
       </div>
       <div className="tech-box bg-[#F9F9F9] lg:h-[449px] h-fit rounded-2xl flex p-5 items-center">
