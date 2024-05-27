@@ -3,13 +3,9 @@ import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import Anchor from "next/link";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-
-function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-  event.preventDefault();
-  console.info("You clicked a breadcrumb.");
-}
 
 interface Path {
   label: string;
@@ -34,15 +30,8 @@ const BreadCrumbComp: React.FC<Props> = ({ path, color }) => {
             );
           }
           return (
-            <Link
-              underline="hover"
-              key={i}
-              color="inherit"
-              href={item.path}
-              onClick={handleClick}
-              sx={{ color }}
-            >
-              {item.label}
+            <Link underline="hover" key={i} color="inherit" sx={{ color }}>
+              <Anchor href={item.path}>{item.label}</Anchor>
             </Link>
           );
         })}
