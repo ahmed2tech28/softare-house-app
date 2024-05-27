@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import MapDetailBox from "../../common/MapDetailBox";
 import MapTooltip from "../../common/MapTooltip";
 import Map from "../../svgs/Map";
+import MapSmall from "../../svgs/MapSmall";
+import MapTab from "../../svgs/MapTab";
 
 const MapArea: React.FC = () => {
   const [mousePositionX, setMousePositionX] = useState(0);
@@ -45,7 +47,7 @@ const MapArea: React.FC = () => {
       id="industries"
     >
       <div
-        className="w-full xl:mt-0 mt-[5rem] h-[599px] flex flex-col justify-start items-center relative map-svg"
+        className="w-full xl:mt-0 xl:flex hidden mt-[5rem] h-[599px] flex-col justify-start items-center relative map-svg"
         // onMouseEnter={(e) => {
         //   console.log(e.clientX, e.clientY);
         //   setMousePositionX(e.clientX);
@@ -53,6 +55,34 @@ const MapArea: React.FC = () => {
         // }}
       >
         <Map />
+        <MapTooltip
+          mousePositionX={mousePositionX}
+          mousePositionY={mousePositionY}
+        />
+      </div>
+      <div
+        className="w-full xl:mt-0 mt-[5rem] h-[599px] lg:flex flex-col justify-start items-center relative map-svg xl:hidden hidden"
+        // onMouseEnter={(e) => {
+        //   console.log(e.clientX, e.clientY);
+        //   setMousePositionX(e.clientX);
+        //   setMousePositionY(e.clientY);
+        // }}
+      >
+        <MapSmall />
+        <MapTooltip
+          mousePositionX={mousePositionX}
+          mousePositionY={mousePositionY}
+        />
+        </div>
+      <div
+        className="w-full xl:mt-0 mt-[5rem] h-[599px] flex flex-col justify-start items-center relative map-svg lg:hidden"
+        // onMouseEnter={(e) => {
+        //   console.log(e.clientX, e.clientY);
+        //   setMousePositionX(e.clientX);
+        //   setMousePositionY(e.clientY);
+        // }}
+      >
+        <MapTab />
         <MapTooltip
           mousePositionX={mousePositionX}
           mousePositionY={mousePositionY}
