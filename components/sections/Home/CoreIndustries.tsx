@@ -141,7 +141,7 @@ const CoreIndustries: React.FC = () => {
         We provide web and mobile app development services to a wide range of
         industries based on the latest industry trends.
       </p>
-      <div className="mx-auto xl:h-[670px] h-fit mt-7 lg:grid xl:grid-cols-5 lg:grid-cols-3 hidden">
+      <div className="mx-auto xl:h-[670px] h-fit mt-7 lg:grid xl:grid-cols-5 lg:grid-cols-2 hidden">
         {industries.map((item, i) => (
           <Industry
             key={i}
