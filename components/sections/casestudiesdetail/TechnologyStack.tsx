@@ -39,6 +39,7 @@ const TechnologyStack: React.FC = () => {
             <div className="h-[288px] md:w-full w-full lg:mx-auto mx-0 flex lg:flex-col flex-row justify-between overflow-x-auto">
               {sideBarItems.map((item, i) => (
                 <button
+                  key={i}
                   className={`inline-flex justify-start items-center h-[48px] md:w-full w-auto ${
                     item == sideBarItemSelected ? "bg-[#0C8CE9] text-white" : ""
                   } hover:bg-[#0C8CE9] transition-all duration-75 hover:text-white px-4 rounded-full`}
