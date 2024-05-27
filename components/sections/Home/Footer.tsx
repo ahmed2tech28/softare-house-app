@@ -49,12 +49,31 @@ const MobileFooter: React.FC = () => {
     "offices",
   ];
   return (
-    <footer className="w-screen justify-end items-center bg-[#111827] h-[25rem] py-2 flex flex-col xl:hidden text-white">
-      <div className="h-[80%] w-full px-3 flex flex-col gap-y-1 py-3">
+    <footer className="w-screen justify-end items-center bg-[#111827]  py-2 flex flex-col xl:hidden text-white h-fit">
+      <div className="w-full px-3 flex flex-col gap-y-1 py-3 h-fit">
         {accordionItems.map((item, i) => (
           <>
-            <div key={i} onClick={(e) => setAccordionOpened(item)}>
-              {item}
+            <div
+              key={i}
+              onClick={(e) => {
+                if (accordionOpened == item) {
+                  setAccordionOpened("");
+                  return;
+                }
+                setAccordionOpened(item);
+              }}
+              className="flex w-full justify-between py-3"
+            >
+              <span>{item}</span>
+              {item == accordionOpened ? (
+                <span className="rotate-[270deg] px-3">
+                  <img src="/arrow.svg" width={20} alt="" />
+                </span>
+              ) : (
+                <span className="rotate-[90deg] px-3">
+                  <img src="/arrow.svg" width={20} alt="" />
+                </span>
+              )}
             </div>
             <div className="w-full flex flex-col">
               {accordionOpened == "services" &&
