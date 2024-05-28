@@ -15,7 +15,7 @@ interface Path {
 
 const navRoutes: Path[] = [
   {
-    path: "#home",
+    path: "/",
     name: "Home",
   },
   {
