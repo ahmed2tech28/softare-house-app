@@ -33,6 +33,7 @@ const BreadCrumbComp: React.FC<Props> = ({ path, color }) => {
             <Anchor
               href={item.path}
               style={{ color }}
+              key={i}
               className="hover:underline"
             >
               {item.label}
