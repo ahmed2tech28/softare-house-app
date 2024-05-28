@@ -8,37 +8,37 @@ import ButtonComp from "../../common/ButtonComp";
 import BottomBox from "../../common/BottomBox";
 
 interface Path {
-  path: string;
+  pathb: string;
   name: string;
 }
 
 const navRoutes: Path[] = [
   {
-    path: "#home",
+    pathb: "#home",
     name: "Home",
   },
   {
-    path: "#services",
+    pathb: "#services",
     name: "Services",
   },
   {
-    path: "#industries",
+    pathb: "#industries",
     name: "Industries",
   },
   {
-    path: "#expertise",
+    pathb: "#expertise",
     name: "Expertise",
   },
   {
-    path: "#company",
+    pathb: "#company",
     name: "Company",
   },
   {
-    path: "#portfolio",
+    pathb: "#portfolio",
     name: "Portfolio",
   },
   {
-    path: "#blog",
+    pathb: "#blog",
     name: "Blog",
   },
 ];
@@ -69,17 +69,17 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="sm:max-h-[100vh] sm:min-h-[50rem] h-[60rem] w-screen relative text-white"
+      className="sm:max-h-[100vh] sm:min-h-[50rem] hb:min-h-fit h-[60rem] w-screen relative text-white"
       id="home"
     >
       <BlurBg img={img} isFading={faiding} />
-      <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between">
+      <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between  hb:pb-[3rem]">
         <Navbar linkHovered={linkHovered} setlinkHovered={setlinkHovered} />
         <div
-          className="h-[calc(100%-8.6rem)] flex flex-col justify-center w-[90vw] mx-auto"
+          className="h-[calc(100%-8.6rem)] hb:h-[calc(100%-5rem)] flex flex-col justify-center w-[90vw] mx-auto"
           onMouseEnter={(e) => setlinkHovered("")}
         >
-          <div className="lg:w-[60%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
+          <div className="xl:w-[60%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
             <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-normal">
               Custom Software Development Company
             </h1>

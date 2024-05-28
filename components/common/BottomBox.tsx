@@ -167,7 +167,7 @@ const BottomBox: React.FC<{
     },
   ];
   return (
-    <div className="w-full mx-auto h-[200px] mt-[7rem]">
+    <div className="w-full mx-auto h-[200px] mt-[7rem] hb:mt-[3rem]">
       <div className="container mx-auto lg:flex hidden flex-wrap h-full bg-[rgba(0,0,0,0.5)] rounded-[12px] overflow-hidden border-[0.02px] border-[#54575E]">
         {boxes.map((item, i) => {
           return (

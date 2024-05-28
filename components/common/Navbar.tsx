@@ -99,7 +99,7 @@ const Navbar: React.FC<{
         className={`w-full h-fit`}
         style={{ backgroundColor: `${linkHovered ? "white" : "transparent"}` }}
       >
-        <nav className="flex container mx-auto justify-between items-center h-[83px]">
+        <nav className="flex container mx-auto justify-between items-center h-[83px] hb:h-[5rem]">
           {path == "/" ? (
             <div
               className="logo"
@@ -148,7 +148,7 @@ const Navbar: React.FC<{
               sx={{
                 color: linkHovered ? "black" : "white",
                 cursor: "pointer",
-                width: "26px",
+                widthb: "26px",
                 height: "26px",
               }}
             />
