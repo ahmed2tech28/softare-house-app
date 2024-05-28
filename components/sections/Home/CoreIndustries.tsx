@@ -63,10 +63,12 @@ const industries: industry[] = [
 
 const Industry: React.FC<industry> = ({ title, desc, img }) => {
   return (
-    <div className="border-[0.4px] border-[#eeececd6] p-4 w-[240px] h-[283px] flex flex-col justify-between lg:mx-0 mx-auto hover:bg-[#0C8CE9] transition-colors duration-100 ease-linear cursor-pointer group">
+    <div className="border-[0.4px] border-[#eeececd6] p-4 xl:w-[240px] xl:h-[283px] w-[200px] h-[263px] flex flex-col justify-between lg:mx-0 mx-auto hover:bg-[#0C8CE9] transition-colors duration-100 ease-linear cursor-pointer group">
       <div className="lg:hidden flex-col gap-y-4 group-hover:flex flex">
         <h1 className="text-white font-medium text-[16px]">{title}</h1>
-        <p className="text-white text-[14px] font-light f-mon">{desc}</p>
+        <p className="text-white xl:text-[14px] text-[12px] font-light f-mon">
+          {desc}
+        </p>
       </div>
       <div className="lg:hidden justify-between w-full group-hover:flex flex">
         <button className="text-white text-[12px]">View Case Study</button>
@@ -141,7 +143,7 @@ const CoreIndustries: React.FC = () => {
         We provide web and mobile app development services to a wide range of
         industries based on the latest industry trends.
       </p>
-      <div className="mx-auto xl:h-[670px] h-fit mt-7 lg:grid xl:grid-cols-5 lg:grid-cols-2 hidden">
+      <div className="mx-auto xl:h-[670px] h-fit mt-7 lg:grid lg:grid-cols-5 hidden">
         {industries.map((item, i) => (
           <Industry
             key={i}
