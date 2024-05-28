@@ -61,7 +61,7 @@ const MapArea: React.FC = () => {
         />
       </div>
       <div
-        className="w-full xl:mt-0 mt-[5rem] h-[599px] lg:flex flex-col justify-start items-center relative map-svg xl:hidden hidden"
+        className="w-full mt-0 h-[499px] lg:flex flex-col justify-start items-center relative map-svg xl:hidden hidden"
         // onMouseEnter={(e) => {
         //   console.log(e.clientX, e.clientY);
         //   setMousePositionX(e.clientX);
@@ -73,9 +73,9 @@ const MapArea: React.FC = () => {
           mousePositionX={mousePositionX}
           mousePositionY={mousePositionY}
         />
-        </div>
+      </div>
       <div
-        className="w-full xl:mt-0 mt-[5rem] h-[599px] flex flex-col justify-start items-center relative map-svg lg:hidden"
+        className="w-full mt-0 h-[399px] flex flex-col justify-start items-center relative map-svg lg:hidden"
         // onMouseEnter={(e) => {
         //   console.log(e.clientX, e.clientY);
         //   setMousePositionX(e.clientX);

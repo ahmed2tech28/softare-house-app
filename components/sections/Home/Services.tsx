@@ -122,7 +122,7 @@ const Services: React.FC = () => {
   ];
   return (
     <section
-      className="h-[45rem] my-[3rem] flex flex-col gap-y-3 "
+      className="h-[45rem] mt-[3rem] flex flex-col gap-y-3 "
       id="services"
     >
       <h1 className="text-center font-semibold text-4xl leading-[5rem]">
