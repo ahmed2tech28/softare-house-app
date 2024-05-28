@@ -432,7 +432,7 @@ export const ResultObtained: React.FC = () => {
         "The Devhouse team performed a migration from on-premises infrastructure to the cloud. It allowed the customer to optimize the streaming operations, reach all-time low streaming latency, and scale up business performance while maintaining zero downtime when dealing with rapid user growth. As a result, the number of no-fault-founds was reduced by 8 times, with <b>software solutions maintenance costs cut by 50%</b>",
     },
     {
-      title: "Clients attraction/retention rate growth by 20-30%",
+      title: "Clients attraction/ retention rate growth by 20-30%",
       description:
         "The company received a high-performing product with cross-platform capabilities. The solution allows the company to broadcast quality video content to multiple users on a pay-per-view basis. The combination of convenient navigation and appealing UX design contributed to an increased user satisfaction rate several times over. Within six weeks, 10,000 people subscribed to the service. Blockbuster ensured high-quality delivery for users",
     },

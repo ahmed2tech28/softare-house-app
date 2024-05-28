@@ -30,9 +30,13 @@ const BreadCrumbComp: React.FC<Props> = ({ path, color }) => {
             );
           }
           return (
-            <Link underline="hover" key={i} color="inherit" sx={{ color }}>
-              <Anchor href={item.path}>{item.label}</Anchor>
-            </Link>
+            <Anchor
+              href={item.path}
+              style={{ color }}
+              className="hover:underline"
+            >
+              {item.label}
+            </Anchor>
           );
         })}
       </Breadcrumbs>
