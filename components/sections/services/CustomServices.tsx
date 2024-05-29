@@ -113,7 +113,7 @@ const CustomServices: React.FC = () => {
                   ))}
                 </div>
                 <div>
-                  <button className="px-10 py-3 bg-[#0066ff41] rounded-full text-[#0066FF]">
+                  <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">
                     Explore more →
                   </button>
                 </div>
