@@ -53,7 +53,7 @@ const QuestionMayYouHave: React.FC = () => {
           offer
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-[2rem]">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-[2rem]">
         {questions.map((item, i) => (
           <QuestionComp key={i} question={item.question} answer={item.answer} />
         ))}
