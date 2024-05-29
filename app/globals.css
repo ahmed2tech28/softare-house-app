@@ -157,6 +157,10 @@ svg a {
     font-family: "Montserrat", sans-serif !important;
 }
 
+.f-gil {
+    font-family: "gilroy" !important;
+}
+
 .hover-shadow-custom:hover {
     box-shadow: 1px 3px 24px -3px rgba(0, 0, 0, 0.194);
     transition: box-shadow 0.3s ease-in-out;
@@ -239,4 +243,12 @@ header.text-black nav * {
 
 .blue-gradient {
     background: linear-gradient(90deg, #0C8CE9 0%, #0066FF 100%);
+}
+
+
+
+
+.css-1f773le-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+    min-height: 0 !important;
+    height: 2rem;
 }

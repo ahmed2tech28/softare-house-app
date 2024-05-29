@@ -136,7 +136,7 @@ const CoreIndustries: React.FC = () => {
   };
   return (
     <section className="w-screen xl:h-[816px] h-fit bg-[#111827] mb-4 py-10 flex flex-col gap-y-4">
-      <h1 className="text-center text-white text-[36px]">
+      <h1 className="text-center text-white lg:text-[36px] text-[20px]">
         Core Industries we Serve
       </h1>
       <p className="text-center text-white text-[16px] font-light f-mon lg:w-[684px] w-[80vw] mx-auto leading-[28px]">
