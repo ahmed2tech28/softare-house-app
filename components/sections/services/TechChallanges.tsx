@@ -11,7 +11,7 @@ const TechChallanges: React.FC = () => {
         services you need.
       </p>
       <button className="bg-white text-[#0C8CE9] px-10 py-3 rounded-full font-semibold f-mon">
-        Let's Talk Now
+        Let&apos;s Talk Now
       </button>
     </div>
   );

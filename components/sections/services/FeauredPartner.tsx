@@ -8,7 +8,7 @@ const FeauredPartner: React.FC = () => {
           Featured Partners & Clients
         </h1>
         <p>
-          Clients and partners we've worked with frequently recommend us to
+          Clients and partners we&apos;ve worked with frequently recommend us to
           others thanks to our individual approach to tech problems
         </p>
       </div>
