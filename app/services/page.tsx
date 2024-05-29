@@ -8,6 +8,7 @@ import Footer from "@/components/sections/Home/Footer";
 import Contact from "@/components/sections/Home/Contact";
 import FeauredPartner from "@/components/sections/services/FeauredPartner";
 import Experties from "@/components/sections/services/Experties";
+import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
 
 const Services = () => {
   return (
@@ -19,6 +20,7 @@ const Services = () => {
       <FeauredPartner />
       <CoreIndustries />
       <Experties />
+      <QuestionMayYouHave />
       <main className="cover">
         <Contact />
       </main>
