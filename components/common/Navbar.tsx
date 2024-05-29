@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -19,7 +19,7 @@ const navRoutes: Path[] = [
     name: "Home",
   },
   {
-    path: "#services",
+    path: "/services",
     name: "Services",
   },
   {
@@ -46,15 +46,21 @@ const navRoutes: Path[] = [
 
 interface HoveredProps {
   linkHovered: string;
+  scrolled: boolean;
   setlinkHovered: (item: any) => void;
 }
 
 const HoveredItems: React.FC<HoveredProps> = ({
   linkHovered,
   setlinkHovered,
+  scrolled,
 }) => {
   return (
-    <div className="w-screen pb-4 absolute top-[83px] bg-white z-50">
+    <div
+      className={`w-screen pb-4 ${
+        scrolled ? "fixed" : "absolute"
+      } top-[83px] bg-white z-50`}
+    >
       <hr />
       <div
         className=" flex w-full"
@@ -93,17 +99,43 @@ const Navbar: React.FC<{
 }> = ({ linkHovered, setlinkHovered }) => {
   const [navRes, setNavRes] = useState(false);
   const path = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 80) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <div
         className={`w-full h-fit`}
-        style={{ backgroundColor: `${linkHovered ? "white" : "transparent"}` }}
+        style={{
+          backgroundColor: `${
+            linkHovered || scrolled ? "white" : "transparent"
+          }`,
+          position: scrolled ? "fixed" : undefined,
+          top: scrolled ? "0" : undefined,
+          left: scrolled ? "0" : undefined,
+        }}
       >
         <nav className="flex container mx-auto justify-between items-center h-[83px] hb:h-[5rem]">
-          {path == "/" ? (
+          {path == "/" || path == "/services" ? (
             <div
               className="logo"
-              style={{ filter: `invert(${linkHovered ? "1" : "0"})` }}
+              style={{
+                filter: `invert(${linkHovered || scrolled ? "1" : "0"})`,
+              }}
             >
               <Link href={"/"}>
                 <img src="/devLogo.png" width={"75px"} alt="logo" />
@@ -112,7 +144,9 @@ const Navbar: React.FC<{
           ) : (
             <div
               className="logo"
-              style={{ filter: `invert(${linkHovered ? "1" : "1"})` }}
+              style={{
+                filter: `invert(${linkHovered || scrolled ? "1" : "1"})`,
+              }}
             >
               <Link href={"/"}>
                 <img src="/devLogo.png" width={"75px"} alt="logo" />
@@ -130,7 +164,7 @@ const Navbar: React.FC<{
                   <Link
                     href={item.path}
                     className={`${
-                      linkHovered
+                      linkHovered || scrolled
                         ? linkHovered == item.name
                           ? "text-blue-600"
                           : "text-black"
@@ -146,7 +180,7 @@ const Navbar: React.FC<{
           <div className="seacrh-icon flex justify-end xl:gap-x-0 gap-x-2">
             <SearchIcon
               sx={{
-                color: linkHovered ? "black" : "white",
+                color: linkHovered || scrolled ? "black" : "white",
                 cursor: "pointer",
                 widthb: "26px",
                 height: "26px",
@@ -163,7 +197,10 @@ const Navbar: React.FC<{
                 />
               ) : (
                 <MenuIcon
-                  sx={{ color: "white", cursor: "pointer" }}
+                  sx={{
+                    color: scrolled ? "black" : "white",
+                    cursor: "pointer",
+                  }}
                   className="xl:hidden inline"
                 />
               )}
@@ -228,6 +265,7 @@ const Navbar: React.FC<{
         <HoveredItems
           linkHovered={linkHovered}
           setlinkHovered={setlinkHovered}
+          scrolled={scrolled}
         />
       )}
     </>

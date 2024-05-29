@@ -236,3 +236,7 @@ svg a {
 header.text-black nav * {
     color: black !important;
 }
+
+.blue-gradient {
+    background: linear-gradient(90deg, #0C8CE9 0%, #0066FF 100%);
+}

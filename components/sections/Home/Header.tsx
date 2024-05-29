@@ -80,7 +80,7 @@ const Header: React.FC = () => {
           onMouseEnter={(e) => setlinkHovered("")}
         >
           <div className="xl:w-[60%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
-            <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-normal">
+            <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-semibold">
               Custom Software Development Company
             </h1>
             <p className="sm:text-[1rem] text-center w-[90%] mx-auto font-light f-mon leading-[28px]">
