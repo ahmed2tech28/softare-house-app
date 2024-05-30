@@ -9,6 +9,7 @@ import LearnMoreInPortfolio from "@/components/sections/mobileappservicescomp/Le
 import LatestInsights from "@/components/sections/Home/LatestInsights";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
+import FeaturedMobDevProjects from "@/components/sections/mobileappservicescomp/FeaturedMobDevProjects";
 
 function MobileAppPage() {
   return (
@@ -19,6 +20,7 @@ function MobileAppPage() {
       <AppCoast />
       <FeaturedMobDev />
       <LearnMoreInPortfolio />
+      <FeaturedMobDevProjects />
       <QuestionMayYouHave />
       <main className="cover">
         <LatestInsights />

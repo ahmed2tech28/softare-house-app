@@ -6,7 +6,7 @@ const AppCoast: React.FC = () => {
       <h1 className="text-center text-white mb:text-[36px] text-[30px]">
         How much will your app cost?
       </h1>
-      <p className="f-mon text-white text-center mb:w-full w-[90%] mx-auto">
+      <p className="f-mon text-white text-center xl:w-full w-[90%] mx-auto">
         Calculate the cost of your software project with our solution that
         allows you to select the required functionality interactively and
         quickly

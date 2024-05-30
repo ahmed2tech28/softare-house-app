@@ -48,7 +48,7 @@ const CustomMobileApp: React.FC = () => {
             payment gateways (Stripe, PayPal), and in-app calling feature
             integration (Twilio, Bandwith).
           </div>
-          <div className="xl:w-[50%] md:w-[40%] w-full flex md:items-end flex-col">
+          <div className="xl:w-[50%] md:w-[40%] w-full flex md:items-end md:flex-col">
             <div className="flex flex-col lg:w-[18rem] w-[14rem]">
               <h2 className="text-[#0C8CE9] text-[30px] font-semibold">
                 2200 Hours
