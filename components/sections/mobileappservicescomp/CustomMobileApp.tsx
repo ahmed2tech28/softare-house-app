@@ -30,6 +30,7 @@ const CustomMobileApp: React.FC = () => {
         <div className="flex lg:gap-x-4 md:gap-x-2 gap-x-1 md:flex-row flex-col md:w-full w-1/3">
           {options.map((item, i) => (
             <button
+              key={i}
               className={`hover:bg-[#0C8CE9] ${
                 optionSelected == item ? "bg-[#0C8CE9] text-white" : ""
               } hover:text-white px-[1.5rem] rounded-[33px] h-[53px] xl:text-[30px] lg:text-[20px] text-[15px] font-semibold transition-all duration-150 md:inline inline-flex justify-start items-center`}

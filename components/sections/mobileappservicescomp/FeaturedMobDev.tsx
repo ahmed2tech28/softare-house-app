@@ -57,8 +57,9 @@ const FeaturedMobDev: React.FC = () => {
     <section className="container mx-auto py-[3rem] flex flex-col gap-y-[2rem]">
       <Hiding />
       <main className="flex flex-col w-full gap-y-[2rem]">
-        {cards.map((item) => (
+        {cards.map((item, i) => (
           <Card
+            key={i}
             img={item.img}
             name={item.name}
             description={item.description}
