@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import LoadingBar from "@/components/common/LoadingBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LoadingBar />
+        {children}
+      </body>
     </html>
   );
 }

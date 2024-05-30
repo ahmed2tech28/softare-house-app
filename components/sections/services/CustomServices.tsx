@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface sevices {
@@ -5,6 +6,7 @@ interface sevices {
   img: string;
   categories: string[];
   description: string;
+  link: string;
 }
 
 const services: sevices[] = [
@@ -18,6 +20,7 @@ const services: sevices[] = [
     ],
     description:
       "Our mobile developers use well-proven agile practices and follow a client-oriented approach to develop custom mobile apps  that highlight your brand identity, bring customers, and solve everyday business challenges.",
+    link: "/services/mobileapp",
   },
   {
     name: "Web app development",
@@ -29,6 +32,7 @@ const services: sevices[] = [
     ],
     description:
       "We've gained our experience in building web applications through cooperating with companies that follow various business models and operate in variousbusiness domains like FinTech and e-Commerce.",
+    link: "#",
   },
   {
     name: "UI/UX design",
@@ -40,6 +44,7 @@ const services: sevices[] = [
     ],
     description:
       "Our UI/UX design team's expertise and creativity will help you get the product you’ve pictured. We rely on established standards, proven tools and deep understanding of your business goals while designing your product.",
+    link: "#",
   },
   {
     name: "QA services",
@@ -51,6 +56,7 @@ const services: sevices[] = [
     ],
     description:
       "We run manual and automated tests and use different approaches during the entire development life-cycle to eliminate problems and bugs, enhance performance, and improve business logic and design.",
+    link: "#",
   },
   {
     name: "DevOps services",
@@ -62,6 +68,7 @@ const services: sevices[] = [
     ],
     description:
       "Bring new code and features to your products painlessly with our experienced DevOps engineers. We'll help you reduce time to market without sacrificing reliability, security, and compliance.",
+    link: "#",
   },
   {
     name: "Staff augmentation",
@@ -69,6 +76,7 @@ const services: sevices[] = [
     categories: ["Dedicated team", "Team augmentation", "Flexible cooperation"],
     description:
       "We provide staff augmentation services to expand your team with qualified and experienced members. Acquire our iOS, Android, and Web developers, DevOps and QA engineers, UI/UX designers in no time.",
+    link: "#",
   },
   {
     name: "Startup services",
@@ -76,6 +84,7 @@ const services: sevices[] = [
     categories: ["Discovery phase", "MVP development", "CTO as a service"],
     description:
       "If you're a brave startup with an idea and you want to test waters, we’ll help you bring it to life. As a software engineering company, we have in-depth  experience in creating MVP projects to reduce time to market.",
+    link: "#",
   },
 ];
 
@@ -113,9 +122,11 @@ const CustomServices: React.FC = () => {
                   ))}
                 </div>
                 <div>
-                  <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">
-                    Explore more →
-                  </button>
+                  <Link href={item.link}>
+                    <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">
+                      Explore more →
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
