@@ -128,10 +128,11 @@ const Navbar: React.FC<{
           top: scrolled ? "0" : undefined,
           left: scrolled ? "0" : undefined,
           borderBottom: scrolled ? "0.03px solid rgba(0,0,0,0.3)" : undefined,
+          zIndex: scrolled ? "100" : undefined,
         }}
       >
         <nav className="flex container mx-auto justify-between items-center h-[83px] hb:h-[5rem]">
-          {path == "/" || path == "/services" ? (
+          {path == "/" || path.includes("/services") ? (
             <div
               className="logo"
               style={{

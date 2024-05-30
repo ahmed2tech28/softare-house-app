@@ -12,7 +12,7 @@ const QuestionComp: React.FC<questions> = ({ answer, question }) => {
     <div
       className={`flex flex-col ${
         opened ? "h-[296px]" : "h-[114px]"
-      } justify-start items-start gap-x-5 bg-[#F9F9F9] p-[1rem] py-[3rem] transition-[height] duration-100 gap-y-[3rem]`}
+      } justify-start items-start gap-x-5 bg-[#F9F9F9] hover:bg-[#E2F3FF] p-[1rem] py-[3rem] transition-all duration-100 gap-y-[3rem]`}
     >
       <div className="flex items-center gap-x-5 h-[14px] py-2">
         <div
