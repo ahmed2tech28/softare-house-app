@@ -44,11 +44,11 @@ const questions: questions[] = [
 const QuestionMayYouHave: React.FC = () => {
   return (
     <div className="container mx-auto flex flex-col gap-y-[4rem] mb-[6rem]">
-      <div className="flex w-full justify-between">
-        <h1 className="w-2/3 text-[36px] font-semibold">
+      <div className="flex w-full justify-between lg:flex-row flex-col">
+        <h1 className="lg:w-2/3 w-full text-[36px] font-semibold">
           Questions you may have
         </h1>
-        <p className="w-[30%]">
+        <p className="lg:w-[30%] w-full">
           Learn more about our software development services and expertise we
           offer
         </p>

@@ -192,7 +192,7 @@ const Navbar: React.FC<{
               {navRes ? (
                 <CloseIcon
                   sx={{
-                    color: linkHovered ? "black" : "white",
+                    color: linkHovered || scrolled ? "black" : "white",
                     cursor: "pointer",
                   }}
                   className="xl:hidden inline"
@@ -211,7 +211,7 @@ const Navbar: React.FC<{
         </nav>
       </div>
       {!navRes ? (
-        <div className="w-[90vw] h-screen bg-white fixed right-0 z-30 top-0 transition-transform duration-100 translate-x-full">
+        <div className="w-[90vw] h-screen bg-white fixed right-0 top-0 transition-transform duration-100 translate-x-full z-[200]">
           <div className="top flex h-[20%] justify-end px-3 py-3">
             <span onClick={(e) => setNavRes(!navRes)}>
               {navRes ? (

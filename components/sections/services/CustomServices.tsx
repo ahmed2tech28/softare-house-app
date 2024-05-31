@@ -32,7 +32,7 @@ const services: sevices[] = [
     ],
     description:
       "We've gained our experience in building web applications through cooperating with companies that follow various business models and operate in variousbusiness domains like FinTech and e-Commerce.",
-    link: "#",
+    link: "/services/webapp",
   },
   {
     name: "UI/UX design",
