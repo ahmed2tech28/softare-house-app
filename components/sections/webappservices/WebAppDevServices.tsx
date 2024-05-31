@@ -27,25 +27,27 @@ const services: services[] = [
 const WebAppDevServices: React.FC = () => {
   return (
     <div className="container mx-auto py-[3rem]">
-      <div className="flex w-full justify-between items-center">
-        <h1 className="text-[36px] font-semibold w-[30%]">
+      <div className="flex lg:flex-row flex-col w-full justify-between items-center">
+        <h1 className="text-[36px] font-semibold xl:w-[30%] lg:w-[40%] w-full">
           Web application development services
         </h1>
-        <p className="f-mon w-[40%]">
+        <p className="f-mon xl:w-[40%] lg:w-[50%] lg: w-full">
           We consult businesses, helping them modernize or create apps from
           scratch with custom UI/UX design.
         </p>
       </div>
-      <div className="grid grid-cols-2 pt-[3rem] gap-y-11">
+      <div className="grid lg:grid-cols-2 grid-cols-1 pt-[3rem] gap-y-11 gap-x-4">
         {services.map((item, i) => {
           return (
             // Added 1 in index number before comaring is because of indexes are not 1, 2, 3, 4. They are 0, 1, 2, 4.
             <div
               className={`flex ${
-                (i + 1) % 2 != 0 ? "justify-start" : "justify-end"
+                (i + 1) % 2 != 0
+                  ? "justify-start"
+                  : "lg:justify-end justify-start"
               }`}
             >
-              <div className="flex flex-col gap-y-4 w-[612px]">
+              <div className="flex flex-col gap-y-4 lg:w-[612px] w-full">
                 <h1 className="text-[36px] font-semibold flex items-center gap-x-3">
                   <span>
                     <svg

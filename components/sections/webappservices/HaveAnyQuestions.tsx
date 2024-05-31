@@ -1,17 +1,17 @@
 import React from "react";
 
-const HaveAnyQuestions = () => {
+const HaveAnyQuestions: React.FC = () => {
   return (
     <div className="container mx-auto py-[3rem]">
-      <div className="h-[248px] w-full blue-gradient rounded-[22px] flex justify-center items-center gap-x-[2rem] px-[4rem]">
-        <h1 className="text-[36px] text-white font-semibold w-2/5">
+      <div className="h-[248px] w-full blue-gradient rounded-[22px] flex lg:flex-row flex-col justify-center items-center gap-x-[2rem] px-[4rem]">
+        <h1 className="text-[36px] text-white font-semibold lg:w-2/5 w-full">
           Have any questions?
         </h1>
-        <p className="f-mon leading-[28px] text-white w-2/5">
+        <p className="f-mon leading-[28px] text-white lg:w-2/5 w-full">
           Our managers will consult you about choosing a web-based solution for
           your needs.
         </p>
-        <div className="w-1/5 justify-end flex">
+        <div className="lg:w-1/5 w-full justify-end flex">
           <button className="text-[#0C8CE9] bg-white f-mon font-semibold px-3 py-2 rounded-full">
             Contact Us
           </button>

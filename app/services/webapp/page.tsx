@@ -7,7 +7,10 @@ import CustomerInDomain from "@/components/sections/webappservices/CustomerInDom
 import HaveAnyQuestions from "@/components/sections/webappservices/HaveAnyQuestions";
 import WebAppDevServices from "@/components/sections/webappservices/WebAppDevServices";
 import ClientArea from "@/components/sections/Home/ClientArea";
-
+import TypeofWebs from "@/components/sections/webappservices/TypeofWebs";
+import GotAnyQuestions from "@/components/sections/webappservices/GotAnyQuestions";
+import DevelopmentProcess from "@/components/sections/webappservices/DevelopmentProcess";
+import WebAppsForClient from "@/components/sections/webappservices/WebAppsForClient";
 import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
@@ -23,6 +26,10 @@ function WebServicesPage() {
       <HaveAnyQuestions />
       <WebAppDevServices />
       <ClientArea />
+      <TypeofWebs />
+      <GotAnyQuestions />
+      <DevelopmentProcess />
+      <WebAppsForClient />
       <QuestionMayYouHave />
       <main className="cover">
         <Contact />
