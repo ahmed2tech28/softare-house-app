@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import Slider from "react-slick";
 
 interface sevices {
   name: string;
@@ -89,12 +91,19 @@ const services: sevices[] = [
 ];
 
 const CustomServices: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="container mx-auto py-[4rem]">
       <h1 className="text-[36px] font-semibold text-center">
         Custom Software Services we offer
       </h1>
-      <div className="flex flex-col gap-y-[6rem] w-full sm:py-[6rem] py-[2rem]">
+      <div className="lg:flex hidden flex-col gap-y-[6rem] w-full sm:py-[6rem] py-[2rem]">
         {services.map((item, i) => {
           return (
             <div
@@ -132,6 +141,47 @@ const CustomServices: React.FC = () => {
             </div>
           );
         })}
+      </div>
+      <div className="my-[2rem]">
+        <Slider {...settings}>
+          {services.map((item, i) => {
+            return (
+              <div
+                key={i}
+                className="w-full lg:h-[300px] h-fit flex gap-x-6 lg:flex-row flex-col lg:gap-y-0 gap-y-4"
+              >
+                <img
+                  src={`/services-imgs/${item.img}`}
+                  alt={item.name}
+                  className="lg:w-auto w-[30rem]"
+                />
+                <div className="h-full flex flex-col justify-center gap-y-5">
+                  <h2 className="text-[30px] font-semibold">{item.name}</h2>
+                  <p className="leading-[30px] f-mon font-extralight">
+                    {item.description}
+                  </p>
+                  <div className="flex xl:gap-x-[7rem] md:gap-x-[3rem] sm:gap-x-[1rem] gap-x-[0.4rem] f-mon ">
+                    {item.categories.map((item, i) => (
+                      <span
+                        key={i}
+                        className="underline font-semibold cursor-pointer"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div>
+                    <Link href={item.link}>
+                      <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">
+                        Explore more →
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
       </div>
     </div>
   );
