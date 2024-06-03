@@ -39,9 +39,12 @@ const cards: card[] = [
 
 const Hiding: React.FC = () => {
   return (
-    <div className="flex w-full justify-between items-center">
-      <h1 className="text-[30px] font-semibold">
+    <div className="flex sm:flex-row flex-col w-full justify-between sm:items-center items-start">
+      <h1 className="text-[30px] font-semibold sm:block hidden">
         Featured Mobile <br /> Development Projects
+      </h1>
+      <h1 className="text-[30px] font-semibold sm:hidden block">
+        Featured Mobile Development Projects
       </h1>
       <div>
         <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">

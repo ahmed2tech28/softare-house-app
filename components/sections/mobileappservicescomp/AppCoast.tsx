@@ -2,7 +2,7 @@ import React from "react";
 
 const AppCoast: React.FC = () => {
   return (
-    <div className="container mx-auto h-[248px] blue-gradient rounded-[22px] mb-[3rem] flex flex-col justify-center items-center gap-y-3">
+    <div className="container mx-auto md:h-[248px] h-fit md:py-0 py-[1rem] blue-gradient rounded-[22px] mb-[3rem] flex flex-col justify-center items-center gap-y-3">
       <h1 className="text-center text-white mb:text-[36px] text-[30px]">
         How much will your app cost?
       </h1>
