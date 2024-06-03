@@ -142,7 +142,7 @@ const CustomServices: React.FC = () => {
           );
         })}
       </div>
-      <div className="my-[2rem]">
+      <div className="my-[2rem] block lg:hidden">
         <Slider {...settings}>
           {services.map((item, i) => {
             return (
