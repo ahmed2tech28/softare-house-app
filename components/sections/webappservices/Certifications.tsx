@@ -13,7 +13,7 @@ const Certifications: React.FC = () => {
   return (
     <div className="container mx-auto py-[3rem]">
       <h1 className="text-[36px] font-semibold">Certifications</h1>
-      <p className="text-[16px] lg:w-[40%] md:w-[80%] w-full leading-[28px]">
+      <p className="text-[16px] lg:w-[40%] md:w-[80%] f-mon w-full leading-[28px]">
         We keep deepening our expertise to build even more innovative, secure,
         and scalable apps
       </p>
