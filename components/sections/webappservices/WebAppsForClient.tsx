@@ -37,7 +37,7 @@ const WebAppsForClient: React.FC = () => {
     <div className="container mx-auto py-[3rem]">
       <div className="flex flex-col">
         <h1 className="text-[36px] font-semibold md:w-[421px] w-full">
-          Web application we've delivered for our clients
+          Web application we{"'"}ve delivered for our clients
         </h1>
         <div className="flex flex-col gap-y-[6rem] w-full sm:py-[6rem] py-[2rem]">
           {cardsdetails.map((item, i) => (

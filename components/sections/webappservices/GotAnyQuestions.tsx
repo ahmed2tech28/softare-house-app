@@ -15,8 +15,8 @@ const GotAnyQuestions: React.FC = () => {
           </h1>
           <p className="f-mon leading-[28px] text-white w-full">
             Ask our managers anything you want to know about software
-            development, and they'll answer your question within 24 hours. It's
-            free of charge and commitment.
+            development, and they{"'"}ll answer your question within 24 hours.
+            It{"'"}s free of charge and commitment.
           </p>
         </div>
       </div>

@@ -46,6 +46,7 @@ const WebAppDevServices: React.FC = () => {
                   ? "justify-start"
                   : "lg:justify-end justify-start"
               }`}
+              key={i}
             >
               <div className="flex flex-col gap-y-4 lg:w-[612px] w-full">
                 <h1 className="text-[36px] font-semibold flex items-center gap-x-3">

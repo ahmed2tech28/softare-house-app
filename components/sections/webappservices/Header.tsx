@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <div className="lg:w-[50%] w-[9-vw] lg:mx-0 mx-auto flex flex-col gap-y-[1rem]">
             <h1 className="text-[40px]">Web App Development Services</h1>
             <p className="leading-[28px] f-mon">
-              Web applications that'll help you digitize your internal or
+              Web applications that{"'"}ll help you digitize your internal or
               external processes, modernize legacy apps or improve the mobile
               experience
             </p>

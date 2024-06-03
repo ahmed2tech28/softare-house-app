@@ -70,7 +70,9 @@ const DevelopmentProcess: React.FC = () => {
           </h3>
           <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
             {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]">{item}</span>
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
             ))}
           </div>
         </div>
