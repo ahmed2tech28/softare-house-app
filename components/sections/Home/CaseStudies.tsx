@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 interface CaseStudy {
   projectname: string;
@@ -84,67 +85,73 @@ const DevLogo: React.FC = () => {
 const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
   const [blur, setBlur] = useState(false);
   return (
-    <div className=" mb:w-[85vw] md:!w-[40rem] w-[476px] h-[80%] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
-      {blur ? (
-        <img
-          src="/case-studies/1.png"
-          style={{ filter: "blur(5px)", transition: "all 0.3s" }}
-          alt=""
-        />
-      ) : (
-        <img src="/case-studies/1.png" alt="" />
-      )}
-
-      <div
-        className="absolute top-0 z-20 h-full w-full bg-[#0000002a] hover:bg-[#00000045] flex flex-col items-start gap-y-4 justify-end p-5 transition-colors duration-300 ease-linear"
-        onMouseEnter={(e) => setBlur(true)}
-        onMouseLeave={(e) => setBlur(false)}
-      >
-        <h1 className="text-2xl font-bold text-white">{projectname}</h1>
-        <Line />
-        <div className="flex h-[3rem] justify-between w-full group-hover:hidden transition-all duration-100 ease-out">
-          <div className="w-[70%]">
-            <img src="/devLogo.png" width={"80"} height={"30"} alt="DevLogo" />
-          </div>
-          <div className="right flex w-[30%] gap-x-2 items-center text-white">
-            <span className="text-3xl font-bold">{percent1}</span>
-            <span className="">Lorem ipsum dolor sit.</span>
-          </div>
-        </div>
-        <div className="hidden group-hover:flex h-[50%] flex-col w-full transition-all duration-100 ease-out">
-          <div className="flex h-[50%] justify-between w-full gap-x-4">
-            <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-4xl font-bold">{percent1}</span>
-              <span className="">Lorem ipsum dolor sit.</span>
+    <Link href={"/casestudies"}>
+      <div className=" mb:w-[85vw] md:!w-[40rem] w-[476px] h-[80%] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
+        {blur ? (
+          <img
+            src="/case-studies/1.png"
+            style={{ filter: "blur(5px)", transition: "all 0.3s" }}
+            alt=""
+          />
+        ) : (
+          <img src="/case-studies/1.png" alt="" />
+        )}
+        <div
+          className="absolute top-0 z-20 h-full w-full bg-[#0000002a] hover:bg-[#00000045] flex flex-col items-start gap-y-4 justify-end p-5 transition-colors duration-300 ease-linear"
+          onMouseEnter={(e) => setBlur(true)}
+          onMouseLeave={(e) => setBlur(false)}
+        >
+          <h1 className="text-2xl font-bold text-white">{projectname}</h1>
+          <Line />
+          <div className="flex h-[3rem] justify-between w-full group-hover:hidden transition-all duration-100 ease-out">
+            <div className="w-[70%]">
+              <img
+                src="/devLogo.png"
+                width={"80"}
+                height={"30"}
+                alt="DevLogo"
+              />
             </div>
-            <div className="flex w-[50%] items-center text-white gap-x-2">
-              <span className="text-4xl font-bold">{percent2}</span>
+            <div className="right flex w-[30%] gap-x-2 items-center text-white">
+              <span className="text-3xl font-bold">{percent1}</span>
               <span className="">Lorem ipsum dolor sit.</span>
             </div>
           </div>
-          <div className="flex h-[50%] w-full items-center">
-            <div className="w-1/2 flex gap-x-3">
-              <button className="font-bold bg-white px-3 rounded-3xl h-9">
-                See Design
-              </button>
-              <div className="w-[30%]">
-                <img
-                  src="/devLogo.png"
-                  width={"100"}
-                  height={"20"}
-                  alt="DevLogo"
-                />
+          <div className="hidden group-hover:flex h-[50%] flex-col w-full transition-all duration-100 ease-out">
+            <div className="flex h-[50%] justify-between w-full gap-x-4">
+              <div className="flex w-[50%] items-center text-white gap-x-2">
+                <span className="text-4xl font-bold">{percent1}</span>
+                <span className="">Lorem ipsum dolor sit.</span>
+              </div>
+              <div className="flex w-[50%] items-center text-white gap-x-2">
+                <span className="text-4xl font-bold">{percent2}</span>
+                <span className="">Lorem ipsum dolor sit.</span>
               </div>
             </div>
-            <div className="w-1/2 flex justify-end h-full items-center">
-              <button className="bg-white h-10 w-10 text-2xl rounded-md">
-                →
-              </button>
+            <div className="flex h-[50%] w-full items-center">
+              <div className="w-1/2 flex gap-x-3">
+                <button className="font-bold bg-white px-3 rounded-3xl h-9">
+                  See Design
+                </button>
+                <div className="w-[30%]">
+                  <img
+                    src="/devLogo.png"
+                    width={"100"}
+                    height={"20"}
+                    alt="DevLogo"
+                  />
+                </div>
+              </div>
+              <div className="w-1/2 flex justify-end h-full items-center">
+                <button className="bg-white h-10 w-10 text-2xl rounded-md">
+                  →
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

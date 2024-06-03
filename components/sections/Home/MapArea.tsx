@@ -158,7 +158,7 @@ const MapArea: React.FC = () => {
           mousePositionY={mousePositionY}
         />
       </div>
-      <div className="h-[277px] 2xl:w-[80%] xl:w-[90%] lg:w-[90vw] lg:block hidden xl:mx-auto xl:ms-0 ms-[-2rem] relative">
+      <div className="h-[277px] 2xl:w-[80%] xl:w-[90%] lg:w-[90vw] lg:block hidden xl:mx-auto xl:ms-auto ms-[-2rem] relative">
         {mapdetails.map((item, i) => (
           <MapDetailBox
             key={i}

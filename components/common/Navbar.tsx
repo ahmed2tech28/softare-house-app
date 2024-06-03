@@ -27,7 +27,7 @@ const navRoutes: Path[] = [
     name: "Industries",
   },
   {
-    path: "#expertise",
+    path: "/casestudies",
     name: "Expertise",
   },
   {
