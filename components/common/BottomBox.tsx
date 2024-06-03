@@ -6,6 +6,7 @@ import ProgressBar from "./ProgressBar";
 interface Boxes {
   title: string;
   desc: string;
+  company: string;
 }
 
 interface BoxProps {
@@ -17,6 +18,7 @@ interface BoxProps {
   hovered: number;
   onHover: (i: number) => void;
   animate: boolean;
+  company: string;
 }
 
 const Button: React.FC<{ blue: boolean }> = ({ blue }) => {
@@ -40,6 +42,7 @@ const Box: React.FC<BoxProps> = ({
   animate,
   hovered,
   onHover,
+  company,
 }) => {
   return (
     <div
@@ -57,7 +60,12 @@ const Box: React.FC<BoxProps> = ({
       onMouseLeave={(e) => onHover(-1)}
     >
       <div>
-        <img src={`/header-files/${title}`} width={"137px"} alt="" />
+        <div className="flex w-full justify-between items-center">
+          <img src={`/header-files/${title}`} width={"137px"} alt="" />
+          {(expand == i || hovered == i) && (
+            <span className="text-[0.7rem]">{company}</span>
+          )}
+        </div>
         {(expand == i || hovered == i) && (
           <p className="text-[12px] w-[90%] ms-2 f-mon">{desc}</p>
         )}
@@ -84,15 +92,19 @@ const MobileBox: React.FC<BoxProps> = ({
   title,
   expand,
   onHover,
+  company,
 }) => {
   if (expand == i) {
     return (
       <div className="w-full h-full flex flex-col justify-between p-5">
-        <ProgressBar />
         <div>
-          <img src={`/header-files/${title}`} width={"200"} alt="" />
+          <div className="flex w-full justify-between items-center">
+            <img src={`/header-files/${title}`} width={"137px"} alt="" />
+            {expand == i && <span className="text-[0.7rem]">{company}</span>}
+          </div>
           <p className="text-[14px] w-[90%] ms-2 f-mon">{desc}</p>
         </div>
+        <ProgressBar />
         <div className="flex justify-between">
           <button>View case study</button>
           <Button blue={true} />
@@ -152,18 +164,22 @@ const BottomBox: React.FC<{
     {
       title: "1.png",
       desc: "Reduced animate to market for a\n suite of enterprise apps .",
+      company: "Finanace",
     },
     {
       title: "2.png",
       desc: "Reduced animate to market for a\n suite of enterprise apps ",
+      company: "Finanace",
     },
     {
       title: "3.png",
       desc: "Reduced animate to market for a\n suite of enterprise apps .",
+      company: "Finanace",
     },
     {
       title: "4.png",
       desc: "Reduced animate to market for a\n suite of enterprise apps ",
+      company: "Finanace",
     },
   ];
   return (
@@ -181,6 +197,7 @@ const BottomBox: React.FC<{
               hovered={hovered}
               onHover={onHover}
               animate={animate}
+              company={item.company}
             />
           );
         })}
@@ -198,6 +215,7 @@ const BottomBox: React.FC<{
               hovered={hovered}
               onHover={onHover}
               animate={animate}
+              company={item.company}
             />
           );
         })}
