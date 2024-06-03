@@ -19,7 +19,9 @@ const Card: React.FC<Props> = ({ img, name, callangesSolved, bg }) => {
       </div>
       <div className="h-full flex flex-col justify-center gap-y-2">
         <h2 className="text-[30px] font-semibold">{name}</h2>
-        <h3 className="text-[#0C8CE9] text-[24px]">Challanges Solved :</h3>
+        <h3 className="text-[#0C8CE9] text-[24px] font-semibold">
+          Challanges Solved :
+        </h3>
         <ul className="list-disc ps-4">
           {callangesSolved.map((item, i) => (
             <li key={i} className="leading-[38px]">

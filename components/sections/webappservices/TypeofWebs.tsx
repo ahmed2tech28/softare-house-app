@@ -36,7 +36,7 @@ const TypeofWebs: React.FC = () => {
         <h1 className="font-semibold text-[36px] text-center">
           Types of web apps we create
         </h1>
-        <p className="text-center f-mon w-[579px] leading-[28px]">
+        <p className="text-center f-mon sm:w-[579px] w-fullleading-[28px]">
           Our development expertise covers all popular types of web
           applications, from marketplaces to streaming platforms.
         </p>

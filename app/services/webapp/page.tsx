@@ -11,6 +11,8 @@ import TypeofWebs from "@/components/sections/webappservices/TypeofWebs";
 import GotAnyQuestions from "@/components/sections/webappservices/GotAnyQuestions";
 import DevelopmentProcess from "@/components/sections/webappservices/DevelopmentProcess";
 import WebAppsForClient from "@/components/sections/webappservices/WebAppsForClient";
+import TechStack from "@/components/sections/webappservices/TechStack";
+import Certifications from "@/components/sections/webappservices/Certifications";
 import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
@@ -30,6 +32,8 @@ function WebServicesPage() {
       <GotAnyQuestions />
       <DevelopmentProcess />
       <WebAppsForClient />
+      <TechStack />
+      <Certifications />
       <QuestionMayYouHave />
       <main className="cover">
         <Contact />
