@@ -155,7 +155,7 @@ const Navbar: React.FC<{
               </Link>
             </div>
           )}
-          <ul className="xl:flex gap-x-[2.5rem] hidden f-mon h-full">
+          <ul className="lg:flex gap-x-[2.5rem] hidden f-mon h-full">
             {navRoutes.map((item, i) => {
               return (
                 <li
@@ -182,7 +182,7 @@ const Navbar: React.FC<{
               );
             })}
           </ul>
-          <div className="seacrh-icon flex justify-end xl:gap-x-0 gap-x-2">
+          <div className="seacrh-icon flex justify-end lg:gap-x-0 gap-x-2">
             <SearchIcon
               sx={{
                 color: linkHovered || scrolled ? "black" : "white",
@@ -198,7 +198,7 @@ const Navbar: React.FC<{
                     color: linkHovered || scrolled ? "black" : "white",
                     cursor: "pointer",
                   }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               ) : (
                 <MenuIcon
@@ -206,7 +206,7 @@ const Navbar: React.FC<{
                     color: scrolled ? "black" : "white",
                     cursor: "pointer",
                   }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               )}
             </span>
@@ -220,12 +220,12 @@ const Navbar: React.FC<{
               {navRes ? (
                 <CloseIcon
                   sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               ) : (
                 <MenuIcon
                   sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               )}
             </span>
@@ -238,12 +238,12 @@ const Navbar: React.FC<{
               {navRes ? (
                 <CloseIcon
                   sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               ) : (
                 <MenuIcon
                   sx={{ color: "black", cursor: "pointer" }}
-                  className="xl:hidden inline"
+                  className="lg:hidden inline"
                 />
               )}
             </span>
