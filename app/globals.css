@@ -254,3 +254,9 @@ header.text-black nav * {
     min-height: 0 !important;
     height: 2rem;
 }
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
