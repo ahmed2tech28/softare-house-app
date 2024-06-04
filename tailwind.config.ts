@@ -15,6 +15,8 @@ const config: Config = {
       },
       screens: {
         "3xl": "1920px",
+        "cxl": "1325px",
+        "clg": "1063px",
         "mb": "512px",
         "hb": { raw: "(max-height: 760px) and (min-height:550px) and (min-width:768px) and (max-width:1300px)" },
       },

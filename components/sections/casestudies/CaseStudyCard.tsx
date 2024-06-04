@@ -30,7 +30,7 @@ export const ExpandedCaseStudy: React.FC<casestudy> = ({
 }) => {
   return (
     <Link href={"/casestudies/detail"}>
-      <div className="w-[795px] h-[422px] bg-[#F9F9F9] relative overflow-hidden group rounded-md">
+      <div className="cxl:!w-[795px] xl:w-[725px] clg:w-[640px] lg:w-[600px] w-full clg:h-[422px] h-fit bg-[#F9F9F9] relative overflow-hidden group rounded-md">
         <div className="h-[276px] group-hover:h-[100%] group-hover:relative overflow-hidden flex justify-center items-center">
           <img src={img} alt="expnaded-image" className="object-cover" />
         </div>
@@ -86,10 +86,10 @@ export const CollapsedCaseStudy: React.FC<casestudy> = ({
 }) => {
   return (
     <Link href={"/casestudies/detail"}>
-      <div className="w-[389px] h-[422px] bg-[#F9F9F9] overflow-hidden group rounded-md">
+      <div className="cxl:!w-[389px] xl:w-[349px] clg:w-[304px] lg:w-[300px] w-full clg:h-[422px] h-fit bg-[#F9F9F9] overflow-hidden group rounded-md">
         <div className="h-[276px] group-hover:h-[100%] group-hover:relative overflow-hidden flex justify-center items-center relative">
           <img
-            className="absolute inset-0 h-full w-auto object-cover"
+            className="absolute inset-0 h-full lg:w-auto w-full object-cover"
             src={img}
             alt="collapsed-image"
           />
