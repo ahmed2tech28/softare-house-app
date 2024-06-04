@@ -20,7 +20,7 @@ const teams: string[] = [
 const DevelopmentProcess: React.FC = () => {
   const [stepSelected, setStepSelected] = useState("Study the project");
   return (
-    <section className="container mx-auto py-[3rem] h-fit">
+    <section className="container mx-auto md:py-[3rem] py-[1.5rem] h-fit">
       <div className="flex lg:flex-row flex-col w-full justify-between items-center">
         <h1 className="text-[36px] font-semibold xl:w-[30%] lg:w-[40%] w-full">
           Development process at Devhouse
@@ -51,7 +51,7 @@ const DevelopmentProcess: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="lg:w-1/2 w-full bg-[#F9F9F9] h-fit rounded-[36px] p-[3rem]">
+        <div className="lg:w-1/2 w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
           <h1 className="text-[30px] font-semibold">
             {steps.indexOf(stepSelected) + 1 < 10
               ? `0${steps.indexOf(stepSelected) + 1}`
