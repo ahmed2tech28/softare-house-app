@@ -18,7 +18,9 @@ const Services = () => {
       <TechChallanges />
       <SoftwareDevLifeCycle />
       <FeauredPartner />
-      <CoreIndustries />
+      <main className="cover">
+        <CoreIndustries />
+      </main>
       <Experties />
       <QuestionMayYouHave />
       <main className="cover">
