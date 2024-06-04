@@ -12,7 +12,7 @@ const FeauredPartner: React.FC = () => {
           others thanks to our individual approach to tech problems
         </p>
       </div>
-      <div className="w-full h-fit flex justify-start items-start">
+      <div className="w-full h-fit flex justify-center items-start">
         <img
           src="/partners.svg"
           alt="partners"

@@ -114,7 +114,11 @@ export default function ConsultingBox() {
       {consultongBoxItems.map((item, i) => {
         return (
           <Accordion
-            sx={{ boxShadow: "none", marginBottom: "2rem" }}
+            sx={{
+              boxShadow: "none",
+              paddingTop: "1rem",
+              paddingBottom: "1rem",
+            }}
             key={i}
             defaultExpanded={i == 0}
           >
