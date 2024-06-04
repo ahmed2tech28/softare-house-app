@@ -153,7 +153,7 @@ const CoreIndustries: React.FC = () => {
           />
         ))}
       </div>
-      <div className="h-fit lg:hidden">
+      <div className="h-fit lg:hidden w-full">
         <Slider {...settings}>
           {industries.map((item, i) => (
             <Industry

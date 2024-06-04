@@ -2,7 +2,7 @@ import React from "react";
 
 const FeauredPartner: React.FC = () => {
   return (
-    <section className="container mx-auto h-[595px] flex flex-col gap-y-[4rem] mb-[4rem]">
+    <section className="container mx-auto lg:h-[595px] h-fit flex flex-col gap-y-[4rem] mb-[4rem]">
       <div>
         <h1 className="text-[36px] font-semibold">
           Featured Partners & Clients

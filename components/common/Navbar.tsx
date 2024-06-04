@@ -172,6 +172,9 @@ const Navbar: React.FC<{
                           : "text-black"
                         : "text-white"
                     }`}
+                    style={{
+                      fontWeight: path == item.path ? "600" : undefined,
+                    }}
                   >
                     {item.name}
                   </Link>
@@ -253,7 +256,13 @@ const Navbar: React.FC<{
                     key={i}
                     className="text-[1.15rem] border-b-2 border-black w-full py-3 px-3"
                   >
-                    <Link href={item.path} className="text-black">
+                    <Link
+                      href={item.path}
+                      className="text-black"
+                      style={{
+                        fontWeight: path == item.path ? "600" : undefined,
+                      }}
+                    >
                       {item.name}
                     </Link>
                   </li>
