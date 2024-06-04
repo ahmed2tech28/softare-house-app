@@ -5,6 +5,7 @@ import AboutProject from "@/components/sections/casestudiesdetail/AboutProject";
 import ClientArea from "@/components/sections/Home/ClientArea";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
+import { Metadata } from "next";
 
 const CaseStudiesDetail = () => {
   return (
@@ -24,3 +25,8 @@ const CaseStudiesDetail = () => {
 };
 
 export default CaseStudiesDetail;
+
+export const metadata: Metadata = {
+  title: "CaseStudies Detail - Software House App",
+  description: "Softawre House",
+};

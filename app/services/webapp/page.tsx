@@ -16,6 +16,7 @@ import Certifications from "@/components/sections/webappservices/Certifications"
 import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
+import { Metadata } from "next";
 
 function WebServicesPage() {
   return (
@@ -44,3 +45,8 @@ function WebServicesPage() {
 }
 
 export default WebServicesPage;
+
+export const metadata: Metadata = {
+  title: "Web Development Sevices - Software House App",
+  description: "Softawre House",
+};

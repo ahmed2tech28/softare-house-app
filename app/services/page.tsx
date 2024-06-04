@@ -9,6 +9,7 @@ import Contact from "@/components/sections/Home/Contact";
 import FeauredPartner from "@/components/sections/services/FeauredPartner";
 import Experties from "@/components/sections/services/Experties";
 import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
+import { Metadata } from "next";
 
 const Services = () => {
   return (
@@ -32,3 +33,8 @@ const Services = () => {
 };
 
 export default Services;
+
+export const metadata: Metadata = {
+  title: "Sevices - Software House App",
+  description: "Softawre House",
+};

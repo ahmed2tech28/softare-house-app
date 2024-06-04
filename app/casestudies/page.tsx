@@ -4,6 +4,7 @@ import DropDown from "@/components/common/DropDown";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
 import CaseStudiesComp from "@/components/sections/casestudies/CaseStudies";
+import { Metadata } from "next";
 
 const Top: React.FC = () => {
   return (
@@ -43,3 +44,8 @@ export default function CaseStudies() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: "CaseStudies - Software House App",
+  description: "Softawre House",
+};

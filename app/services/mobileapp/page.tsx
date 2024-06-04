@@ -10,6 +10,7 @@ import LatestInsights from "@/components/sections/Home/LatestInsights";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
 import FeaturedMobDevProjects from "@/components/sections/mobileappservicescomp/FeaturedMobDevProjects";
+import { Metadata } from "next";
 
 function MobileAppPage() {
   return (
@@ -32,3 +33,8 @@ function MobileAppPage() {
 }
 
 export default MobileAppPage;
+
+export const metadata: Metadata = {
+  title: "Mobile App Development Sevices - Software House App",
+  description: "Softawre House",
+};
