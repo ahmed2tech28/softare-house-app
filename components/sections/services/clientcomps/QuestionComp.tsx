@@ -12,13 +12,11 @@ const QuestionComp: React.FC<questions> = ({ answer, question }) => {
     <div
       className={`flex flex-col ${
         opened ? "h-[296px]" : "h-[114px]"
-      } justify-start items-start gap-x-5 bg-[#F9F9F9] hover:bg-[#E2F3FF] p-[1rem] py-[3rem] transition-all duration-100 gap-y-[3rem]`}
+      } justify-start items-start gap-x-5 bg-[#F9F9F9] hover:bg-[#E2F3FF] p-[1rem] py-[3rem] transition-all duration-100 gap-y-[3rem] cursor-pointer`}
+      onClick={(e) => setOpened(!opened)}
     >
       <div className="flex items-center gap-x-5 h-[14px] py-2">
-        <div
-          className="text-[3.5rem] text-[#0C8CE9] cursor-pointer mt-3"
-          onClick={(e) => setOpened(!opened)}
-        >
+        <div className="text-[3.5rem] text-[#0C8CE9] cursor-pointer mt-3">
           {opened ? "-" : "+"}
         </div>
         <h1 className="font-normal">{question}</h1>
