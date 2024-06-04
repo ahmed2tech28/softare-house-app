@@ -57,7 +57,7 @@ const HoveredItems: React.FC<HoveredProps> = ({
 }) => {
   return (
     <div
-      className={`w-screen pb-4 ${
+      className={`w-screen ${
         scrolled ? "fixed" : "absolute"
       } top-[83px] bg-white z-50`}
     >
