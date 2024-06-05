@@ -15,7 +15,7 @@ const FeaturedMobDevProjects: React.FC = () => {
         {options.map((item, i) => (
           <button
             key={i}
-            className={`hover:bg-[#0C8CE9] font-semibold transition-all duration-150 hover:text-white sm:text-[30px] text-[20px] px-5 py-2 rounded-full ${
+            className={`hover:bg-[#0C8CE9] font-semibold transition-all duration-150 hover:text-white sm:text-[30px] text-[20px] px-7 py-2 rounded-full ${
               optionSelected == item
                 ? "bg-[#0C8CE9] text-white"
                 : "bg-[#F9F9F9]"
