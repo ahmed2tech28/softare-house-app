@@ -15,6 +15,7 @@
     "@mui/material": "^5.15.17",
     "@ramonak/react-progress-bar": "^5.2.0",
     "country-flags-svg": "^2.0.0-beta.1",
+    "fullpage.js": "^4.0.22",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",

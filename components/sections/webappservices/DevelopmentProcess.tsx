@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
 
 const steps: string[] = [
   "Study the project",
@@ -16,6 +17,181 @@ const teams: string[] = [
   "Project Manager",
   "Solution Architect",
 ];
+
+const StepShow: React.FC<{
+  stepSelected: string;
+  setStepSelected: any;
+}> = ({ setStepSelected, stepSelected }) => {
+  const settings = {
+    // dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    swipeToSlide: true,
+  };
+  const sliderRef = useRef<any>(null);
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const slider = sliderRef.current?.innerSlider;
+    const delta = e.deltaY;
+
+    if (delta < 0) {
+      slider?.slickPrev();
+    } else {
+      slider?.slickNext();
+    }
+  };
+
+  return (
+    <div className="lg:w-1/2 w-full overflow-hidden" onWheel={handleWheel}>
+      <Slider {...settings} ref={sliderRef}>
+        <div
+          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          onMouseEnter={(e) => setStepSelected("Study the project")}
+        >
+          <h1 className="text-[30px] font-semibold">
+            {steps.indexOf(stepSelected) + 1 < 10
+              ? `0${steps.indexOf(stepSelected) + 1}`
+              : steps.indexOf(stepSelected) + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {stepSelected}
+          </h1>
+          <p className="f-mon leading-[28px]">
+            We analyze your requirements — project type, features, platforms —
+            then create specification, design, and approve wireframes. In other
+            cases, we study your already-made documentation and provide rough
+            and detailed time & money estimates.
+          </p>
+          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
+            Team
+          </h3>
+          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
+            {teams.map((item, i) => (
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div
+          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          onMouseEnter={(e) => setStepSelected("Product design")}
+        >
+          <h1 className="text-[30px] font-semibold">
+            {steps.indexOf(stepSelected) + 1 < 10
+              ? `0${steps.indexOf(stepSelected) + 1}`
+              : steps.indexOf(stepSelected) + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {stepSelected}
+          </h1>
+          <p className="f-mon leading-[28px]">
+            We analyze your requirements — project type, features, platforms —
+            then create specification, design, and approve wireframes. In other
+            cases, we study your already-made documentation and provide rough
+            and detailed time & money estimates.
+          </p>
+          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
+            Team
+          </h3>
+          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
+            {teams.map((item, i) => (
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div
+          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          onMouseEnter={(e) => setStepSelected("Development & testing")}
+        >
+          <h1 className="text-[30px] font-semibold">
+            {steps.indexOf(stepSelected) + 1 < 10
+              ? `0${steps.indexOf(stepSelected) + 1}`
+              : steps.indexOf(stepSelected) + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {stepSelected}
+          </h1>
+          <p className="f-mon leading-[28px]">
+            We analyze your requirements — project type, features, platforms —
+            then create specification, design, and approve wireframes. In other
+            cases, we study your already-made documentation and provide rough
+            and detailed time & money estimates.
+          </p>
+          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
+            Team
+          </h3>
+          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
+            {teams.map((item, i) => (
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div
+          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          onMouseEnter={(e) => setStepSelected("Launch")}
+        >
+          <h1 className="text-[30px] font-semibold">
+            {steps.indexOf(stepSelected) + 1 < 10
+              ? `0${steps.indexOf(stepSelected) + 1}`
+              : steps.indexOf(stepSelected) + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {stepSelected}
+          </h1>
+          <p className="f-mon leading-[28px]">
+            We analyze your requirements — project type, features, platforms —
+            then create specification, design, and approve wireframes. In other
+            cases, we study your already-made documentation and provide rough
+            and detailed time & money estimates.
+          </p>
+          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
+            Team
+          </h3>
+          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
+            {teams.map((item, i) => (
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div
+          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          onMouseEnter={(e) => setStepSelected("Maintenance (per request)")}
+        >
+          <h1 className="text-[30px] font-semibold">
+            {steps.indexOf(stepSelected) + 1 < 10
+              ? `0${steps.indexOf(stepSelected) + 1}`
+              : steps.indexOf(stepSelected) + 1}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {stepSelected}
+          </h1>
+          <p className="f-mon leading-[28px]">
+            We analyze your requirements — project type, features, platforms —
+            then create specification, design, and approve wireframes. In other
+            cases, we study your already-made documentation and provide rough
+            and detailed time & money estimates.
+          </p>
+          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
+            Team
+          </h3>
+          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
+            {teams.map((item, i) => (
+              <span className="xl:text-[16px] text-[14px]" key={i}>
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Slider>
+    </div>
+  );
+};
 
 const DevelopmentProcess: React.FC = () => {
   const [stepSelected, setStepSelected] = useState("Study the project");
@@ -51,31 +227,10 @@ const DevelopmentProcess: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="lg:w-1/2 w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
-          <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
-          </h1>
-          <p className="f-mon leading-[28px]">
-            We analyze your requirements — project type, features, platforms —
-            then create specification, design, and approve wireframes. In other
-            cases, we study your already-made documentation and provide rough
-            and detailed time & money estimates.
-          </p>
-          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
-            Team
-          </h3>
-          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
-            {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]" key={i}>
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
+        <StepShow
+          stepSelected={stepSelected}
+          setStepSelected={setStepSelected}
+        />
       </div>
     </section>
   );
