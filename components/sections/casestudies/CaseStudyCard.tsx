@@ -107,7 +107,7 @@ export const CollapsedCaseStudy: React.FC<casestudy> = ({
                 </div>
               </div>
               <div className="h-[65%] text-white flex flex-col gap-y-3">
-                <h1 className="text-[25px]">{title}</h1>
+                <h1 className="cxl:text-[25px] text-[20px]">{title}</h1>
                 <p>{desc}</p>
               </div>
               <div className="h-[25%] flex justify-between text-white items-center">
