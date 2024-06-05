@@ -260,3 +260,7 @@ header.text-black nav * {
 *::after {
     box-sizing: border-box;
 }
+
+.css-mzgvh0-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+    margin: 0px 0;
+}

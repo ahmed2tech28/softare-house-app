@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -108,48 +110,59 @@ const consultongBoxItems: counsulting[] = [
   },
 ];
 
+const CustomAccordian: React.FC<{ item: counsulting; i: number }> = ({
+  i,
+  item,
+}) => {
+  const [expanded, setExpanded] = React.useState(i == 0);
+
+  return (
+    <Accordion
+      sx={{
+        boxShadow: "none",
+        paddingTop: "1rem",
+        paddingBottom: "1rem",
+        borderLeft: expanded ? "4px solid #0C8CE9" : undefined,
+      }}
+      key={i}
+      defaultExpanded={i == 0}
+      onChange={() => setExpanded(!expanded)}
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1-content"
+        id="panel1-header"
+      >
+        <h1 className="f-gil text-[30px] font-semibold">{item.quest}</h1>
+      </AccordionSummary>
+      <AccordionDetails>
+        <p className="font-thin">{item.ans}</p>
+        <button className="inline-flex mt-[2rem] gap-x-2 items-center">
+          <svg
+            width="31"
+            height="20"
+            viewBox="0 0 31 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="31" height="20" rx="10" fill="#0C8CE9" />
+            <path
+              d="M13.2139 13.8106C12.9317 14.0692 12.9317 14.5173 13.1963 14.7931C13.3374 14.931 13.5315 15 13.7079 15C13.8843 15 14.0607 14.931 14.2018 14.8104L18.7883 10.501C18.9294 10.3631 19 10.1907 19 10.0011C19 9.81149 18.9294 9.63911 18.7883 9.50121L14.2018 5.19182C13.9196 4.93326 13.4785 4.93326 13.1963 5.20906C12.9317 5.48486 12.9317 5.9158 13.2139 6.1916L17.2712 10.0011L13.2139 13.8106Z"
+              fill="white"
+            />
+          </svg>
+          <span>Learn more</span>
+        </button>
+      </AccordionDetails>
+    </Accordion>
+  );
+};
+
 export default function ConsultingBox() {
   return (
     <div className="f-mon h-full flex flex-col">
       {consultongBoxItems.map((item, i) => {
-        return (
-          <Accordion
-            sx={{
-              boxShadow: "none",
-              paddingTop: "1rem",
-              paddingBottom: "1rem",
-            }}
-            key={i}
-            defaultExpanded={i == 0}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <h1 className="f-gil text-[30px] font-semibold">{item.quest}</h1>
-            </AccordionSummary>
-            <AccordionDetails>
-              <p className="font-thin">{item.ans}</p>
-              <button className="inline-flex mt-[2rem] gap-x-2 items-center">
-                <svg
-                  width="31"
-                  height="20"
-                  viewBox="0 0 31 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="31" height="20" rx="10" fill="#0C8CE9" />
-                  <path
-                    d="M13.2139 13.8106C12.9317 14.0692 12.9317 14.5173 13.1963 14.7931C13.3374 14.931 13.5315 15 13.7079 15C13.8843 15 14.0607 14.931 14.2018 14.8104L18.7883 10.501C18.9294 10.3631 19 10.1907 19 10.0011C19 9.81149 18.9294 9.63911 18.7883 9.50121L14.2018 5.19182C13.9196 4.93326 13.4785 4.93326 13.1963 5.20906C12.9317 5.48486 12.9317 5.9158 13.2139 6.1916L17.2712 10.0011L13.2139 13.8106Z"
-                    fill="white"
-                  />
-                </svg>
-                <span>Learn more</span>
-              </button>
-            </AccordionDetails>
-          </Accordion>
-        );
+        return <CustomAccordian key={i} item={item} i={i} />;
       })}
     </div>
   );
