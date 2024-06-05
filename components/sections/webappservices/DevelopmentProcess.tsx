@@ -220,7 +220,7 @@ const DevelopmentProcess: React.FC = () => {
           or release the product.
         </p>
       </div>
-      <div className="flex w-full h-fit mt-[3rem]">
+      <div className="flex w-full h-fit mt-[3rem] items-center">
         <div className="w-1/2 lg:block hidden">
           <ul className="flex flex-col gap-y-6">
             {steps.map((item, i) => (
