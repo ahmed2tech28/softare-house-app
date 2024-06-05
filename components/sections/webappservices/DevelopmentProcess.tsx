@@ -32,6 +32,7 @@ const StepShow: React.FC<{
     swipeToSlide: true,
   };
   const sliderRef = useRef<any>(null);
+  const [startY, setStartY] = useState(0);
 
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -44,20 +45,40 @@ const StepShow: React.FC<{
       slider?.slickNext();
     }
   };
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setStartY(e.touches[0].clientY);
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const slider = sliderRef.current?.innerSlider;
+    const deltaY = e.touches[0].clientY - startY;
+
+    if (Math.abs(deltaY) > 50) {
+      // Adjust the threshold as needed
+      e.preventDefault();
+      if (deltaY < 0) {
+        slider?.slickNext();
+      } else {
+        slider?.slickPrev();
+      }
+    }
+  };
 
   return (
-    <div className="lg:w-1/2 w-full overflow-hidden" onWheel={handleWheel}>
+    <div
+      className="lg:w-1/2 w-full overflow-hidden"
+      onWheel={handleWheel}
+      onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchStart}
+    >
       <Slider {...settings} ref={sliderRef}>
         <div
           className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Study the project")}
         >
           <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
+            {"01"}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
+            {"Study the project"}
           </h1>
           <p className="f-mon leading-[28px]">
             We analyze your requirements — project type, features, platforms —
@@ -81,11 +102,9 @@ const StepShow: React.FC<{
           onMouseEnter={(e) => setStepSelected("Product design")}
         >
           <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
+            {"02"}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
+            {"Product design"}
           </h1>
           <p className="f-mon leading-[28px]">
             We analyze your requirements — project type, features, platforms —
@@ -109,11 +128,9 @@ const StepShow: React.FC<{
           onMouseEnter={(e) => setStepSelected("Development & testing")}
         >
           <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
+            {"03"}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
+            {"Development & testing"}
           </h1>
           <p className="f-mon leading-[28px]">
             We analyze your requirements — project type, features, platforms —
@@ -137,11 +154,9 @@ const StepShow: React.FC<{
           onMouseEnter={(e) => setStepSelected("Launch")}
         >
           <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
+            {"04"}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
+            {"Launch"}
           </h1>
           <p className="f-mon leading-[28px]">
             We analyze your requirements — project type, features, platforms —
@@ -165,11 +180,9 @@ const StepShow: React.FC<{
           onMouseEnter={(e) => setStepSelected("Maintenance (per request)")}
         >
           <h1 className="text-[30px] font-semibold">
-            {steps.indexOf(stepSelected) + 1 < 10
-              ? `0${steps.indexOf(stepSelected) + 1}`
-              : steps.indexOf(stepSelected) + 1}
+            {"05"}
             &nbsp;&nbsp;&nbsp;&nbsp;
-            {stepSelected}
+            {"Maintenance (per request)"}
           </h1>
           <p className="f-mon leading-[28px]">
             We analyze your requirements — project type, features, platforms —
