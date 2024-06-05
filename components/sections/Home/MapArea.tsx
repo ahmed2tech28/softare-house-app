@@ -144,14 +144,7 @@ const MapArea: React.FC = () => {
           mousePositionY={mousePositionY}
         />
       </div>
-      <div
-        className="w-full mt-0 h-[399px] flex flex-col justify-start items-center relative map-svg lg:hidden"
-        // onMouseEnter={(e) => {
-        //   console.log(e.clientX, e.clientY);
-        //   setMousePositionX(e.clientX);
-        //   setMousePositionY(e.clientY);
-        // }}
-      >
+      <div className="w-full mt-0 md:h-[399px] flex flex-col justify-start items-center relative map-svg lg:hidden md:rotate-0 rotate-90 h-fit">
         <MapTab />
         <MapTooltip
           mousePositionX={mousePositionX}
