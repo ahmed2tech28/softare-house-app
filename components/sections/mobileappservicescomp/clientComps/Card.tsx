@@ -1,5 +1,6 @@
 import React from "react";
 import { findFlagUrlByNationality } from "country-flags-svg";
+import Link from "next/link";
 
 interface Props {
   img: string;
@@ -10,6 +11,7 @@ interface Props {
   country: string;
   flag: string;
   industry: string;
+  link: string;
 }
 
 const Card: React.FC<Props> = ({
@@ -21,6 +23,7 @@ const Card: React.FC<Props> = ({
   country,
   flag,
   industry,
+  link,
 }) => {
   return (
     <div className="w-full lg:h-[300px] h-fit flex gap-x-6 lg:flex-row flex-col lg:gap-y-0 gap-y-4">
@@ -53,11 +56,11 @@ const Card: React.FC<Props> = ({
         <p className="leading-[30px] f-mon font-extralight">{categorie}</p>
         <h2 className="text-[30px] font-semibold">{name}</h2>
         <p className="leading-[30px] f-mon font-extralight">{description}</p>
-        <div>
+        <Link href={link}>
           <button className="px-10 py-3 bg-[#0066ff2b] rounded-full font-semibold text-[#0066FF]">
             Explore more →
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,15 +1,41 @@
 import React from "react";
 import Link from "next/link";
 
+interface navItems {
+  name: string;
+  path: string;
+}
+
 export const Industries: React.FC = () => {
-  const industries: string[] = [
-    "Health Care",
-    "Logistics",
-    "FinTech",
-    "Market Place",
-    "Retail",
-    "Travel",
-    "Education",
+  const industries: navItems[] = [
+    {
+      name: "Health Care",
+      path: "#",
+    },
+    {
+      name: "Logistics",
+      path: "#",
+    },
+    {
+      name: "FinTech",
+      path: "#",
+    },
+    {
+      name: "Market Place",
+      path: "#",
+    },
+    {
+      name: "Retail",
+      path: "#",
+    },
+    {
+      name: "Travel",
+      path: "#",
+    },
+    {
+      name: "Education",
+      path: "#",
+    },
   ];
 
   return (
@@ -19,8 +45,8 @@ export const Industries: React.FC = () => {
         {industries.map((item, i) => {
           return (
             <li key={i}>
-              <Link href={"#"} className={`hover:text-blue-600`}>
-                {item}
+              <Link href={item.path} className={`hover:text-blue-600`}>
+                {item.name}
               </Link>
             </li>
           );
@@ -31,12 +57,27 @@ export const Industries: React.FC = () => {
 };
 
 export const Services: React.FC = () => {
-  const services: string[] = [
-    "Web Application Development",
-    "Mobile App Development",
-    "UI/UX Design Services",
-    "Desktop Application Development",
-    "Hire a Developer",
+  const services: navItems[] = [
+    {
+      name: "Web App Development",
+      path: "/services/webapp",
+    },
+    {
+      name: "Mobile App Development",
+      path: "/services/mobileapp",
+    },
+    {
+      name: "UI/UX Design Services",
+      path: "#",
+    },
+    {
+      name: "Desktop Application Development",
+      path: "#",
+    },
+    {
+      name: "Hire a Developer",
+      path: "#",
+    },
   ];
 
   return (
@@ -46,8 +87,8 @@ export const Services: React.FC = () => {
         {services.map((item, i) => {
           return (
             <li key={i}>
-              <Link href={"#"} className={`hover:text-blue-600`}>
-                {item}
+              <Link href={item.path} className={`hover:text-blue-600`}>
+                {item.name}
               </Link>
             </li>
           );

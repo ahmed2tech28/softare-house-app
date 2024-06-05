@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import ButtonComp from "../../common/ButtonComp";
 import Link from "next/link";
 
-const services: string[] = [
-  "Web Application Development",
-  "Mobile App Development",
-  "UI/UX Design Services",
-  "Desktop Application Development",
-  "Hire a Developer",
+interface navItems {
+  name: string;
+  path: string;
+}
+
+const services: navItems[] = [
+  { name: "Web Application Development", path: "/services/webapp" },
+  { name: "Mobile App Development", path: "/services/mobileapp" },
+  { name: "UI/UX Design Services", path: "#" },
+  { name: "Desktop Application Development", path: "#" },
+  { name: "Hire a Developer", path: "#" },
 ];
 
 const solutions: string[] = [
@@ -79,8 +84,8 @@ const MobileFooter: React.FC = () => {
               {accordionOpened == "services" &&
                 item == "services" &&
                 services.map((item, i) => (
-                  <Link href={"#"} className="ms-2" key={i}>
-                    {item}
+                  <Link href={item.path} className="ms-2" key={i}>
+                    {item.name}
                   </Link>
                 ))}
               {accordionOpened == "solutions" &&
@@ -124,8 +129,12 @@ const PcFooter: React.FC = () => {
             <h1 className="text-[16px] font-semibold">Services</h1>
             <div className="flex flex-col gap-y-6">
               {services.map((item, i) => (
-                <Link key={i} href={"#"} className="text-[14px] font-normal">
-                  {item}
+                <Link
+                  key={i}
+                  href={item.path}
+                  className="text-[14px] font-normal"
+                >
+                  {item.name}
                 </Link>
               ))}
             </div>

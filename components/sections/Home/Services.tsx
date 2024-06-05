@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
@@ -6,14 +7,18 @@ interface CardProps {
   title: string;
   desc: string;
   category: string;
+  link: string;
 }
 
-const SpecialBtn: React.FC = () => {
+const SpecialBtn: React.FC<{ link: string }> = ({ link }) => {
   return (
-    <button className="group-hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-300 ease-in-out group-hover:text-white text-left h-[65px] rounded-[4rem] px-8 font-semibold inline-flex justify-between items-center">
+    <Link
+      className="group-hover:bg-[#0C8CE9] bg-gray-200 transition-colors duration-300 ease-in-out group-hover:text-white text-left h-[65px] rounded-[4rem] px-8 font-semibold inline-flex justify-between items-center"
+      href={link}
+    >
       <span className="text-xl">Explore more</span>
       <span className="text-xl">→</span>
-    </button>
+    </Link>
   );
 };
 
@@ -21,7 +26,7 @@ const CardCircle: React.FC = () => {
   return <div className="w-[1.6rem] rounded-xl h-3 bg-[#0C8CE9]"></div>;
 };
 
-const Card: React.FC<CardProps> = ({ category, desc, title }) => {
+const Card: React.FC<CardProps> = ({ category, desc, title, link }) => {
   return (
     <div className="mb:w-[407px] w-[95vw] hover-shadow-custom h-[509px] rounded-[2rem] border-[0.5px] border-[#CBD1DC] p-5 py-10 flex flex-col justify-between group cursor-pointer">
       <div className="top flex justify-start gap-x-2 items-center">
@@ -37,7 +42,7 @@ const Card: React.FC<CardProps> = ({ category, desc, title }) => {
           {desc}
         </p>
       </div>
-      <SpecialBtn />
+      <SpecialBtn link={link} />
     </div>
   );
 };
@@ -103,21 +108,25 @@ const Services: React.FC = () => {
       title: "Custom Web App Development Services",
       desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
       category: "Development",
+      link: "/services/webapp",
     },
     {
       title: "Mobile App Development Services",
       desc: "We are providing steller native mobile app development, hybrid mobile application development and cross platform mobile app development services.",
       category: "Development",
+      link: "/services/mobileapp",
     },
     {
       title: "UI/UX <br> Design Services",
       desc: "Want to turn your idea into a reality? We are providing UI/UX design services because a design without vision is just a painting.",
       category: "Design",
+      link: "#",
     },
     {
       title: "Hire a <br> Dedicated Team",
       desc: "Looking for a solution related to a startup or established business? Hire a developer for web and mobile development services.",
       category: "Design",
+      link: "#",
     },
   ];
   return (
@@ -140,6 +149,7 @@ const Services: React.FC = () => {
                 desc={item.desc}
                 category={item.category}
                 key={i}
+                link={item.link}
               />
             );
           })}

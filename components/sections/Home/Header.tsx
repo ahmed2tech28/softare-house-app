@@ -80,11 +80,11 @@ const Header: React.FC = () => {
           className="h-[calc(100%-8.6rem)] hb:h-[calc(100%-5rem)] flex flex-col justify-center w-[90vw] mx-auto"
           onMouseEnter={(e) => setlinkHovered("")}
         >
-          <div className="xl:w-[60%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
+          <div className="xl:w-[80%] h-[clac(100%-200px)] w-[90%] mx-auto flex flex-col justify-center items-center gap-y-2">
             <h1 className="sm:text-[2.5rem] text-3xl text-center sm:leading-[4rem] font-semibold">
               Custom Software Development Company
             </h1>
-            <p className="sm:text-[1rem] text-center w-[90%] mx-auto font-light f-mon leading-[28px]">
+            <p className="sm:text-[1rem] xl:w-[70%] text-center w-[90%] mx-auto font-light f-mon leading-[28px]">
               Looking for mobile and web development services to guarantee
               unmatched usability? We are a leading offshore software
               development company. Let&apos;s discuss your project and find{" "}

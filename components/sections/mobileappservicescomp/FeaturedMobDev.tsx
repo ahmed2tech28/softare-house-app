@@ -71,6 +71,7 @@ const FeaturedMobDev: React.FC = () => {
             country={item.country}
             flag={item.flag}
             industry={item.industry}
+            link="/casestudies/detail"
           />
         ))}
       </main>

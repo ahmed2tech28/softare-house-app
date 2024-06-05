@@ -18,7 +18,7 @@ const IntroAboutProject: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full z-10 bg-[#00000092] p-10 flex flex-col justify-between items-start">
         <BreadCrumbComp path={path} color="white" />
         <div>
-          <h1 className="lg:text-[4.5rem] md:text-[3rem] sm:text-[2.5rem] mb:text-[2rem] text-[1.2rem] leading-tight text-white font-semibold">
+          <h1 className="lg:!text-[4.5rem] md:!text-[3rem] sm:text-[2.5rem] mb:text-[2rem] text-[1.2rem] leading-tight text-white font-semibold">
             Developed Customized CSR System, Improved Workflow and Reporting
           </h1>
           <p className="text-white lg:text-2xl mb:text-xl text-base">
