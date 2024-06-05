@@ -58,7 +58,7 @@ const WebAppBlog: React.FC<qualitiesProp> = ({
         </div>
       </div>
       {item !== qualities.length - 1 && (
-        <div className="bg-[#F9F9F9] h-[10px] w-full my-6"></div>
+        <div className="bg-[#F9F9F9] h-[10px] w-full my-[3rem]"></div>
       )}
     </>
   );
