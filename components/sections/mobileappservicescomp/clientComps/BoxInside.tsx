@@ -164,7 +164,7 @@ const BoxInside = () => {
           </div>
           <div className="h-1/2">
             <h3 className="xl:text-[30px] text-[24px] font-semibold">30%</h3>
-            <h3 className="xl:text-[30px] text-[24px] font-xl:semibold">
+            <h3 className="xl:text-[30px] text-[24px] font-semibold">
               more performant
             </h3>
           </div>
