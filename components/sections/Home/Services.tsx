@@ -120,7 +120,7 @@ const Services: React.FC = () => {
       title: "UI/UX <br> Design Services",
       desc: "Want to turn your idea into a reality? We are providing UI/UX design services because a design without vision is just a painting.",
       category: "Design",
-      link: "#",
+      link: "/services/uiux",
     },
     {
       title: "Hire a <br> Dedicated Team",

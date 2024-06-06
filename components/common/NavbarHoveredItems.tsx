@@ -68,7 +68,7 @@ export const Services: React.FC = () => {
     },
     {
       name: "UI/UX Design Services",
-      path: "#",
+      path: "/services/uiux",
     },
     {
       name: "Desktop Application Development",
