@@ -48,8 +48,8 @@ const Ci: React.FC = () => {
 
 const UpperSection: React.FC = () => {
   return (
-    <div className="flex lg:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%]">
-      <div className="md:w-[30%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
+    <div className="flex md:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%] items-center">
+      <div className="lg:w-[30%] md:w-[40%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
         <h1 className="text-[38px] font-medium">Our Achivements</h1>
         <p className="text-[16px] f-mon">
           Dev House stands tall among the leading software development
