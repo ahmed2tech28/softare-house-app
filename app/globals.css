@@ -264,3 +264,7 @@ header.text-black nav * {
 .css-mzgvh0-MuiPaper-root-MuiAccordion-root.Mui-expanded {
     margin: 0px 0;
 }
+
+.design-card-bg {
+    background: linear-gradient(180deg, #0B8AEA 0%, #0067FE 100%);
+}

@@ -46,7 +46,7 @@ const services: sevices[] = [
     ],
     description:
       "Our UI/UX design team's expertise and creativity will help you get the product you’ve pictured. We rely on established standards, proven tools and deep understanding of your business goals while designing your product.",
-    link: "#",
+    link: "/services/uiux",
   },
   {
     name: "QA services",
