@@ -134,17 +134,15 @@ const CustomAccordian: React.FC<{ item: counsulting; i: number }> = ({
         id="panel1-header"
       >
         <h1
-          className="f-gil text-[30px] font-semibold"
-          style={{ paddingBottom: expanded ? "0.75rem" : undefined }}
+          className={`f-gil text-[30px] font-semibold ${
+            expanded ? "md:pb-0 pb-2" : ""
+          }`}
         >
           {item.quest}
         </h1>
       </AccordionSummary>
       <AccordionDetails>
-        <p
-          className="font-thin"
-          style={{ paddingTop: expanded ? "0.75rem" : undefined }}
-        >
+        <p className={`font-thin ${expanded ? "md:pt-0 pt-2" : ""}`}>
           {item.ans}
         </p>
         <button className="inline-flex mt-[2rem] gap-x-2 items-center">
