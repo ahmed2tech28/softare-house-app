@@ -133,10 +133,20 @@ const CustomAccordian: React.FC<{ item: counsulting; i: number }> = ({
         aria-controls="panel1-content"
         id="panel1-header"
       >
-        <h1 className="f-gil text-[30px] font-semibold">{item.quest}</h1>
+        <h1
+          className="f-gil text-[30px] font-semibold"
+          style={{ paddingBottom: expanded ? "0.75rem" : undefined }}
+        >
+          {item.quest}
+        </h1>
       </AccordionSummary>
       <AccordionDetails>
-        <p className="font-thin">{item.ans}</p>
+        <p
+          className="font-thin"
+          style={{ paddingTop: expanded ? "0.75rem" : undefined }}
+        >
+          {item.ans}
+        </p>
         <button className="inline-flex mt-[2rem] gap-x-2 items-center">
           <svg
             width="31"
