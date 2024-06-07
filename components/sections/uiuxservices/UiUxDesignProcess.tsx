@@ -2,6 +2,9 @@ import React from "react";
 import Top from "./common/TopHiding";
 
 const imageName: string = "/ux-research.png";
+const imageName2: string = "/ux-research2.png";
+const imageName3: string = "/ux-research3.png";
+const imageName4: string = "/ux-research4.png";
 
 const FirstStep: React.FC = () => {
   return (
@@ -45,7 +48,7 @@ const SecondStep: React.FC = () => {
     <div className="cxl:w-[1198px] w-full mx-auto flex lg:flex-row-reverse flex-col lg:h-[387.31px] h-fit gap-y-[3rem] gap-x-[3rem]">
       <div className="lg:w-[50%] w-full overflow-hidden rounded-[36px]">
         <img
-          src={imageName}
+          src={imageName2}
           alt="Image"
           className="w-full h-full object-cover"
         />
@@ -77,7 +80,7 @@ const ThirdStep: React.FC = () => {
     <div className="cxl:w-[1198px] w-full mx-auto flex lg:flex-row flex-col lg:h-[387.31px] h-fit gap-y-[3rem] gap-x-[3rem]">
       <div className="lg:w-[50%] w-full overflow-hidden rounded-[36px]">
         <img
-          src={imageName}
+          src={imageName3}
           alt="Image"
           className="w-full h-full object-cover"
         />
@@ -110,7 +113,7 @@ const FourthStep: React.FC = () => {
     <div className="cxl:w-[1198px] w-full mx-auto flex lg:flex-row-reverse flex-col lg:h-[387.31px] h-fit gap-y-[3rem] gap-x-[3rem]">
       <div className="lg:w-[50%] w-full overflow-hidden rounded-[36px]">
         <img
-          src={imageName}
+          src={imageName4}
           alt="Image"
           className="w-full h-full object-cover"
         />
