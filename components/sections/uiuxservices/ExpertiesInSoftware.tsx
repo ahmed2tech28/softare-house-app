@@ -89,7 +89,7 @@ const Tools: React.FC = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3 grid-cols-1 h-fit">
+    <div className="grid md:grid-cols-3 grid-cols-1 h-fit f-mon">
       <Col {...col1} />
       <Col {...col2} />
       <Col {...col3} />
