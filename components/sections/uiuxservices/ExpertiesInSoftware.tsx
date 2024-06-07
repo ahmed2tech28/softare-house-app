@@ -15,7 +15,7 @@ const Col: React.FC<ColProps> = ({ title, tools }) => {
   return (
     <div className="md:h-[521px] h-fit md:py-0 py-[1rem] flex flex-col gap-y-[3rem]">
       <h2 className="text-[30px] font-semibold">{title}</h2>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-[2rem]">
         {tools.map((item, i) => {
           return (
             <div key={i} className="flex items-center lg:gap-x-8 gap-x-3">
@@ -99,7 +99,7 @@ const Tools: React.FC = () => {
 
 const ExpertiesInSoftware: React.FC = () => {
   return (
-    <div className="w-screen py-[4rem] h-fit">
+    <div className="w-screen pt-[4rem] pb-[10rem] h-fit">
       <div className="container mx-auto flex flex-col gap-y-[4rem] h-fit">
         <Top
           hiding="Our expertise in software design tools"
