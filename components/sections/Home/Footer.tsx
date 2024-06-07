@@ -57,9 +57,8 @@ const MobileFooter: React.FC = () => {
     <footer className="w-screen justify-end items-center bg-[#111827]  py-2 flex flex-col lg:hidden text-white h-fit">
       <div className="w-full px-3 flex flex-col gap-y-1 py-3 h-fit">
         {accordionItems.map((item, i) => (
-          <>
+          <div key={i}>
             <div
-              key={i}
               onClick={(e) => {
                 if (accordionOpened == item) {
                   setAccordionOpened("");
@@ -110,7 +109,7 @@ const MobileFooter: React.FC = () => {
                   </Link>
                 ))}
             </div>
-          </>
+          </div>
         ))}
       </div>
       <div className="text-xl h-[20%]">

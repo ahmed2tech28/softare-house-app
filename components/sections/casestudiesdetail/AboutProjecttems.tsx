@@ -37,13 +37,13 @@ export const ProjectIdea: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           d="M27 66.0589V42.2942M27 42.2942V22.2942H47.9412L52.1765 30.7648H63.7059V50.0589H47.9412L43.2353 42.2942H27Z"
           stroke="#0C8CE9"
-          stroke-width="5"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinejoin="round"
         />
       </svg>
       <svg
@@ -57,15 +57,15 @@ export const ProjectIdea: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-width="5"
-          stroke-opacity="0.1"
+          strokeWidth="5"
+          strokeOpacity="0.1"
         />
         <path
           d="M27 66.0589V42.2942M27 42.2942V22.2942H47.9412L52.1765 30.7648H63.7059V50.0589H47.9412L43.2353 42.2942H27Z"
           stroke="#0C8CE9"
-          stroke-width="5"
-          stroke-opacity="0.1"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeOpacity="0.1"
+          strokeLinejoin="round"
         />
       </svg>
       <h1 className="text-[36px] font-semibold">Project Idea</h1>
@@ -99,14 +99,14 @@ export const ProjectChallanges: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           d="M31.5646 59.0937H54.6234M61.9176 34.6231C61.9176 24.2271 53.4898 15.7996 43.094 15.7996C32.6981 15.7996 24.2705 24.2271 24.2705 34.6231C24.2705 40.6752 27.1267 46.0602 31.5646 49.5036H54.6234C59.0616 46.0602 61.9176 40.6752 61.9176 34.6231Z"
           stroke="#0C8CE9"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M37.9165 67.522C37.9165 67.2858 38.108 67.0942 38.3443 67.0942H47.8417C48.0779 67.0942 48.2694 67.2858 48.2694 67.522C48.2694 69.8848 46.3541 71.8001 43.9914 71.8001H42.1946C39.8318 71.8001 37.9165 69.8848 37.9165 67.522Z"
@@ -124,21 +124,21 @@ export const ProjectChallanges: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-opacity="0.1"
-          stroke-width="5"
+          strokeOpacity="0.1"
+          strokeWidth="5"
         />
         <path
           d="M31.5646 59.0937H54.6234M61.9176 34.6231C61.9176 24.2271 53.4898 15.7996 43.094 15.7996C32.6981 15.7996 24.2705 24.2271 24.2705 34.6231C24.2705 40.6752 27.1267 46.0602 31.5646 49.5036H54.6234C59.0616 46.0602 61.9176 40.6752 61.9176 34.6231Z"
           stroke="#0C8CE9"
-          stroke-opacity="0.1"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeOpacity="0.1"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M37.9165 67.522C37.9165 67.2858 38.108 67.0942 38.3443 67.0942H47.8417C48.0779 67.0942 48.2694 67.2858 48.2694 67.522C48.2694 69.8848 46.3541 71.8001 43.9914 71.8001H42.1946C39.8318 71.8001 37.9165 69.8848 37.9165 67.522Z"
           fill="#0C8CE9"
-          fill-opacity="0.1"
+          fillOpacity="0.1"
         />
       </svg>
 
@@ -177,14 +177,14 @@ export const Results: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-width="5"
+          strokeWidth="5"
         />
         <path
           d="M24.1768 43.5958L39.0003 57.5885L66.0591 31.2356"
           stroke="#0C8CE9"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
       <svg
@@ -198,16 +198,16 @@ export const Results: React.FC = () => {
         <path
           d="M43 83C65.0914 83 83 65.0914 83 43C83 20.9086 65.0914 3 43 3C20.9086 3 3 20.9086 3 43C3 65.0914 20.9086 83 43 83Z"
           stroke="#0C8CE9"
-          stroke-opacity="0.1"
-          stroke-width="5"
+          strokeOpacity="0.1"
+          strokeWidth="5"
         />
         <path
           d="M24.1768 43.5958L39.0003 57.5885L66.0591 31.2356"
           stroke="#0C8CE9"
-          stroke-opacity="0.1"
-          stroke-width="5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeOpacity="0.1"
+          strokeWidth="5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
 
@@ -460,7 +460,7 @@ export const ResultObtained: React.FC = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_210_86)">
+              <g clipPath="url(#clip0_210_86)">
                 <path
                   d="M21.5 2.6875C26.4894 2.6875 31.2744 4.66953 34.8024 8.19755C38.3305 11.7256 40.3125 16.5106 40.3125 21.5C40.3125 26.4894 38.3305 31.2744 34.8024 34.8024C31.2744 38.3305 26.4894 40.3125 21.5 40.3125C16.5106 40.3125 11.7256 38.3305 8.19755 34.8024C4.66953 31.2744 2.6875 26.4894 2.6875 21.5C2.6875 16.5106 4.66953 11.7256 8.19755 8.19755C11.7256 4.66953 16.5106 2.6875 21.5 2.6875ZM21.5 43C27.2022 43 32.6708 40.7348 36.7028 36.7028C40.7348 32.6708 43 27.2022 43 21.5C43 15.7978 40.7348 10.3292 36.7028 6.2972C32.6708 2.26517 27.2022 0 21.5 0C15.7978 0 10.3292 2.26517 6.2972 6.2972C2.26517 10.3292 0 15.7978 0 21.5C0 27.2022 2.26517 32.6708 6.2972 36.7028C10.3292 40.7348 15.7978 43 21.5 43ZM30.5115 17.074C31.0322 16.5533 31.0322 15.6967 30.5115 15.176C29.9908 14.6553 29.1342 14.6553 28.6135 15.176L18.8125 24.977L14.3865 20.551C13.8658 20.0303 13.0092 20.0303 12.4885 20.551C11.9678 21.0717 11.9678 21.9283 12.4885 22.449L17.8635 27.824C18.3842 28.3447 19.2408 28.3447 19.7615 27.824L30.5115 17.074Z"
                   fill="#0C8CE9"

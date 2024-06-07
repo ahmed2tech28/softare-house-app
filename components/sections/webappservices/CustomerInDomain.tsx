@@ -65,7 +65,7 @@ const Box: React.FC<coreindustryinfo> = ({ title, desc, color, bg }) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect width="26" height="26" rx="4" fill="#0066FF" />
-          <g clip-path="url(#clip0_675_1360)">
+          <g clipPath="url(#clip0_675_1360)">
             <path
               d="M19.5715 13.5518C20.1238 13.5518 20.5715 13.104 20.5715 12.5518C20.5715 11.9995 20.1238 11.5518 19.5715 11.5518V13.5518ZM7.42871 11.5518H6.42871V13.5518H7.42871V11.5518ZM19.5715 11.5518H7.42871V13.5518H19.5715V11.5518Z"
               fill="white"
@@ -73,9 +73,9 @@ const Box: React.FC<coreindustryinfo> = ({ title, desc, color, bg }) => {
             <path
               d="M15.5244 8.16675L19.572 12.5517L15.5244 16.9366"
               stroke="white"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="square"
+              strokeLinejoin="round"
             />
           </g>
           <defs>

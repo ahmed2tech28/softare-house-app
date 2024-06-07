@@ -281,8 +281,8 @@ export default CaseStudies;
 //             x2="348.75"
 //             y2="0.750031"
 //             stroke="#CBD1DC"
-//             stroke-width="0.5"
-//             stroke-linecap="round"
+//             strokeWidth="0.5"
+//             strokeLinecap="round"
 //           />
 //         </svg>
 //         <div className="h-[30px] flex justify-between items-center">

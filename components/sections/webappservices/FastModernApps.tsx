@@ -18,9 +18,9 @@ const Tick: React.FC = () => {
       <path
         d="M26.875 6.875L10.5469 23.125L3.125 15.7386"
         stroke="#0C8CE9"
-        stroke-width="4.33"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="4.33"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
