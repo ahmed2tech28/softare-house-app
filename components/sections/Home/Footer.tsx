@@ -122,7 +122,7 @@ const MobileFooter: React.FC = () => {
 
 const PcFooter: React.FC = () => {
   return (
-    <footer className="w-screen xl:h-[610px] h-fit bg-[#111827] py-[6rem] hidden flex-col lg:flex">
+    <footer className="w-screen xl:h-[610px] h-fit bg-[#111827] pt-[6rem] hidden flex-col lg:flex">
       <div className="h-[490px] container mx-auto">
         <div className="h-[358px] w-full flex justify-between text-white">
           <div className="w-[253px] h-full flex flex-col gap-y-6">
