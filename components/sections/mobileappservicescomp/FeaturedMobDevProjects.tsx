@@ -26,7 +26,7 @@ const FeaturedMobDevProjects: React.FC = () => {
           </button>
         ))}
       </div>
-      <div className="xl:h-[476px] h-fit w-full featured-projects-gradient rounded-[22px] py-[3rem] px-[5rem]">
+      <div className="xl:h-[476px] h-fit w-full featured-projects-gradient rounded-[22px] md:py-[3rem]  md:px-[5rem] px-[1rem] py-[2rem]">
         <BoxInside />
       </div>
     </div>

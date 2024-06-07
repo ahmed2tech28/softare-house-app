@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import QuestionComp from "./clientcomps/QuestionComp";
-
+import Slider from "react-slick";
 interface questions {
   question: string;
   answer: string;
@@ -42,6 +43,14 @@ const questions: questions[] = [
 ];
 
 const QuestionMayYouHave: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
   return (
     <div className="container mx-auto flex flex-col gap-y-[4rem] mb-[6rem]">
       <div className="flex w-full justify-between lg:flex-row flex-col">
@@ -53,10 +62,21 @@ const QuestionMayYouHave: React.FC = () => {
           offer
         </p>
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-[2rem]">
+      <div className="lg:grid hidden grid-cols-2 gap-[2rem]">
         {questions.map((item, i) => (
           <QuestionComp key={i} question={item.question} answer={item.answer} />
         ))}
+      </div>
+      <div className="lg:hidden">
+        <Slider {...settings}>
+          {questions.map((item, i) => (
+            <QuestionComp
+              key={i}
+              question={item.question}
+              answer={item.answer}
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

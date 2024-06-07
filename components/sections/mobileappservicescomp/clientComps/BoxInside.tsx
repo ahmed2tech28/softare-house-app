@@ -146,7 +146,7 @@ const BoxInside = () => {
             perfect language for developing complex enterprise applications
             requiring room for growth.
           </p>
-          <div className="flex justify-start gap-x-4 items-center mt-3">
+          <div className="flex md:flex-row flex-col justify-start gap-x-4 md:items-center gap-y-[1rem] mt-3">
             <button className="text-[#0066FF] bg-white px-6 py-3 rounded-full">
               Hire developers
             </button>
