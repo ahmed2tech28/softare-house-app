@@ -13,22 +13,22 @@ const DesignRecongnition = () => {
           <img
             src="/designrecongnitionimages/1.svg"
             alt="design-recongnition"
-            className="w-[23%]"
+            className="lg:w-[23%] w-[60%] lg:mx-0 mx-auto"
           />
           <img
             src="/designrecongnitionimages/2.svg"
             alt="design-recongnition"
-            className="w-[23%]"
+            className="lg:w-[23%] w-[60%] lg:mx-0 mx-auto"
           />
           <img
             src="/designrecongnitionimages/3.svg"
             alt="design-recongnition"
-            className="w-[23%]"
+            className="lg:w-[23%] w-[60%] lg:mx-0 mx-auto"
           />
           <img
             src="/designrecongnitionimages/4.svg"
             alt="design-recongnition"
-            className="w-[23%]"
+            className="lg:w-[23%] w-[60%] lg:mx-0 mx-auto"
           />
         </div>
       </div>
