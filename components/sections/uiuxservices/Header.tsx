@@ -127,7 +127,7 @@ const Header: React.FC = () => {
       id="home"
       onMouseLeave={(e) => setlinkHovered("")}
     >
-      <BlurBg img={"/services-header.png"} />
+      <BlurBg img={"/uiusx-deader.png"} />
       <div className="absolute top-0 w-full h-full z-10 flex flex-col justify-between  hb:pb-[3rem]">
         <Navbar linkHovered={linkHovered} setlinkHovered={setlinkHovered} />
         <div
