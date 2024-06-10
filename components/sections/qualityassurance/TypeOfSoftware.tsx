@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Top from "./common/TopHiding";
 
-const TypeOfSoftware = () => {
+const TypeOfSoftware: React.FC = () => {
   const [sideBarItemSelected, setSideBarItemSelected] =
     useState("Functional Testing");
   const sideBarItems: string[] = [
@@ -22,11 +22,11 @@ const TypeOfSoftware = () => {
         <div className="tech-box bg-[#F9F9F9] h-fit rounded-2xl flex p-5 items-center">
           <div className="flex lg:flex-row flex-col w-full xl:justify-center justify-between gap-y-5">
             <div className="left xl:w-[368px] lg:w-[312px] w-full lg:h-fit h-[150px] rounded-2xl p-5 flex flex-col justify-between">
-              <div className="h-[288px] md:w-full w-full lg:mx-auto mx-0 flex lg:flex-col flex-row justify-between overflow-x-auto">
+              <div className="h-fit md:w-full w-full lg:mx-auto mx-0 flex lg:flex-col flex-row justify-between overflow-x-auto gap-y-4">
                 {sideBarItems.map((item, i) => (
                   <button
                     key={i}
-                    className={`inline-flex justify-start items-center h-[48px] md:w-full w-auto ${
+                    className={`inline-flex justify-start items-center md:w-full w-auto lg:text-[26px] py-4 font-semibold ${
                       item == sideBarItemSelected
                         ? "bg-[#0C8CE9] text-white"
                         : ""
