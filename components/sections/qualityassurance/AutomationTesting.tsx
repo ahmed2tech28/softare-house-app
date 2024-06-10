@@ -32,7 +32,7 @@ const Card1: React.FC = () => {
       <h2 className="font-semibold text-[36px]">Backend</h2>
       <p className="f-mon leading-[28px]">
         It automates the API testing as well as helps us to check a large amount
-        of backend logic with which all the product's platforms.
+        of backend logic with which all the product{"'"}s platforms.
       </p>
       <span className="my-3">
         <Button />
@@ -49,7 +49,7 @@ const Card2: React.FC = () => {
       <h2 className="font-semibold text-[36px]">User Interface</h2>
       <p className="f-mon leading-[28px]">
         It automates the API testing as well as helps us to check a large amount
-        of backend logic with which all the product's platforms.
+        of backend logic with which all the product{"'"}s platforms.
       </p>
       <span className="my-3">
         <Button />
