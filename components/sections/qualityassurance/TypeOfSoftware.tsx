@@ -108,7 +108,10 @@ const TypeOfSoftware: React.FC = () => {
           <Slider {...settings}>
             {sideBarItems.map((item, i) => {
               return (
-                <div className="right lg:w-[calc(100%-368px)] w-full flex justify-center items-center">
+                <div
+                  className="right lg:w-[calc(100%-368px)] w-full flex justify-center items-center"
+                  key={i}
+                >
                   {sideBarItemSelected == "Functional Testing" && (
                     <div className="lg:w-[657px] w-full lg:h-[300px] h-fit flex flex-col justify-center gap-y-[2rem] transition-all duration-75">
                       <p>
