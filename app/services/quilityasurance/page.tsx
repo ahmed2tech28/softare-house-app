@@ -5,6 +5,7 @@ import WhatToDoWeTest from "@/components/sections/qualityassurance/WhatToDoWeTes
 import TypeOfSoftware from "@/components/sections/qualityassurance/TypeOfSoftware";
 import SoftwareTestingProcess from "@/components/sections/qualityassurance/SoftwareTestingProcess";
 import AutomationTesting from "@/components/sections/qualityassurance/AutomationTesting";
+import ToolsWeUse from "@/components/sections/qualityassurance/ToolsWeUse";
 import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHave";
 import LatestInsights from "@/components/sections/Home/LatestInsights";
 import Contact from "@/components/sections/Home/Contact";
@@ -19,6 +20,7 @@ function QAServicesPage() {
       <TypeOfSoftware />
       <SoftwareTestingProcess />
       <AutomationTesting />
+      <ToolsWeUse />
       <QuestionMayYouHave />
       <LatestInsights />
       <Contact />
