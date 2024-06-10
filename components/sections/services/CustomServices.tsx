@@ -58,7 +58,7 @@ const services: sevices[] = [
     ],
     description:
       "We run manual and automated tests and use different approaches during the entire development life-cycle to eliminate problems and bugs, enhance performance, and improve business logic and design.",
-    link: "#",
+    link: "/services/quilityasurance",
   },
   {
     name: "DevOps services",

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface navItems {
   name: string;
@@ -57,6 +58,7 @@ export const Industries: React.FC = () => {
 };
 
 export const Services: React.FC = () => {
+  const path = usePathname();
   const services: navItems[] = [
     {
       name: "Web App Development",
@@ -71,8 +73,8 @@ export const Services: React.FC = () => {
       path: "/services/uiux",
     },
     {
-      name: "Desktop Application Development",
-      path: "#",
+      name: "Quality Assurance Services",
+      path: "/services/quilityasurance",
     },
     {
       name: "Hire a Developer",
@@ -87,7 +89,11 @@ export const Services: React.FC = () => {
         {services.map((item, i) => {
           return (
             <li key={i}>
-              <Link href={item.path} className={`hover:text-blue-600`}>
+              <Link
+                href={item.path}
+                className={`hover:text-blue-600`}
+                style={{ fontWeight: path == item.path ? "600" : undefined }}
+              >
                 {item.name}
               </Link>
             </li>
