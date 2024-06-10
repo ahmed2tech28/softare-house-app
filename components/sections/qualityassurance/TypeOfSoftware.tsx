@@ -26,7 +26,7 @@ const TypeOfSoftware: React.FC = () => {
                 {sideBarItems.map((item, i) => (
                   <button
                     key={i}
-                    className={`inline-flex justify-start items-center md:w-full w-auto lg:text-[26px] py-4 font-semibold ${
+                    className={`inline-flex justify-start items-center md:w-full w-auto lg:text-[26px] text-[12px] lg:py-4 font-semibold ${
                       item == sideBarItemSelected
                         ? "bg-[#0C8CE9] text-white"
                         : ""

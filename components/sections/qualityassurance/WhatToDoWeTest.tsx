@@ -43,12 +43,12 @@ const WhatToDoWeTest = () => {
     <div className="w-screen py-[2rem]">
       <div className="container mx-auto flex flex-col gap-y-[4rem]">
         <Top description="" hiding="What do we test?" />
-        <div className="flex h-fit w-ful justify-between">
+        <div className="flex lg:flex-row flex-col h-fit w-ful justify-between">
           {appsdevelop.map((item, i) => {
             return (
               <div
                 key={i}
-                className="w-[354.71px] h-[300px] flex flex-col gap-y-[0.2rem]"
+                className="lg:w-[354.71px] w-full lg:h-[300px] lg:py-0 py-[1rem] h-fit flex flex-col gap-y-[0.2rem]"
               >
                 {/* <div className="flex items-end"> */}
                 <h1 className="text-[30px] font-semibold inline-flex items-end gap-x-2">
