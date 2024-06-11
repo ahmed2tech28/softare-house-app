@@ -77,8 +77,8 @@ export const Services: React.FC = () => {
       path: "/services/quilityasurance",
     },
     {
-      name: "Hire a Developer",
-      path: "#",
+      name: "DevOps Services",
+      path: "/services/devops",
     },
   ];
 
