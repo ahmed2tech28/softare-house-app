@@ -21,55 +21,25 @@ const teams: string[] = [
 const StepShow: React.FC<{
   stepSelected: string;
   setStepSelected: any;
-}> = ({ setStepSelected, stepSelected }) => {
+  setStepSelectedIndex: any;
+  sliderRef: any;
+}> = ({ setStepSelected, stepSelected, setStepSelectedIndex, sliderRef }) => {
   const settings = {
     // dots: true,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
-  };
-  const sliderRef = useRef<any>(null);
-  const [startY, setStartY] = useState(0);
-
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    const slider = sliderRef.current?.innerSlider;
-    const delta = e.deltaY;
-
-    if (delta < 0) {
-      slider?.slickPrev();
-    } else {
-      slider?.slickNext();
-    }
-  };
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setStartY(e.touches[0].clientY);
-  };
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    const slider = sliderRef.current?.innerSlider;
-    const deltaY = e.touches[0].clientY - startY;
-
-    if (Math.abs(deltaY) > 50) {
-      // Adjust the threshold as needed
-      e.preventDefault();
-      if (deltaY < 0) {
-        slider?.slickNext();
-      } else {
-        slider?.slickPrev();
-      }
-    }
+    afterChange: (cuurent: number) => {
+      setStepSelected(steps[cuurent]);
+      setStepSelectedIndex(cuurent);
+    },
   };
 
   return (
-    <div
-      className="lg:w-1/2 w-full overflow-hidden"
-      onWheel={handleWheel}
-      onTouchMove={handleTouchMove}
-      onTouchStart={handleTouchStart}
-    >
+    <div className="lg:w-1/2 w-full overflow-hidden">
       <Slider {...settings} ref={sliderRef}>
         <div
           className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
@@ -208,8 +178,57 @@ const StepShow: React.FC<{
 
 const DevelopmentProcess: React.FC = () => {
   const [stepSelected, setStepSelected] = useState("Study the project");
+  const [stepSelectedIndex, setStepSelectedIndex] = useState(0);
+  const sliderRef = useRef<any>(null);
+  const [startY, setStartY] = useState(0);
+  const containerRef = useRef<any>(null);
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    console.log(stepSelectedIndex);
+    if (stepSelectedIndex > 0 && stepSelectedIndex < steps.length - 1) {
+      e.preventDefault();
+    }
+    const slider = sliderRef.current?.innerSlider;
+    const delta = e.deltaY;
+
+    if (delta < 0) {
+      slider?.slickPrev();
+    } else {
+      slider?.slickNext();
+    }
+  };
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setStartY(e.touches[0].clientY);
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const slider = sliderRef.current?.innerSlider;
+    const deltaY = e.touches[0].clientY - startY;
+
+    if (Math.abs(deltaY) > 50) {
+      // Adjust the threshold as needed
+      e.preventDefault();
+      if (deltaY < 0) {
+        slider?.slickNext();
+      } else {
+        slider?.slickPrev();
+      }
+    }
+  };
+  useEffect(() => {
+    const container = containerRef.current;
+    // Add the event listener with passive: false
+    container.addEventListener("wheel", handleWheel, { passive: false });
+
+    // Cleanup function to remove the event listener
+    return () => {
+      container.removeEventListener("wheel", handleWheel);
+    };
+  }, [stepSelectedIndex]);
   return (
-    <section className="container mx-auto md:py-[3rem] py-[1.5rem] h-fit">
+    <section
+      className="container mx-auto md:py-[3rem] py-[1.5rem] h-fit"
+      ref={containerRef}
+    >
       <div className="flex lg:flex-row flex-col w-full justify-between items-center">
         <h1 className="text-[36px] font-semibold xl:w-[30%] lg:w-[40%] w-full">
           Development process at Devhouse
@@ -243,6 +262,8 @@ const DevelopmentProcess: React.FC = () => {
         <StepShow
           stepSelected={stepSelected}
           setStepSelected={setStepSelected}
+          setStepSelectedIndex={setStepSelectedIndex}
+          sliderRef={sliderRef}
         />
       </div>
     </section>
