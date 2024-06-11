@@ -269,3 +269,8 @@ header.text-black nav * {
 .design-card-bg {
     background: linear-gradient(180deg, #0B8AEA 0%, #0067FE 100%);
 }
+
+
+.css-w0hlca.Mui-expanded {
+    margin: 0px 0;
+}
