@@ -135,7 +135,7 @@ const Header: React.FC = () => {
           onMouseEnter={(e) => setlinkHovered("")}
         >
           <div className="lg:w-[50%] w-[9-vw] lg:mx-0 mx-auto flex flex-col gap-y-[1rem]">
-            <h1 className="text-[40px]">UI/UX Design Services</h1>
+            <h1 className="text-[40px] font-semibold">UI/UX Design Services</h1>
             <p className="leading-[28px] f-mon">
               Our design team uses the latest UI·UX practices to deliver a
               top-notch product that will solve business objectives and satisfy

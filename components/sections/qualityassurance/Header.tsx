@@ -135,7 +135,9 @@ const Header: React.FC = () => {
           onMouseEnter={(e) => setlinkHovered("")}
         >
           <div className="lg:w-[50%] w-[9-vw] lg:mx-0 mx-auto flex flex-col gap-y-[1rem]">
-            <h1 className="text-[40px]">Quality Assurance Services</h1>
+            <h1 className="text-[40px] font-semibold">
+              Quality Assurance Services
+            </h1>
             <p className="leading-[28px] f-mon">
               We draw up an elaborate approach to testing your software that
               covers every single part of the product and is meant to ensure its
