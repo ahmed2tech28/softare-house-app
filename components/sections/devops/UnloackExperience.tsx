@@ -29,7 +29,7 @@ const Tick: React.FC = () => {
 const UnloackExperience: React.FC = () => {
   return (
     <div className="container mx-auto py-[3rem]">
-      <div className="lg:h-[147px] h-fit flex lg:flex-row flex-col lg:gap-y-0 gap-y-8 gap-x-3 font-semibold">
+      <div className="lg:h-[147px] h-fit flex lg:flex-row flex-col lg:gap-y-0 gap-y-8 gap-x-3">
         <div className="lg:w-[64%] w-full">
           <p className="text-[30px] leading-[49px]">
             Unlock seamless product evolution with our dedicated DevOps team.
