@@ -161,7 +161,7 @@ const Header: React.FC = () => {
               edges="rounded"
             />
           </div>
-          <div className="lg:w-[50%] flex justify-end lg:items-end items-center lg:h-[50%]">
+          <div className="lg:w-[50%] flex justify-end lg:items-end items-center lg:h-[80%]">
             <div className="flex lg:items-center gap-y-[2rem] gap-x-[2rem] lg:flex-row flex-col">
               <Icon1 />
               <Icon2 />
