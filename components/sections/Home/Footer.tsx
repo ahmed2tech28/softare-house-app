@@ -12,7 +12,7 @@ const services: navItems[] = [
   { name: "Web Application Development", path: "/services/webapp" },
   { name: "Mobile App Development", path: "/services/mobileapp" },
   { name: "UI/UX Design Services", path: "/services/uiux" },
-  { name: "Desktop Application Development", path: "#" },
+  { name: "Quality Assurance Services", path: "/services/quilityasurance" },
   { name: "Hire a Developer", path: "#" },
 ];
 
