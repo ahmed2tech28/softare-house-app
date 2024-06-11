@@ -70,7 +70,7 @@ const services: sevices[] = [
     ],
     description:
       "Bring new code and features to your products painlessly with our experienced DevOps engineers. We'll help you reduce time to market without sacrificing reliability, security, and compliance.",
-    link: "#",
+    link: "/services/devops",
   },
   {
     name: "Staff augmentation",
