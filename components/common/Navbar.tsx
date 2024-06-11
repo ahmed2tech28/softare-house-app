@@ -27,7 +27,7 @@ const navRoutes: Path[] = [
     name: "Industries",
   },
   {
-    path: "/casestudies",
+    path: "#",
     name: "Expertise",
   },
   {
@@ -35,7 +35,7 @@ const navRoutes: Path[] = [
     name: "Company",
   },
   {
-    path: "#portfolio",
+    path: "/casestudies",
     name: "Portfolio",
   },
   {
