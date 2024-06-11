@@ -184,7 +184,6 @@ const DevelopmentProcess: React.FC = () => {
   const containerRef = useRef<any>(null);
 
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    console.log(stepSelectedIndex);
     if (stepSelectedIndex > 0 && stepSelectedIndex < steps.length - 1) {
       e.preventDefault();
     }
