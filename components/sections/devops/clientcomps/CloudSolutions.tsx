@@ -61,7 +61,7 @@ const CloudSolutions = () => {
           return (
             <button
               key={i}
-              className="rounded-[33px] font-semibold px-[1.5rem] py-3 lg:text-[24px] text-[14px] w-fit bg-[#F4F4F4] hover:text-white hover:bg-[#0066FF] transition-all duration-100"
+              className="rounded-[33px] font-semibold px-[1.5rem] py-3 lg:text-[24px] text-[14px] w-fit bg-[#EEF7FE] hover:text-white hover:bg-[#0066FF] transition-all duration-100"
               style={{
                 backgroundColor: item == stepSelected ? "#0066FF" : undefined,
                 color: item == stepSelected ? "white" : undefined,
