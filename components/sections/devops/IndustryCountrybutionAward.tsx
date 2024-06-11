@@ -73,7 +73,7 @@ const UpperSection: React.FC = () => {
   return (
     <div className="flex md:w-full w-[95vw] lg:mx-0 mx-auto justify-between h-[50%] items-center">
       <div className="md:w-[50%] w-[90%] h-full flex flex-col justify-center items-start gap-y-6">
-        <h1 className="text-[38px] font-medium">
+        <h1 className="text-[38px] font-semibold">
           Industry contribution awards
         </h1>
         <p className="text-[16px] f-mon">
