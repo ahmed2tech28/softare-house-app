@@ -78,8 +78,8 @@ const UpperSection: React.FC = () => {
         </h1>
         <p className="text-[16px] f-mon">
           Leading rating & review platforms rank Cleveroad among top software
-          development companies due to our tech assistance in clients' digital
-          transformation.
+          development companies due to our tech assistance in clients{"'"}{" "}
+          digital transformation.
         </p>
       </div>
       <div className="w-[50%] md:flex hidden justify-end items-center f-mon">
