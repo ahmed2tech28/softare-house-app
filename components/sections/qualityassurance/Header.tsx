@@ -148,7 +148,7 @@ const Header: React.FC = () => {
               {"Get A personalized estimate"}
             </button>
           </div>
-          <div className="w-[50%] flex justify-end lg:items-end items-center lg:h-[50%]">
+          <div className="w-[50%] flex justify-end lg:items-end items-center lg:h-[80%]">
             <div className="flex items-center gap-x-[2rem]">
               <Icon1 />
               <Icon2 />
