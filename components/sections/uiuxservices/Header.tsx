@@ -123,7 +123,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="sm:max-h-[100vh] sm:min-h-[50rem] hb:min-h-fit h-[60rem] w-screen relative text-white"
+      className="sm:max-h-[100vh] sm:min-h-[50rem] hb:min-h-fit h-[100vh] w-screen relative text-white"
       id="home"
       onMouseLeave={(e) => setlinkHovered("")}
     >
