@@ -111,7 +111,7 @@ const codeasinfrastructure: cloudtech[] = [
 const CloudSolutions = () => {
   const [stepSelected, setStepSelected] = useState("Cloud solutions");
   return (
-    <div className="w-full flex md:flex-row flex-col gap-y-4">
+    <div className="w-full flex md:flex-row flex-col-reverse gap-y-4">
       <div className="w-full md:w-[60%] flex flex-col">
         <h1 className="text-[30px] font-semibold">{stepSelected}</h1>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-y-[4rem] mt-[4rem]">
