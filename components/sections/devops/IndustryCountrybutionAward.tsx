@@ -133,7 +133,7 @@ const BottomSection: React.FC = () => {
     },
   ];
   return (
-    <div className="flex lg:flex-row flex-col w-full justify-between h-[50%]">
+    <div className="flex lg:flex-row flex-col w-full justify-between h-[50%] gap-x-4">
       {certicates.map((item, i) => {
         return (
           <div
