@@ -13,6 +13,7 @@ import QuestionMayYouHave from "@/components/sections/services/QuestionMayYouHav
 import LatestInsights from "@/components/sections/Home/LatestInsights";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";
+import { Metadata } from "next";
 
 function DevOpsServicesPage() {
   return (
@@ -36,3 +37,8 @@ function DevOpsServicesPage() {
 }
 
 export default DevOpsServicesPage;
+
+export const metadata: Metadata = {
+  title: "DevOps Sevices - Software House App",
+  description: "Softawre House",
+};
