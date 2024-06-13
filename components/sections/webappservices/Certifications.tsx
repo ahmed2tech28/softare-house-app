@@ -23,7 +23,7 @@ const Certifications: React.FC = () => {
             key={i}
             src={item}
             alt={`certification-${i}`}
-            className="xl:w-auto w-[250px] h-[250px]"
+            // className="xl:w-auto w-[250px] h-[250px]"
           />
         ))}
       </div>
