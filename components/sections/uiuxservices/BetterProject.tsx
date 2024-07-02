@@ -1,52 +1,8 @@
 import React from "react";
 import Card from "./clientcomps/Card";
+import casestudies from "@/data/casestudies";
 
-interface card {
-  img: string;
-  name: string;
-  description: string;
-  categorie: string;
-  bg: string;
-  country: string;
-  flag: string;
-  industry: string;
-}
-
-const cards: card[] = [
-  {
-    img: "/feautured-dev/1.png",
-    name: "Micro-Investment Platform with SAMA-Compliant",
-    description:
-      "Cross-platform solution for managing micro-investments and savings, compatible with SAMA fintech regulations including multi-factor authorization and KYC verification",
-    categorie: "Under NDA",
-    bg: "#F2EFFD",
-    country: "Saudi Arabia",
-    flag: "Saudi",
-    industry: "Fintech",
-  },
-  {
-    img: "/feautured-dev/2.png",
-    name: "Transportation Management System with Route Planning",
-    description:
-      "TMS for the logistics company with automated route planning and delivery points management modules. The solution's integration with the existing LMS",
-    categorie: "Under NDA",
-    bg: "#F4B700",
-    country: "USA",
-    flag: "American",
-    industry: "Logistics",
-  },
-  {
-    img: "/feautured-dev/2.png",
-    name: "Versatile Video-On-Demand Platform",
-    description:
-      "Video streaming platform for movie renting and purchasing with multi-platform access. Blockbuster is a leading service in the Nordic countries and has 500,000+ subscibers",
-    categorie: "Media",
-    bg: "#FFA6A9",
-    country: "USA",
-    flag: "American",
-    industry: "Logistics",
-  },
-];
+const cards = casestudies.filter((item) => item.pages?.includes("UIUX"));
 
 const Hiding: React.FC = () => {
   return (
@@ -74,15 +30,15 @@ const BetterProject: React.FC = () => {
         {cards.map((item, i) => (
           <Card
             key={i}
-            img={item.img}
-            name={item.name}
-            description={item.description}
-            categorie={item.categorie}
-            bg={item.bg}
+            img={item.img!}
+            name={item.title}
+            description={item.desc}
+            categorie={item.category}
+            bg={"#F2EFFD"}
             country={item.country}
             flag={item.flag}
             industry={item.industry}
-            link="/casestudies/detail"
+            link={`/casestudies/${item.slug}`}
           />
         ))}
       </main>

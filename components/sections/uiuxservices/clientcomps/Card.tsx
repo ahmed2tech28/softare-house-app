@@ -9,7 +9,7 @@ interface Props {
   categorie: string;
   bg: string;
   country: string;
-  flag: string;
+  flag?: string;
   industry: string;
   link: string;
 }
@@ -38,11 +38,13 @@ const Card: React.FC<Props> = ({
           <div>
             <button className="bg-[#F4F4F4] px-3 py-3 rounded-full text-[#969FAF] inline-flex items-center gap-x-2">
               <span className="rounded-full w-[2rem] h-[2rem] overflow-hidden flex justify-center items-center ">
-                <img
-                  src={findFlagUrlByNationality(flag)}
-                  alt={country}
-                  className="object-cover w-full h-full"
-                />
+                {flag && (
+                  <img
+                    src={findFlagUrlByNationality(flag)}
+                    alt={country}
+                    className="object-cover w-full h-full"
+                  />
+                )}
               </span>
               {country}
             </button>

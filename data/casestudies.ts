@@ -11,6 +11,8 @@ interface casestudy {
   team: number;
   startedIn: number;
   country: string;
+  flag?: string;
+  pages?: string[];
 }
 
 const casestudies: casestudy[] = [
@@ -23,10 +25,12 @@ const casestudies: casestudy[] = [
     percent: 31,
     varient: "expanded",
     img: "https://devhouse.co/wp-content/uploads/2023/08/Desktop-64.webp",
-    country: "Pakistan",
+    country: "USA",
     industry: "FASHION",
     startedIn: 1,
     team: 8,
+    flag: "American",
+    pages: ["Web", "UIUX", "Mobile"],
   },
   {
     id: 2,
@@ -41,6 +45,8 @@ const casestudies: casestudy[] = [
     industry: "FASHION",
     startedIn: 2014,
     team: 5,
+    flag: "American",
+    pages: ["Web", "UIUX", "Mobile"],
   },
   {
     id: 3,
@@ -55,9 +61,11 @@ const casestudies: casestudy[] = [
     industry: "Agriculture",
     startedIn: 2014,
     team: 5,
+    flag: "American",
+    pages: ["Web", "UIUX", "Mobile"],
   },
   {
-    id: 1,
+    id: 16,
     slug: "toxicologia-pardini",
     title: "Toxicologia Pardini",
     desc: "Take the drug test wherever you are + 4,500 clinics and laboratories in all states of Brazil.",
