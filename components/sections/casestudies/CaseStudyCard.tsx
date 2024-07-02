@@ -2,12 +2,18 @@ import Link from "next/link";
 import React from "react";
 
 interface casestudy {
+  id: number;
+  slug?: string;
   title: string;
   desc: string;
   category: string;
   percent: number;
   varient: "expanded" | "collapsed";
   img?: string;
+  industry: string;
+  team: number;
+  startedIn: number;
+  country: string;
 }
 
 const DevLogo: React.FC = () => {
@@ -27,10 +33,11 @@ export const ExpandedCaseStudy: React.FC<casestudy> = ({
   category,
   desc,
   img,
+  slug,
 }) => {
   return (
     <Link
-      href={"/casestudies/detail"}
+      href={`/casestudies/${slug}`}
       className="cxl:!w-[795px] xl:w-[725px] clg:w-[640px] lg:w-[600px] w-full clg:h-[422px] h-fit "
     >
       <div className="bg-[#F9F9F9] relative overflow-hidden group rounded-md w-full h-full">
@@ -86,10 +93,11 @@ export const CollapsedCaseStudy: React.FC<casestudy> = ({
   category,
   desc,
   img,
+  slug,
 }) => {
   return (
     <Link
-      href={"/casestudies/detail"}
+      href={`/casestudies/${slug}`}
       className="cxl:!w-[389px] xl:w-[349px] clg:w-[304px] lg:w-[300px] w-full clg:h-[422px] h-fit "
     >
       <div className="bg-[#F9F9F9] overflow-hidden group rounded-md w-full h-full">

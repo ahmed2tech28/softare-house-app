@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import casestudies from "@/data/casestudies";
 import Link from "next/link";
 
 interface CaseStudy {
   projectname: string;
-  percent1: string;
-  percent2: string;
-  img: string;
+  percent1: number;
+  percent2: number;
+  img: string | undefined;
+  link: string;
 }
 
 const TopSection: React.FC<{ functions: any }> = ({ functions }) => {
@@ -21,7 +23,7 @@ const TopSection: React.FC<{ functions: any }> = ({ functions }) => {
           className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md"
           onClick={(e) =>
             functions.current.scrollBy({
-              left: -80,
+              left: -200,
               behavior: "smooth",
             })
           }
@@ -32,7 +34,7 @@ const TopSection: React.FC<{ functions: any }> = ({ functions }) => {
           className="p-2 bg-[#F7F7F7] text-[#423ED6] rounded-md"
           onClick={(e) =>
             functions.current.scrollBy({
-              left: 80,
+              left: 200,
               behavior: "smooth",
             })
           }
@@ -82,18 +84,28 @@ const DevLogo: React.FC = () => {
   );
 };
 
-const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
+const Box: React.FC<CaseStudy> = ({
+  percent1,
+  percent2,
+  projectname,
+  img,
+  link,
+}) => {
   const [blur, setBlur] = useState(false);
   return (
-    <div className=" mb:w-[85vw] md:!w-[40rem] w-[476px] h-[80%] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group">
+    <Link
+      href={link}
+      className="block mb:w-[85vw] md:!w-[40rem] w-[476px] h-[80%] bg-[#9eb6e9] rounded-2xl relative overflow-hidden cursor-pointer group"
+    >
       {blur ? (
         <img
-          src="/case-studies/1.png"
+          src={img}
           style={{ filter: "blur(5px)", transition: "all 0.3s" }}
           alt=""
+          className="object-cover w-full h-full"
         />
       ) : (
-        <img src="/case-studies/1.png" alt="" />
+        <img src={img} alt="" className="object-cover w-full h-full" />
       )}
 
       <div
@@ -145,7 +157,7 @@ const Box: React.FC<CaseStudy> = ({ percent1, percent2, projectname }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -198,36 +210,6 @@ const CaseStudies: React.FC = () => {
     };
   }, [isDragging, startX, scrollLeft]);
 
-  const casestudies: CaseStudy[] = [
-    {
-      projectname:
-        "Developed Customized CSR System, Improved Workflow and Reporting",
-      percent1: "31%",
-      percent2: "23%",
-      img: "/case-studies/1.png",
-    },
-    {
-      projectname:
-        "Developed Customized CSR System, Improved Workflow and Reporting",
-      percent1: "31%",
-      percent2: "23%",
-      img: "/case-studies/2.png",
-    },
-    {
-      projectname:
-        "Developed Customized CSR System, Improved Workflow and Reporting",
-      percent1: "31%",
-      percent2: "23%",
-      img: "/case-studies/3.png",
-    },
-    {
-      projectname:
-        "Developed Customized CSR System, Improved Workflow and Reporting",
-      percent1: "31%",
-      percent2: "23%",
-      img: "/case-studies/4.png",
-    },
-  ];
   return (
     <section className="container mx-auto h-[40rem] flex flex-col gap-y-[5rem] mt-[5rem]">
       <TopSection functions={contentRef} />
@@ -239,10 +221,11 @@ const CaseStudies: React.FC = () => {
           {casestudies.map((item, i) => {
             return (
               <Box
-                projectname={item.projectname}
-                percent1={item.percent1}
-                percent2={item.percent2}
+                projectname={item.title}
+                percent1={item.percent}
+                percent2={item.percent}
                 img={item.img}
+                link={`/casestudies/${item.slug}`}
                 key={i}
               />
             );
