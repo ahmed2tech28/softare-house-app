@@ -39,10 +39,10 @@ const StepShow: React.FC<{
   };
 
   return (
-    <div className="lg:w-1/2 w-full overflow-hidden">
-      <Slider {...settings} ref={sliderRef}>
+    <div className="lg:w-1/2 w-full h-full overflow-hidden">
+      <Slider {...settings} ref={sliderRef} className="h-[26.5rem]">
         <div
-          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Study the project")}
         >
           <h1 className="text-[30px] font-semibold">
@@ -68,7 +68,7 @@ const StepShow: React.FC<{
           </div>
         </div>
         <div
-          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Product design")}
         >
           <h1 className="text-[30px] font-semibold">
@@ -77,24 +77,34 @@ const StepShow: React.FC<{
             {"Product design"}
           </h1>
           <p className="f-mon leading-[28px]">
-            We analyze your requirements — project type, features, platforms —
-            then create specification, design, and approve wireframes. In other
-            cases, we study your already-made documentation and provide rough
-            and detailed time & money estimates.
+            After project analysis and initial meetings, we go forward for
+            product designing. First we create a wireframe of the product that
+            includes all its information and specifications. After that our
+            UI/UX designer creates a few samples for you (by keeping your
+            requirements in mind). This process includes branding, logos, color
+            schemes and combinations, font size and family and other related
+            things.
           </p>
           <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
             Team
           </h3>
           <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
-            {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]" key={i}>
-                {item}
-              </span>
-            ))}
+            <span className="xl:text-[16px] text-[14px]">
+              {"Project Manager"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"UI/UX Designer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Front-End Web Developer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Marketing Head for branding"}
+            </span>
           </div>
         </div>
         <div
-          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Development & testing")}
         >
           <h1 className="text-[30px] font-semibold">
@@ -103,24 +113,35 @@ const StepShow: React.FC<{
             {"Development & testing"}
           </h1>
           <p className="f-mon leading-[28px]">
-            We analyze your requirements — project type, features, platforms —
-            then create specification, design, and approve wireframes. In other
-            cases, we study your already-made documentation and provide rough
-            and detailed time & money estimates.
+            The process starts after UI/UX designing and approval from the
+            client. Frontend web designer leads the project from here and
+            convert user interface into a static design by keeping user
+            experience in mind. After completion, web developer changes the
+            static design into dynamic.
           </p>
           <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
             Team
           </h3>
           <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
-            {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]" key={i}>
-                {item}
-              </span>
-            ))}
+            <span className="xl:text-[16px] text-[14px]">
+              {"Project Manager"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Chief Technology Officer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"UI/UX Designer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Frontend Web Designer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Backend Web Developer"}
+            </span>
           </div>
         </div>
         <div
-          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Launch")}
         >
           <h1 className="text-[30px] font-semibold">
@@ -138,15 +159,26 @@ const StepShow: React.FC<{
             Team
           </h3>
           <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
-            {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]" key={i}>
-                {item}
-              </span>
-            ))}
+            <span className="xl:text-[16px] text-[14px]">
+              {"Project Manager"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Chief Technology Officer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"UI/UX Designer"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Frontend Web Designers"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">
+              {"Web Developers"}
+            </span>
+            <span className="xl:text-[16px] text-[14px]">{"QA Manager"}</span>
           </div>
         </div>
         <div
-          className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]"
+          className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]"
           onMouseEnter={(e) => setStepSelected("Maintenance (per request)")}
         >
           <h1 className="text-[30px] font-semibold">
@@ -155,21 +187,11 @@ const StepShow: React.FC<{
             {"Maintenance (per request)"}
           </h1>
           <p className="f-mon leading-[28px]">
-            We analyze your requirements — project type, features, platforms —
-            then create specification, design, and approve wireframes. In other
-            cases, we study your already-made documentation and provide rough
-            and detailed time & money estimates.
+            This is the optional step and depends on the needs and requirements
+            of the client. We are providing custom web application development
+            services and solutions so clients want us to remain in touch with
+            their future requirements and further changes.
           </p>
-          <h3 className="text-[26px] font-semibold xl:mt-[3rem] mt-[1.5rem]">
-            Team
-          </h3>
-          <div className="grid grid-cols-3 gap-y-[1rem] mt-[1rem]">
-            {teams.map((item, i) => (
-              <span className="xl:text-[16px] text-[14px]" key={i}>
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
       </Slider>
     </div>
@@ -238,7 +260,7 @@ const DevelopmentProcess: React.FC = () => {
           or release the product.
         </p>
       </div>
-      <div className="flex w-full h-fit mt-[3rem] items-center">
+      <div className="flex w-full h-full mt-[3rem] items-center">
         <div className="w-1/2 lg:block hidden">
           <ul className="flex flex-col gap-y-6">
             {steps.map((item, i) => (

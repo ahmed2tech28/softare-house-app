@@ -31,8 +31,8 @@ const StepShow: React.FC<{
 
   return (
     <div className="lg:w-1/2 w-full overflow-hidden">
-      <Slider {...settings} ref={sliderRef} className="h-[100%]">
-        <div className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
+      <Slider {...settings} ref={sliderRef} className="h-[26.5rem]">
+        <div className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]">
           <h1 className="text-[30px] font-semibold">
             {"01"}
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,7 +49,7 @@ const StepShow: React.FC<{
           <h1 className="text-[30px] font-semibold py-3">10%</h1>
           <p>This stage takes from the overall testing time</p>
         </div>
-        <div className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
+        <div className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]">
           <h1 className="text-[30px] font-semibold">
             {"02"}
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -66,7 +66,7 @@ const StepShow: React.FC<{
           <h1 className="text-[30px] font-semibold py-3">10%</h1>
           <p>This stage takes from the overall testing time</p>
         </div>
-        <div className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
+        <div className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]">
           <h1 className="text-[30px] font-semibold">
             {"03"}
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -83,7 +83,7 @@ const StepShow: React.FC<{
           <h1 className="text-[30px] font-semibold py-3">10%</h1>
           <p>This stage takes from the overall testing time</p>
         </div>
-        <div className="w-full bg-[#F9F9F9] h-fit rounded-[36px] md:p-[3rem] p-[1.5rem]">
+        <div className="w-full bg-[#F9F9F9] h-[26.5rem] rounded-[36px] md:p-[3rem] p-[1.5rem]">
           <h1 className="text-[30px] font-semibold">
             {"04"}
             &nbsp;&nbsp;&nbsp;&nbsp;

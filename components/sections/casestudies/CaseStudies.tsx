@@ -12,15 +12,15 @@ interface casestudy {
 
 const casestudies: casestudy[] = [
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Tolli Project",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
     varient: "expanded",
-    img: "/case-studies-page/1.png",
+    img: "https://devhouse.co/wp-content/uploads/2023/08/Desktop-64.webp",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Morilee",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -28,7 +28,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/2.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Muqawiloon",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -36,7 +36,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/3.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Toxicologia Pardini",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -44,7 +44,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/4.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Pre Post SEO",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -52,7 +52,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/5.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "SANDALS RESORTS",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -60,7 +60,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/6.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Rent My Home",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -68,7 +68,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/7.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Harmos",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -76,7 +76,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/8.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Puulse",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,
@@ -84,7 +84,7 @@ const casestudies: casestudy[] = [
     img: "/case-studies-page/9.png",
   },
   {
-    title: "Developed Customized CSR System, Improved Workflow and Reporting",
+    title: "Jitsi Meet",
     desc: "Get rich web experience related to web application development, SaaS application development, single page application development services and more.",
     category: "UI/UX Design",
     percent: 31,

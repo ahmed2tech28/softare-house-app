@@ -29,6 +29,20 @@ const qualities: qualities[] = [
     desc: "Responsive applications adjust their design to different screen sizes of smartphones, tablets, and other devices. Even if the window is changing in just one pixel, the page will swiftly rearrange its elements. By going responsive, you ensure a great experience for mobile users and save time and money on designing the iOS or Android version of the app.",
     buttons: ["CSS Flexbox", "CSS Grid", "Bootstrap"],
   },
+
+  {
+    title: "Blockchain App Dev Services",
+    desc: "Blockchain is the world’s most popular and trusted system to buy, sell and trade cryptocurrency. There are different computers connected via peer-to-peer network with each other. We are providing blockchain app development services and solutions so that you can create a digital identity for users, increase reliability and improve data security.",
+    buttons: [
+      "Angular",
+      "React",
+      "Javascript",
+      "Node js",
+      "JAVA",
+      ".NET",
+      "Python",
+    ],
+  },
 ];
 
 const WebAppBlog: React.FC<qualitiesProp> = ({
