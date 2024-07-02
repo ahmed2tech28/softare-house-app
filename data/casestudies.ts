@@ -65,7 +65,7 @@ const casestudies: casestudy[] = [
     pages: ["Web", "UIUX", "Mobile"],
   },
   {
-    id: 16,
+    id: 4,
     slug: "toxicologia-pardini",
     title: "Toxicologia Pardini",
     desc: "Take the drug test wherever you are + 4,500 clinics and laboratories in all states of Brazil.",
@@ -79,7 +79,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 4,
+    id: 5,
     slug: "pre-post-seo",
     title: "Pre Post SEO",
     desc: "PrePostSEO is a platform that offers a suite of tools designed to assist content creators, SEO professionals, and website owners in optimizing their content and ensuring its originality and quality. With tools ranging from plagiarism checkers to backlink checkers, the platform aims to be a one-stop solution for many online content needs.",
@@ -93,7 +93,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 5,
+    id: 6,
     slug: "sandals-resorts",
     title: "SANDALS RESORTS",
     desc: "Sandals Resorts is a renowned name in luxury all-inclusive vacations, predominantly in the Caribbean. With its meticulously designed resorts, Sandals offers couples romantic and high-end vacation experiences. The Sandals.com website serves as a gateway to these idyllic locations, ensuring users get a taste of what awaits them, and simplifying the booking process.",
@@ -107,7 +107,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 6,
+    id: 7,
     slug: "rent-my-home",
     title: "Rent My Home",
     desc: "RENTMYHOME is a forward thinking letting agency that’s passionate about customer service. A group of lettings and property management professionals with a successful track record of delivering the best of results for Landlords.",
@@ -121,7 +121,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 7,
+    id: 8,
     slug: "harmos",
     title: "Harmos",
     desc: "You don’t need to have the skills of a DJ to know what music your friends and guests like. Harmos takes all the guesswork out of deciding what music to play in a group setting.",
@@ -135,7 +135,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 8,
+    id: 9,
     slug: "puulse",
     title: "Puulse",
     desc: "Connect your heart rate and fitness apps or devices with ease using Puulse. Enjoy beat-by-beat accuracy and real-time ECG display for 24/7 monitoring. Analyze heart rate and activity trends, and receive firmware updates for optimal device functionality. Stay motivated and reach your fitness goals.    ",
@@ -149,7 +149,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 9,
+    id: 10,
     slug: "jitsi-meet",
     title: "Jitsi Meet",
     desc: "Get instant video conferencing with unlimited users, secured with lock-protected rooms and encryption. High-quality audio and video can be accessed directly via web browsers, without the need for downloads or an account. With a user-friendly interface and 100% open-source, this app is perfect for staying in touch with colleagues, friends, and family.",
@@ -163,7 +163,7 @@ const casestudies: casestudy[] = [
     team: 3,
   },
   {
-    id: 10,
+    id: 11,
     slug: "poolii",
     title: "POOLII",
     desc: "Poolii is an innovative take on social networking, integrating the thrill of lotteries with the essence of connection-making. Operating under the mantra that “everyone wins by making connections,” Poolii revolutionizes social networking by turning posting into a privilege, allowing only one random user to post each day. Users increase their chances of winning the privilege by actively reading other winning posts.",
@@ -177,7 +177,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 11,
+    id: 12,
     slug: "train-circle-track-master",
     title: "Train Circle Track Master",
     desc: "Poolii is an innovative take on social networking, integrating the thrill of lotteries with the essence of connection-making.",
@@ -191,7 +191,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 12,
+    id: 13,
     slug: "messagenius",
     title: "MESSAGENIUS",
     desc: "Messagenius is an enterprise messaging company based in both the UK and Italy.",
@@ -205,7 +205,7 @@ const casestudies: casestudy[] = [
     team: 6,
   },
   {
-    id: 13,
+    id: 14,
     slug: "azkabasket",
     title: "Azkabasket",
     desc: "Azkabasket is an online grocery store that offers access to locally and sustainably grown and produced food. It aims to promote ethical practices in food sourcing and provides transparency into food sources. The website uses both PayPal and Stripe as payment gateways.",
@@ -219,7 +219,7 @@ const casestudies: casestudy[] = [
     team: 4,
   },
   {
-    id: 14,
+    id: 15,
     slug: "aileven-live",
     title: "Aileven Live",
     desc: "Aileven Live (Cross-platform mobile app) offers live football management experience to fans with real-time decision-making and match analysis. You can follow your favorite team or select other teams in the league and interact like a virtual trainer.",
@@ -233,7 +233,7 @@ const casestudies: casestudy[] = [
     team: 6,
   },
   {
-    id: 14,
+    id: 16,
     slug: "agrisync",
     title: "AgriSync",
     desc: "This project is a cross-platform mobile application that enables farmers and advisors to connect and resolve support issues in real-time. Users can connect with multiple advisors and manage service tickets through a dashboard. The app requires a stable internet connection, and users are recommended to use wired or Bluetooth headphones for the best audio experience.",
@@ -247,7 +247,7 @@ const casestudies: casestudy[] = [
     team: 5,
   },
   {
-    id: 15,
+    id: 17,
     slug: "allocator",
     title: "Allocator",
     desc: "Allocator provides innovative integrated data and software solutions to the alternative investments industry. The platform streamlines data management and monitoring, enabling investors to focus on maximizing returns.",

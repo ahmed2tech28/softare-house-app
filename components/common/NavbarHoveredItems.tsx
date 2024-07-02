@@ -37,6 +37,22 @@ export const Industries: React.FC = () => {
       name: "Education",
       path: "#",
     },
+    {
+      name: "Agriculture",
+      path: "#",
+    },
+    {
+      name: "Sports",
+      path: "#",
+    },
+    {
+      name: "Social",
+      path: "#",
+    },
+    {
+      name: "Education",
+      path: "#",
+    },
   ];
 
   return (
