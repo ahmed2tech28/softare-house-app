@@ -14,6 +14,7 @@ interface Props {
   team: number | undefined;
   startedIn: number | undefined;
   country: string | undefined;
+  slug?: string;
 }
 
 const IntroAboutProject: React.FC<Props> = ({
@@ -24,11 +25,12 @@ const IntroAboutProject: React.FC<Props> = ({
   startedIn,
   team,
   img,
+  slug,
 }) => {
   const path: Path[] = [
     { label: "Home", path: "/" },
     { label: "Case Studies", path: "/casestudies" },
-    { label: "Detail", path: "/casestudies/detail" },
+    { label: title!, path: `/casestudies/${slug}` },
   ];
   return (
     <div className="h-[37rem] w-full border rounded-[3rem] overflow-hidden flex flex-col relative justify-center items-center">
