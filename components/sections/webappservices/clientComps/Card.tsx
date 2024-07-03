@@ -12,17 +12,17 @@ const Card: React.FC<Props> = ({ img, name, callangesSolved, bg }) => {
   return (
     <div className="w-full lg:h-[491.76px] h-fit flex gap-x-6 lg:flex-row flex-col lg:gap-y-0 gap-y-4">
       <div
-        className="h-[491.76px] md:w-[577px] w-full rounded-[2rem] flex flex-col justify-center items-center"
+        className="h-[491.76px] md:w-[577px] w-full rounded-[2rem] flex flex-col justify-center items-center overflow-hidden"
         style={{ backgroundColor: bg }}
       >
-        <img src={img} alt={name} className="" />
+        <img src={img} alt={name} className="w-full h-full object-cover" />
       </div>
-      <div className="h-full flex flex-col justify-center gap-y-2">
+      <div className="h-full flex flex-col justify-center gap-y-2 lg:w-[60%] w-full">
         <h2 className="text-[30px] font-semibold">{name}</h2>
         <h3 className="text-[#0C8CE9] text-[24px] font-semibold">
           Challanges Solved :
         </h3>
-        <ul className="list-disc ps-4">
+        <ul className="list-disc ps-4 h-[10rem] overflow-hidden w-full">
           {callangesSolved.map((item, i) => (
             <li key={i} className="leading-[38px]">
               {item}
