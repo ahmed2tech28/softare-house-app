@@ -17,9 +17,10 @@ import TechnologyStack from "./TechnologyStack";
 interface Props {
   about?: string;
   challanges?: string[];
+  results?: string[];
 }
 
-const AboutProject: React.FC<Props> = ({ about, challanges }) => {
+const AboutProject: React.FC<Props> = ({ about, challanges, results }) => {
   return (
     <>
       <main className="w-full h-fit bg-[#F9F9F9] rounded-2xl overflow-hidden">
@@ -27,7 +28,7 @@ const AboutProject: React.FC<Props> = ({ about, challanges }) => {
           <AboutProjecttems about={about} />
           <ProjectIdea />
           <ProjectChallanges challanges={challanges} />
-          <Results />
+          <Results results={results} />
         </div>
       </main>
       <main className="w-full h-fit flex flex-col gap-y-5">

@@ -30,6 +30,7 @@ const CaseStudiesDetail = () => {
         <AboutProject
           about={currentCaseStudy?.about}
           challanges={currentCaseStudy?.projectChallanges}
+          results={currentCaseStudy?.results}
         />
       </main>
       <main className="cover">

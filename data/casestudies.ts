@@ -15,6 +15,7 @@ interface casestudy {
   pages?: string[];
   about?: string;
   projectChallanges?: string[];
+  results?: string[];
 }
 
 const casestudies: casestudy[] = [
@@ -36,6 +37,7 @@ const casestudies: casestudy[] = [
     about: `The goal of this project is to improve the navigation experience. The current navigation structure presents challenges for users in finding what they are looking for, often requiring them to navigate through multiple screens. Riece for users of the Toli app
     `,
     projectChallanges: [],
+    results: [],
   },
   {
     id: 2,
@@ -54,6 +56,9 @@ const casestudies: casestudy[] = [
     pages: ["Web", "UIUX", "Mobile"],
     about: `As one of the world’s leading brands of designer wedding dresses and evening wear,Morilee has been making your dreams come to life with the help of our amazing designer Madeline Gardner and her striking artistic visions.`,
     projectChallanges: [],
+    results: [
+      "Toli users experience difficulties inFinding and purchasing products, navigatingthrough the app, and receiving relevantrecommendations",
+    ],
   },
   {
     id: 3,
@@ -76,6 +81,7 @@ const casestudies: casestudy[] = [
       "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 4,
@@ -93,6 +99,7 @@ const casestudies: casestudy[] = [
     about:
       "Take the drug test wherever you are + 4,500 clinics and laboratories in all states of Brazil.",
     projectChallanges: [],
+    results: [],
   },
   {
     id: 5,
@@ -117,6 +124,7 @@ const casestudies: casestudy[] = [
       "Keeping the plagiarism database updated and comprehensive while respecting data privacy laws.",
       "SEO guidelines and standards aren’t static. Adapting tools to stay current with industry changes was a constant challenge.",
     ],
+    results: [],
   },
   {
     id: 6,
@@ -140,6 +148,7 @@ const casestudies: casestudy[] = [
       "Integrating real-time data on room availability, pricing, and special packages, ensuring accuracy for potential guests.",
       "Seamless integration with booking engines, customer relationship management (CRM) tools, and third-party review platforms.",
     ],
+    results: [],
   },
   {
     id: 7,
@@ -161,6 +170,7 @@ const casestudies: casestudy[] = [
       "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 8,
@@ -183,6 +193,7 @@ const casestudies: casestudy[] = [
       "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 9,
@@ -206,6 +217,7 @@ const casestudies: casestudy[] = [
       "Ensuring secure and reliable transmission of sensitive health data between the app and third-party devices or apps can also be a challenge.",
       "Keeping up with firmware updates and ensuring that the app remains compatible with the latest versions of the Puulse device can be a challenge.",
     ],
+    results: [],
   },
   {
     id: 10,
@@ -229,6 +241,7 @@ const casestudies: casestudy[] = [
       "While the app offers unlimited users, there may be challenges with server power and bandwidth as the number of participants increases. This could result in decreased audio and video quality or interruptions in the call.",
       "Even though the app is user-friendly and requires no account or downloads, there may be challenges with user adoption and retention. There are many video conferencing apps available on the market, so it may be difficult for this app to stand out and attract a large user base.",
     ],
+    results: [],
   },
   {
     id: 11,
@@ -251,6 +264,7 @@ const casestudies: casestudy[] = [
       "Preventing spam accounts or bots from participating and ensuring genuine human interaction.",
       "Handling a growing user base and ensuring that the system could accommodate a surge in users without compromising performance.",
     ],
+    results: [],
   },
   {
     id: 12,
@@ -272,6 +286,7 @@ const casestudies: casestudy[] = [
       "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 13,
@@ -294,6 +309,7 @@ const casestudies: casestudy[] = [
       "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 14,
@@ -317,6 +333,7 @@ const casestudies: casestudy[] = [
       "Integrating multiple payment gateways, such as PayPal and Stripe, can be a challenge, as it requires compliance with different payment regulations and security standards.",
       "Building a responsive and user-friendly website that works seamlessly across various devices and browsers can also be a challenge, as it requires careful consideration of design, development, and testing processes.",
     ],
+    results: [],
   },
   {
     id: 15,
@@ -339,6 +356,7 @@ const casestudies: casestudy[] = [
       "As the app is cross-platform and built for both iOS and Android devices, ensuring compatibility across multiple devices and operating systems could be a challenge.",
       "The app uses push notifications to provide updates to users. Managing the frequency and timing of these notifications could be a challenge to ensure that users remain engaged without being overwhelmed.",
     ],
+    results: [],
   },
   {
     id: 16,
@@ -361,6 +379,7 @@ const casestudies: casestudy[] = [
       "Advisors may already have existing customer support systems in place, and integrating AgriSync with these systems may present technical challenges.",
       "The app should be user-friendly and accessible to all users, regardless of their technical proficiency or physical abilities. Providing clear and concise instructions and ensuring compatibility with a range of devices and operating systems can help overcome these challenges.",
     ],
+    results: [],
   },
   {
     id: 17,
@@ -383,6 +402,7 @@ const casestudies: casestudy[] = [
       "Providing a smooth user experience is critical to the success of Allocator's platform. The website must be easy to navigate, intuitive, and user-friendly, ensuring that users can quickly and easily access the data and tools they need.",
       "The alternative investments industry is highly regulated, and Allocator's platform must comply with various regulatory requirements. Ensuring that the website meets these requirements and stays up-to-date with any changes or updates is critical for the company's success.",
     ],
+    results: [],
   },
   {
     id: 18,
@@ -404,6 +424,7 @@ const casestudies: casestudy[] = [
       "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
       "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
     ],
+    results: [],
   },
   {
     id: 19,
@@ -426,6 +447,7 @@ const casestudies: casestudy[] = [
       "There are likely other e-commerce platforms that focus on African culture, and the website will need to differentiate itself and offer unique value to attract and retain customers.",
       "As the website relies on several different technologies and tools, ensuring that they are all functioning properly and kept up-to-date could be a challenge, especially as the site continues to grow and evolve.",
     ],
+    results: [],
   },
 ];
 

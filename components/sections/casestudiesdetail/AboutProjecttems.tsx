@@ -148,12 +148,7 @@ export const ProjectChallanges: React.FC<{ challanges?: string[] }> = ({
   );
 };
 
-export const Results: React.FC = () => {
-  const listOfitems: string[] = [
-    "A feature-rich VOD streaming solution aligned with the client's business model enables multi-tier revenue streams based on rentals and purchases. Long-term value creation through business digitalization.",
-    "A video streaming service with cross-platform capabilities for TV, PC, and mobile devices. It allowed the customer to ensure substantial business growth by providing a comprehensive digital experience for users.",
-    "The new UI design concept was approved by the customer and used in the frontend development of the VOD streaming platform. The high-quality user interface that meets the company's marketing and customer service objectives.",
-  ];
+export const Results: React.FC<{ results?: string[] }> = ({ results }) => {
   return (
     <div className="flex flex-col gap-y-3 group">
       <svg
@@ -204,13 +199,14 @@ export const Results: React.FC = () => {
       <h1 className="text-[36px] font-semibold">Results</h1>
       <div className="px-4 f-mon">
         <ul className="list-disc gap-y-2 flex flex-col">
-          {listOfitems.map((item, i) => {
+          {results?.map((item, i) => {
             return (
               <li key={i} className="leading-[35px]">
                 {item}
               </li>
             );
           })}
+          {results?.length == 0 && "No Results Added Yet"}
         </ul>
       </div>
     </div>
