@@ -27,7 +27,10 @@ const CaseStudiesDetail = () => {
           team={currentCaseStudy?.team}
           img={currentCaseStudy?.img}
         />
-        <AboutProject />
+        <AboutProject
+          about={currentCaseStudy?.about}
+          challanges={currentCaseStudy?.projectChallanges}
+        />
       </main>
       <main className="cover">
         <ClientArea />

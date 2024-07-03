@@ -13,6 +13,8 @@ interface casestudy {
   country: string;
   flag?: string;
   pages?: string[];
+  about?: string;
+  projectChallanges?: string[];
 }
 
 const casestudies: casestudy[] = [
@@ -31,6 +33,9 @@ const casestudies: casestudy[] = [
     team: 8,
     flag: "American",
     pages: ["Web", "UIUX", "Mobile"],
+    about: `The goal of this project is to improve the navigation experience. The current navigation structure presents challenges for users in finding what they are looking for, often requiring them to navigate through multiple screens. Riece for users of the Toli app
+    `,
+    projectChallanges: [],
   },
   {
     id: 2,
@@ -47,6 +52,8 @@ const casestudies: casestudy[] = [
     team: 5,
     flag: "American",
     pages: ["Web", "UIUX", "Mobile"],
+    about: `As one of the world’s leading brands of designer wedding dresses and evening wear,Morilee has been making your dreams come to life with the help of our amazing designer Madeline Gardner and her striking artistic visions.`,
+    projectChallanges: [],
   },
   {
     id: 3,
@@ -63,6 +70,12 @@ const casestudies: casestudy[] = [
     team: 5,
     flag: "American",
     pages: ["Web", "UIUX", "Mobile"],
+    about: `This Project is a web application that aims to connect contractors and suppliers with individuals or businesses in need of construction or building services. It serves as a platform that facilitates communication and collaboration between project owners and relevant service providers.`,
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
   },
   {
     id: 4,
@@ -77,6 +90,9 @@ const casestudies: casestudy[] = [
     industry: "DRUGS",
     startedIn: 2014,
     team: 5,
+    about:
+      "Take the drug test wherever you are + 4,500 clinics and laboratories in all states of Brazil.",
+    projectChallanges: [],
   },
   {
     id: 5,
@@ -91,6 +107,16 @@ const casestudies: casestudy[] = [
     industry: "USA",
     startedIn: 2014,
     team: 5,
+    about: `PrePostSEO is a platform that offers a suite of tools designed to assist content creators, SEO professionals, and website owners in optimizing their content and ensuring its originality and quality. With tools ranging from plagiarism checkers to backlink checkers, the platform aims to be a one-stop solution for many online content needs.`,
+    projectChallanges: [
+      "Ensuring the platform could handle a large number of simultaneous requests without compromising on speed or accuracy. this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "Creating a cohesive user experience when the platform hosts a variety of different tools, each with its own requirements.",
+      "Offering tools like plagiarism checkers that require complex algorithms and large databases to function in real-time.",
+      "With so many tools available, presenting them in an intuitive and user-friendly manner was crucial.",
+      "Ensuring the platform performs equally well on desktops, tablets, and smartphones.",
+      "Keeping the plagiarism database updated and comprehensive while respecting data privacy laws.",
+      "SEO guidelines and standards aren’t static. Adapting tools to stay current with industry changes was a constant challenge.",
+    ],
   },
   {
     id: 6,
@@ -105,6 +131,15 @@ const casestudies: casestudy[] = [
     industry: "LIFESTYLE",
     startedIn: 2022,
     team: 5,
+    about:
+      "Sandals Resorts is a renowned name in luxury all-inclusive vacations, predominantly in the Caribbean. With its meticulously designed resorts, Sandals offers couples romantic and high-end vacation experiences. The Sandals.com website serves as a gateway to these idyllic locations, ensuring users get a taste of what awaits them, and simplifying the booking process.",
+    projectChallanges: [
+      "Translating the tangible luxury of the resorts into a digital experience without losing its essence.",
+      "Crafting an interface that is both visually appealing and user-friendly, ensuring potential guests can easily navigate and make reservations.",
+      "Given the increasing reliance on mobile devices, the website had to provide a seamless experience across all device types.",
+      "Integrating real-time data on room availability, pricing, and special packages, ensuring accuracy for potential guests.",
+      "Seamless integration with booking engines, customer relationship management (CRM) tools, and third-party review platforms.",
+    ],
   },
   {
     id: 7,
@@ -119,6 +154,13 @@ const casestudies: casestudy[] = [
     industry: "REAL ESATE",
     startedIn: 2014,
     team: 5,
+    about: `RENTMYHOME is a forward thinking letting agency that’s passionate about customer service. A group of lettings and property management professionals with a successful track record of delivering the best of results for Landlords.`,
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
   },
   {
     id: 8,
@@ -133,6 +175,14 @@ const casestudies: casestudy[] = [
     industry: "MUSIC",
     startedIn: 2018,
     team: 5,
+    about:
+      "You don’t need to have the skills of a DJ to know what music your friends and guests like. Harmos takes all the guesswork out of deciding what music to play in a group setting.",
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
   },
   {
     id: 9,
@@ -147,6 +197,15 @@ const casestudies: casestudy[] = [
     industry: "HEALTH",
     startedIn: 2020,
     team: 5,
+    about:
+      "Puulse is a cross-platform app built on Xamarin for iOS and Android, designed to seamlessly connect up to three heart rate or fitness apps/devices. Our team utilized XMAL, custom views, Prism, and Sql Server, among other technologies and tools, to create an efficient and intuitive experience for our users. With automatic firmware updates and 24/7 ECG monitoring, our solution ensures optimal device functionality and real-time heart rate data analysis.",
+    projectChallanges: [
+      "Integrating with multiple third-party apps and devices can pose a challenge in terms of compatibility and ensuring seamless data transfer.",
+      "Maintaining beat-by-beat accuracy of heart rate data can be challenging due to factors such as signal interference or environmental factors.",
+      "Managing offline data storage and syncing it with the app can present a challenge, especially when dealing with large amounts of data.",
+      "Ensuring secure and reliable transmission of sensitive health data between the app and third-party devices or apps can also be a challenge.",
+      "Keeping up with firmware updates and ensuring that the app remains compatible with the latest versions of the Puulse device can be a challenge.",
+    ],
   },
   {
     id: 10,
@@ -161,6 +220,15 @@ const casestudies: casestudy[] = [
     industry: "VIDEO CONFERENCING",
     startedIn: 2021,
     team: 3,
+    about:
+      "Jitsi Meet is a cross-platform client app built in Xamarin that offers instant video conferencing with unlimited users, secured with encryption and lock-protected rooms. The app was developed using XAML, custom views, Prism, SQL Server, Autofac, Syncfusion, and Media Plugin. Our team worked diligently to create a user-friendly interface that requires no account or downloads, making it perfect for staying in touch with colleagues, friends, and family.",
+    projectChallanges: [
+      "Since this app relies on network connectivity to function, it may face challenges when users have limited or no internet access. This could result in interrupted or poor quality video and audio.",
+      "While the app offers encryption and lock-protected rooms, there is always the possibility of security breaches, such as hacking or unauthorized access.",
+      "Since the app is cross-platform and can be accessed via web browsers, there may be compatibility issues with certain devices or browsers. This could result in users being unable to access the app or experiencing glitches and errors.",
+      "While the app offers unlimited users, there may be challenges with server power and bandwidth as the number of participants increases. This could result in decreased audio and video quality or interruptions in the call.",
+      "Even though the app is user-friendly and requires no account or downloads, there may be challenges with user adoption and retention. There are many video conferencing apps available on the market, so it may be difficult for this app to stand out and attract a large user base.",
+    ],
   },
   {
     id: 11,
@@ -175,6 +243,14 @@ const casestudies: casestudy[] = [
     industry: "Social Networking",
     startedIn: 2014,
     team: 5,
+    about: `Poolii is an innovative take on social networking, integrating the thrill of lotteries with the essence of connection-making. Operating under the mantra that “everyone wins by making connections,” Poolii revolutionizes social networking by turning posting into a privilege, allowing only one random user to post each day. Users increase their chances of winning the privilege by actively reading other winning posts.`,
+    projectChallanges: [
+      "Implementing a transparent, fair, and tamper-proof lottery system.",
+      "Ensuring seamless synchronization between Android and iOS platforms developed using Xamarin.",
+      "Balancing the free nature of the app with generating revenue to support the platform.",
+      "Preventing spam accounts or bots from participating and ensuring genuine human interaction.",
+      "Handling a growing user base and ensuring that the system could accommodate a surge in users without compromising performance.",
+    ],
   },
   {
     id: 12,
@@ -189,6 +265,13 @@ const casestudies: casestudy[] = [
     industry: "Agriculture",
     startedIn: 2014,
     team: 5,
+    about: `This Project is a web application that aims to connect contractors and suppliers with individuals or businesses in need of construction or building services. It serves as a platform that facilitates communication and collaboration between project owners and relevant service providers.`,
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
   },
   {
     id: 13,
@@ -203,6 +286,14 @@ const casestudies: casestudy[] = [
     industry: "MESSAGING",
     startedIn: 2014,
     team: 6,
+    about:
+      "Messagenius is an enterprise messaging company based in both the UK and Italy. Messagenius, the secure enterprise messaging app making work life more secure, smart, and integrated for an interconnected workforce. It offers secure enterprise messaging for smart and integrated communications among colleagues, for all types of industries. Messagenius sets the bar high when it comes to data protection, usability, speed, reliability, and compliance.",
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
   },
   {
     id: 14,
@@ -217,6 +308,15 @@ const casestudies: casestudy[] = [
     industry: "FOOD",
     startedIn: 2022,
     team: 4,
+    about:
+      "Azkabasket is an online ethical grocery store, built using HTML, CSS, jQuery, and Ruby on Rails. Our DevOps solution on Heroku ensures that the web app works smoothly on different devices and provides a good user experience.",
+    projectChallanges: [
+      "Sourcing and aggregating products from local and regional farms and vendors can be a challenge, as they may not have the necessary infrastructure or resources to participate in an online marketplace.",
+      "Maintaining a high level of transparency and ethical standards for the sourced products can be challenging, as it requires ongoing monitoring and evaluation of suppliers.",
+      "Ensuring timely and efficient delivery of fresh produce can be challenging, as it involves managing logistics and transportation to ensure products arrive at their destination in optimal condition.",
+      "Integrating multiple payment gateways, such as PayPal and Stripe, can be a challenge, as it requires compliance with different payment regulations and security standards.",
+      "Building a responsive and user-friendly website that works seamlessly across various devices and browsers can also be a challenge, as it requires careful consideration of design, development, and testing processes.",
+    ],
   },
   {
     id: 15,
@@ -231,6 +331,14 @@ const casestudies: casestudy[] = [
     industry: "SPORTS",
     startedIn: 2020,
     team: 6,
+    about: `Aileven Live is a cross-platform mobile app built using Xamarin for iOS and Android, providing a unique live football management experience. The app utilizes Prism, SQL Server, Autofac, and Syncfusion plugins. Our team worked diligently to deliver the best possible solution for this app.`,
+    projectChallanges: [
+      "As the app relies on real-time match data, ensuring that the data is accurate and up-to-date could be a challenge, especially during high-pressure matches where there are often last-minute substitutions or changes in player performance.",
+      "As the app is focused on providing a unique live football management experience, user engagement could be a challenge. The app must offer compelling features and updates that keep users engaged throughout the match.",
+      "The app relies on APIs such as Swagger and Http Client to access real-time data. Ensuring seamless integration with these APIs and avoiding any downtime could be a challenge.",
+      "As the app is cross-platform and built for both iOS and Android devices, ensuring compatibility across multiple devices and operating systems could be a challenge.",
+      "The app uses push notifications to provide updates to users. Managing the frequency and timing of these notifications could be a challenge to ensure that users remain engaged without being overwhelmed.",
+    ],
   },
   {
     id: 16,
@@ -245,6 +353,14 @@ const casestudies: casestudy[] = [
     industry: "Agriculture",
     startedIn: 2024,
     team: 5,
+    about: `AgriSync is a cross-platform mobile application that enables farmers and advisors to resolve support issues in real-time. Built using Xamarin, the app uses XAML and Custom Views for the frontend and Prism and SQL Server for the backend. Our team utilized GitHub for source code management and implemented Azure for push notifications.`,
+    projectChallanges: [
+      "The app requires a stable internet connection, and any disruptions in network coverage or bandwidth can hinder its functionality.",
+      "The app requires farmers and advisors to adopt and use it as part of their daily operations. It may be challenging to convince them to switch to a new support system, especially if they are already comfortable with their current methods.",
+      "The app collects sensitive information from farmers and advisors, such as video and location data. Ensuring the privacy and security of this data is critical to building trust and maintaining compliance with regulations.",
+      "Advisors may already have existing customer support systems in place, and integrating AgriSync with these systems may present technical challenges.",
+      "The app should be user-friendly and accessible to all users, regardless of their technical proficiency or physical abilities. Providing clear and concise instructions and ensuring compatibility with a range of devices and operating systems can help overcome these challenges.",
+    ],
   },
   {
     id: 17,
@@ -259,6 +375,57 @@ const casestudies: casestudy[] = [
     industry: "BUSINESS",
     startedIn: 2021,
     team: 4,
+    about: `Allocator is a data technology company providing solutions for alternative investments. Using HTML, CSS, VueJs, ReactJS, and Ruby on Rails, we created a platform that is optimized for mobile, tablet, and desktop devices. Our goal was to provide comprehensive data management and monitoring solutions to improve investor returns.`,
+    projectChallanges: [
+      "As Allocator handles sensitive financial data, ensuring the security and privacy of this information is critical. The website must have robust security measures in place to protect against cyber threats and potential breaches.",
+      "Allocator's platform integrates with various data sources, including fund managers and investors. Ensuring that data is accurately collected, standardized, and updated in real-time is crucial for the platform's effectiveness.",
+      "As Allocator continues to expand its offerings and customer base, ensuring that the website can handle increased traffic and data volume is essential. The website must be scalable and able to adapt to changing demands and requirements.",
+      "Providing a smooth user experience is critical to the success of Allocator's platform. The website must be easy to navigate, intuitive, and user-friendly, ensuring that users can quickly and easily access the data and tools they need.",
+      "The alternative investments industry is highly regulated, and Allocator's platform must comply with various regulatory requirements. Ensuring that the website meets these requirements and stays up-to-date with any changes or updates is critical for the company's success.",
+    ],
+  },
+  {
+    id: 18,
+    slug: "plagiarism-checker",
+    title: "Plagiarism Checker",
+    desc: "Plagiarism checker scans text or documents sentence by sentence and display real time results. It also displays sources from where your content is copied. It has in-app purchase.",
+    category: "UI/UX Design",
+    percent: 31,
+    varient: "expanded",
+    img: "https://devhouse.co/wp-content/uploads/2023/07/plagiarism_checker.webp",
+    country: "KSA",
+    industry: "BUSINESS",
+    startedIn: 2021,
+    team: 4,
+    about: `Plagiarism checker scans text or documents sentence by sentence and display real time results. It also displays sources from where your content is copied. It has in-app purchase.`,
+    projectChallanges: [
+      "Muqawiloon deals with a significant amount of data, including business listings, project details, user information, and more. Managing and organizing this data effectively can be a complex task, requiring efficient database design, data validation, and data synchronization across different components of the platform.",
+      "We faced a unique challenge when integrating Zoho Subscriptions for the first time in this project. Despite having experience implementing payment gateways like PayPal and Stripe, working with Zoho Subscriptions we have required a fresh approach and learning curve. Once we had overcome this challenge, We had the opportunity to explore the comprehensive features offered by Zoho Subscriptions, such as robust security measures, simplified subscription management, automated billing, and seamless integration with other Zoho applications. The successful incorporation of Zoho Subscriptions expanded our skill set as a developer but also enhanced the website’s payment options, providing users with a more versatile and comprehensive payment gateway solution.",
+      "Muqawiloon prioritizes delivering a seamless and user-friendly experience. Optimizing performance, reducing page load times, and ensuring smooth navigation is crucial for user satisfaction. Responsive design is also essential for consistent experiences across devices and screen size",
+      "Like any software platform, Muqawiloon acknowledges the presence of bugs and issues. Emphasizing bug fixes, maintaining smooth deployment processes, and establishing efficient debugging and testing workflows are vital for providing a high-quality and dependable platform.",
+    ],
+  },
+  {
+    id: 19,
+    slug: "afrekeria",
+    title: "Afrekeria",
+    desc: "Afrikeria is an e-commerce platform that connects sellers from all over the world to promote and distribute African culture. The platform offers a safe shopping experience and supports financial empowerment for African women.",
+    category: "UI/UX Design",
+    percent: 31,
+    varient: "collapsed",
+    img: "https://devhouse.co/wp-content/uploads/2023/07/afrikeria-feature-img-1-1536x922.webp",
+    country: "KSA",
+    industry: "BUSINESS",
+    startedIn: 2021,
+    team: 4,
+    about: `This e-commerce platform promotes and distributes African culture. Built with a variety of technologies, including HTML, CSS, VueJs, ReactJS, and Ruby on Rails, the site is fully responsive and works seamlessly on all devices. We provided tailored solutions to enhance the user experience.`,
+    projectChallanges: [
+      "While the website aims to promote African culture to a global audience, there may be cultural barriers that make it difficult to connect with some potential customers.",
+      "As an e-commerce platform, the website relies heavily on payment processing, and any issues or complications with payment gateways like Stripe could impact the user experience.",
+      "Shipping products from African countries to customers around the world can be a complex logistical challenge, requiring careful coordination to ensure timely and reliable delivery.",
+      "There are likely other e-commerce platforms that focus on African culture, and the website will need to differentiate itself and offer unique value to attract and retain customers.",
+      "As the website relies on several different technologies and tools, ensuring that they are all functioning properly and kept up-to-date could be a challenge, especially as the site continues to grow and evolve.",
+    ],
   },
 ];
 

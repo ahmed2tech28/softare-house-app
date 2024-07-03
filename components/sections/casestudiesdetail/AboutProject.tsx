@@ -14,14 +14,19 @@ import {
 
 import TechnologyStack from "./TechnologyStack";
 
-const AboutProject: React.FC = () => {
+interface Props {
+  about?: string;
+  challanges?: string[];
+}
+
+const AboutProject: React.FC<Props> = ({ about, challanges }) => {
   return (
     <>
       <main className="w-full h-fit bg-[#F9F9F9] rounded-2xl overflow-hidden">
         <div className="w-[80%] mx-auto py-[4rem] flex flex-col gap-y-[2rem]">
-          <AboutProjecttems />
+          <AboutProjecttems about={about} />
           <ProjectIdea />
-          <ProjectChallanges />
+          <ProjectChallanges challanges={challanges} />
           <Results />
         </div>
       </main>

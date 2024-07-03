@@ -1,19 +1,10 @@
 import React from "react";
 
-export const AboutProjecttems: React.FC = () => {
+export const AboutProjecttems: React.FC<{ about?: string }> = ({ about }) => {
   return (
     <div className="w-full h-fit flex flex-col gap-y-3">
       <h1 className="text-[36px] font-semibold">About a Project</h1>
-      <p className="f-mon font-normal text-[16px] leading-[28px]">
-        Our customer is a Danish company that provides local markets and other
-        Nordic countries with home entertainment solutions, including movie
-        rental services. The services were offered primarily at video rental
-        shops and didn&apos;t allow business scaling. The company wanted to
-        transform the current business model and create a video-on-demand
-        platform to deliver movies and TV series via the Internet on a paid
-        basis. The client chose Cleveroad as an experienced media software
-        development company to jump-start a project with.
-      </p>
+      <p className="f-mon font-normal text-[16px] leading-[28px]">{about}</p>
     </div>
   );
 };
@@ -80,12 +71,10 @@ export const ProjectIdea: React.FC = () => {
   );
 };
 
-export const ProjectChallanges: React.FC = () => {
-  const listOfitems: string[] = [
-    "Creation of a video-on-demand platform localized for the Nordic region. Realization of the features enabling viewers to purchase or rent high-quality movies and TV series.",
-    "Development of a VOD streaming platform that looks and works great across multiple screens, devices, and platforms. Functionality integration enabling video streaming from mobile devices to TVs.",
-    "Designing a responsive on-demand video platform ensuring consistency across devices. Making a high-quality UI design to ensure solid groundwork for wide user adoption and high customer conversion.",
-  ];
+export const ProjectChallanges: React.FC<{ challanges?: string[] }> = ({
+  challanges,
+}) => {
+  // const listOfitems: string[] = challanges!;
   return (
     <div className="flex flex-col gap-y-3 group">
       <svg
@@ -145,13 +134,14 @@ export const ProjectChallanges: React.FC = () => {
       <h1 className="text-[36px] font-semibold">Project Challanges</h1>
       <div className="px-4 f-mon">
         <ul className="list-disc gap-y-2 flex flex-col">
-          {listOfitems.map((item, i) => {
+          {challanges?.map((item, i) => {
             return (
               <li key={i} className="leading-[35px]">
                 {item}
               </li>
             );
           })}
+          {challanges?.length == 0 && "No Project Challanges"}
         </ul>
       </div>
     </div>
