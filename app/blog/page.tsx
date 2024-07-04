@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/sections/blog/Header";
+import Header from "@/components/sections/blog/desktopComps/Header";
 import BlogArea from "@/components/sections/blog/BlogArea";
 import Contact from "@/components/sections/Home/Contact";
 import Footer from "@/components/sections/Home/Footer";

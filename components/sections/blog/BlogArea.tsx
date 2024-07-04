@@ -1,10 +1,10 @@
 import React from "react";
-import LatestNewsBox from "./LatestNewsBox";
-import InnerNav from "./InnerNav";
-import FourBlogsInOneLine from "./FourBlogsInOneLine";
-import EnergyAndPowerTech from "./EnergyAndPowerTech";
-import EnergyAndPowerTechArticle from "./EnergyAndPowerTechArtcle";
-import FourBlogsLineRev from "./FourBlogsInLineRev";
+import LatestNewsBox from "./desktopComps/LatestNewsBox";
+import InnerNav from "./desktopComps/InnerNav";
+import FourBlogsInOneLine from "./desktopComps/FourBlogsInOneLine";
+import EnergyAndPowerTech from "./desktopComps/EnergyAndPowerTech";
+import EnergyAndPowerTechArticle from "./desktopComps/EnergyAndPowerTechArtcle";
+import FourBlogsLineRev from "./desktopComps/FourBlogsInLineRev";
 
 const BlogArea: React.FC = () => {
   return (
