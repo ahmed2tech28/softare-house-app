@@ -39,7 +39,7 @@ const navRoutes: Path[] = [
     name: "Portfolio",
   },
   {
-    path: "#blog",
+    path: "/blog",
     name: "Blog",
   },
 ];
@@ -132,7 +132,9 @@ const Navbar: React.FC<{
         }}
       >
         <nav className="flex container mx-auto justify-between items-center h-[83px] hb:h-[5rem]">
-          {path == "/" || path.includes("/services") ? (
+          {path == "/" ||
+          path.includes("/services") ||
+          path.endsWith("blog") ? (
             <div
               className="logo"
               style={{

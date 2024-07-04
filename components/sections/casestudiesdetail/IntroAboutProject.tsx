@@ -34,7 +34,7 @@ const IntroAboutProject: React.FC<Props> = ({
   ];
   return (
     <div className="h-[37rem] w-full border rounded-[3rem] overflow-hidden flex flex-col relative justify-center items-center">
-      <img src={img} alt="bg-image" />
+      <img src={img} alt="bg-image" className="blur-[2px]" />
       <div className="absolute top-0 left-0 w-full h-full z-10 bg-[#00000092] p-10 flex flex-col justify-between items-start">
         <BreadCrumbComp path={path} color="white" />
         <div>
