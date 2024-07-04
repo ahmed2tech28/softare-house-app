@@ -9,7 +9,7 @@ import Footer from "@/components/sections/Home/Footer";
 import { useParams } from "next/navigation";
 import casestudies from "@/data/casestudies";
 
-const CaseStudiesDetail = () => {
+const CaseStudiesDetail: React.FC = () => {
   const params = useParams<{ slug: string }>();
   const currentCaseStudy = casestudies.find(
     (caseStudy) => caseStudy.slug === params.slug
