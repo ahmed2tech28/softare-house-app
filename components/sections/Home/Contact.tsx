@@ -1,10 +1,20 @@
+"use client";
 import React from "react";
 import TextField from "@mui/material/TextField";
 import ButtonComp from "../../common/ButtonComp";
+import Slider from "react-slick";
+import Clinets from "@/data/Clients";
+interface reviewbox {
+  img?: string;
+  desc: string;
+  client: string;
+  role: string;
+  country: string;
+}
 
 const Form: React.FC = () => {
   return (
-    <form className="flex flex-col gap-y-10 f-mon">
+    <form className="flex flex-col gap-y-10 f-mon xl:w-[80%] lg:w-[90%] w-full">
       <div className="flex w-full gap-x-2">
         <div className="w-1/2 flex flex-col gap-y-10">
           <TextField
@@ -163,48 +173,77 @@ const Form: React.FC = () => {
   );
 };
 
-const ClinetCard: React.FC = () => {
+const ClinetCard: React.FC<reviewbox> = ({ client, country, role, img }) => {
   return (
     <div className="flex w-full rounded-xl gap-x-2">
-      <div className="w-1/3 rounded-full overflow-hidden">
-        <img src="/client2.png" alt="clinet2" />
+      <div className="w-[8rem] h-[7.5rem] rounded-full overflow-hidden">
+        <img src={img} alt={client} className="h-full w-full object-cover" />
       </div>
       <div className="w-2/3 flex flex-col gap-y-3">
-        <p className="f-mon">USASaudi Arabia</p>
-        <p className="font-semibold f-mon">Waleed J Sanchez</p>
-        <p className="f-mon">Disrupting Construction in the GCC</p>
+        <p className="f-mon">{country}</p>
+        <p className="font-semibold f-mon">{client}</p>
+        <p className="f-mon">{role}</p>
       </div>
     </div>
   );
 };
 
-const ReviewBox: React.FC = () => {
+const ReviewBox: React.FC<reviewbox> = ({
+  desc,
+  client,
+  country,
+  role,
+  img,
+}) => {
   return (
     <div className="w-[26rem] h-[35rem] bg-white px-7 py-14 flex-col justify-between flex rounded-xl f-mon">
-      <p className="leading-loose text-[18px] f-mon">
-        Devhouse&apos;s team has been instrumental in the success of our
-        platform, Muqawiloon.com. Their programmers&apos; technical expertise
-        and their designers&apos; creative flair have combined to make our
-        vision a reality, providing a powerful, user-friendly solution for the
-        construction industry.
-      </p>
-      <ClinetCard />
+      <p className="leading-loose text-[18px] f-mon">{desc}</p>
+      <ClinetCard
+        client={client}
+        country={country}
+        desc={desc}
+        role={role}
+        img={img}
+      />
     </div>
   );
 };
 
 const Contact: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="lg:h-[50rem] h-fit w-screen bg-[#F7F7F7] mt-8" id="contact">
       <div className="h-full container mx-auto py-10 flex">
-        <div className="lg:w-1/2 w-[90vw] lg:mx-0 mx-auto flex flex-col gap-y-5">
+        <div className="xl:w-2/3 lg:w-[60%] w-[90vw] lg:mx-0 mx-auto flex flex-col gap-y-5">
           <h1 className="md:text-5xl text-3xl font-semibold md:leading-[4rem]">
             Start growing your <br /> business with us
           </h1>
           <Form />
         </div>
-        <div className="w-1/2 lg:flex hidden justify-center">
+        {/* <div className="w-1/2 lg:flex hidden justify-center">
           <ReviewBox />
+        </div> */}
+        <div className="xl:w-1/3 lg:w-[40%] lg:block hidden justify-center">
+          <div>
+            <Slider {...settings}>
+              {Clinets.map((item, i) => (
+                <ReviewBox
+                  key={i}
+                  client={item.name}
+                  country={item.country}
+                  desc={item.review}
+                  role={item.role}
+                  img={item.img}
+                />
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </div>

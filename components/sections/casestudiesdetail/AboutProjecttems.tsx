@@ -131,7 +131,7 @@ export const ProjectChallanges: React.FC<{ challanges?: string[] }> = ({
         />
       </svg>
 
-      <h1 className="text-[36px] font-semibold">Project Challanges</h1>
+      <h1 className="text-[36px] font-semibold">Project Challenges</h1>
       <div className="px-4 f-mon">
         <ul className="list-disc gap-y-2 flex flex-col">
           {challanges?.map((item, i) => {
