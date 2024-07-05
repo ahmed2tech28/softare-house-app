@@ -102,27 +102,39 @@ const Point: React.FC<point> = ({ top, left, right, bottom }) => {
 
 const Points: React.FC = () => {
   return (
-    <div className="w-full h-full absolute top-0 left-0">
-      <Point
-        top={undefined}
-        bottom={undefined}
-        left={undefined}
-        right={"6em"}
-      />
-      <Point top={undefined} bottom={"2em"} left={undefined} right={"16rem"} />
-      <Point top={"17em"} bottom={undefined} left={"45em"} right={undefined} />
-      <Point top={undefined} bottom={"0em"} left={"20em"} right={undefined} />
-    </div>
+    <>
+      <div className="w-full h-full absolute top-0 left-0 lg:block hidden">
+        <Point
+          top={undefined}
+          bottom={undefined}
+          left={undefined}
+          right={"6em"}
+        />
+        <Point
+          top={undefined}
+          bottom={"2em"}
+          left={undefined}
+          right={"16rem"}
+        />
+        <Point
+          top={"17em"}
+          bottom={undefined}
+          left={"45em"}
+          right={undefined}
+        />
+        <Point top={undefined} bottom={"0em"} left={"20em"} right={undefined} />
+      </div>
+    </>
   );
 };
 
 const Map: React.FC = () => {
   return (
-    <section className="w-screen h-fit relative">
+    <section className="w-screen h-fit relative min-h-[20rem]">
       <img src="/about-dev-house/map.svg" alt="map" className="w-full" />
       <div className="container mx-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full absolute py-[3rem] flex flex-col">
         <div className="h-1/2 w-full relative">
-          <h1 className="text-4xl font-semibold mt-[6rem]">Our presence</h1>
+          <h1 className="text-4xl font-semibold lg:mt-[6rem]">Our presence</h1>
           <Points />
         </div>
         <div className="h-1/2 w-full items-end justify-between lg:flex hidden">

@@ -34,7 +34,7 @@ const DiiferenceAboutElex = () => {
           return (
             <div
               key={i}
-              className="flex flex-col items-start gap-[1rem] lg:w-[399px] w-full 2xl:h-[331px] h-fit border border-[#DEDEDE] px-[1.6rem] py-[3rem]"
+              className="flex flex-col items-start gap-[1rem] lg:w-[399px] w-full border border-[#DEDEDE] px-[1.6rem] py-[3rem]"
             >
               <h2 className="text-[30px] font-semibold">{role.type}</h2>
               <p className="f-mon leading-[30.4px] text-[#111827]">
