@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           <div className="lg:w-[50%] w-[9-vw] lg:mx-0 mx-auto flex flex-col gap-y-[1rem]">
             <h1 className="text-[40px] font-semibold">About Devhouse</h1>
             <p className="leading-[28px] f-mon">
-              ELEKS is the partner of choice for many of the world's leading
+              ELEKS is the partner of choice for many of the world{"'"}s leading
               enterprises, SMEs and technology challengers. We help businesses
               elevate their value through custom software development, product
               design, QA and consultancy services.
