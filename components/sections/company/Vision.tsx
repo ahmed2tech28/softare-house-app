@@ -8,9 +8,10 @@ const Vision = () => {
         <p className="f-mon leading-[38px]">
           Our belief in creating tangible value for our customers is what we
           think is different about ELEKS. Our attention to detail and quality is
-          unmatched in the industry. We're not just a resource provider. We
-          value our customers' success as much as our own – sharing development
-          risk, so that they can be bold in their adoption of new technologies.
+          unmatched in the industry. We{"'"}re not just a resource provider. We
+          value our customers{"'"} success as much as our own – sharing
+          development risk, so that they can be bold in their adoption of new
+          technologies.
         </p>
       </div>
       <div className="lg:w-1/2 w-full flex lg:justify-end">
