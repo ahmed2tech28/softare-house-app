@@ -7,7 +7,7 @@ const FourBlogsInOneLine = () => {
     return (
       <svg
         // width="334"
-        className="xl:w-[334px] w-[320px]"
+        className="xl:w-[334px] w-[310px] xl:h-[306px] h-full"
         height="306"
         viewBox="0 0 334 306"
         fill="none"
@@ -32,7 +32,7 @@ const FourBlogsInOneLine = () => {
           className="w-[330px] h-full object-cover"
         />
       </div>
-      <div className="relative left-[-2rem] w-1/4">
+      <div className="relative xl:left-[-2rem] left-[-3rem] w-1/4">
         <BoxTextBg
           Component={WhiteBg}
           className="ps-[2rem] pe-[1rem]"
@@ -49,7 +49,7 @@ const FourBlogsInOneLine = () => {
           className="w-[330px] h-full object-cover"
         />
       </div>
-      <div className="relative left-[-2rem] w-1/4">
+      <div className="relative xl:left-[-2rem] left-[-3rem] w-1/4">
         <BoxTextBg
           Component={WhiteBg}
           className="ps-[2rem] pe-[1rem]"

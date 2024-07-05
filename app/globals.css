@@ -274,3 +274,11 @@ header.text-black nav * {
 .css-w0hlca.Mui-expanded {
     margin: 0px 0;
 }
+
+.ready-to-realize-bg {
+    background: linear-gradient(90deg, #0C8CE9 0%, #0066FF 100%);
+}
+
+.near-share-teams-bg {
+    background: linear-gradient(270deg, #0C8CE9 0%, #0066FF 100%);
+}
