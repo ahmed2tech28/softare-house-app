@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 const Box: React.FC = () => {
   return (
-    <div className="w-[366px] h-[218px] border-[3px] bg-white rounded-[10px] flex flex-col justify-between px-4 py-10">
+    <div className="w-[366px] h-[218px] border-[3px] bg-white rounded-[10px] flex flex-col justify-between px-4 py-10 mx-auto">
       <h1 className="text-[30px] font-semibold leading-[36.75px]">Tokyo</h1>
       <p>
         501, THE MODULE roppongi, 7-21-24 Roppongi, Minato-ku, Tokyo 106-0032
@@ -22,7 +22,7 @@ const Box: React.FC = () => {
 const Box2: React.FC = () => {
   return (
     <div
-      className="w-[366px] h-[218px] border bg-[#0066FF] rounded-[10px] flex flex-col justify-between px-4 py-10"
+      className="w-[366px] h-[218px] border bg-[#0066FF] rounded-[10px] flex flex-col justify-between px-4 py-10 mx-auto"
       style={{ color: "white" }}
     >
       <h1 className="text-[30px] font-semibold leading-[36.75px]">Tokyo</h1>
@@ -133,7 +133,7 @@ const Map: React.FC = () => {
     <section className="w-screen h-fit relative min-h-[20rem]">
       <img src="/about-dev-house/map.svg" alt="map" className="w-full" />
       <div className="container mx-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full absolute py-[3rem] flex flex-col">
-        <div className="h-1/2 w-full relative">
+        <div className="h-1/2 w-full relative lg:block hidden">
           <h1 className="text-4xl font-semibold lg:mt-[6rem]">Our presence</h1>
           <Points />
         </div>
@@ -142,13 +142,13 @@ const Map: React.FC = () => {
           <Box2 />
           <Box />
         </div>
-        <div className="block lg:hidden">
-          <Slider {...settings}>
-            <Box />
-            <Box2 />
-            <Box />
-          </Slider>
-        </div>
+      </div>
+      <div className="block lg:hidden my-6">
+        <Slider {...settings}>
+          <Box />
+          <Box2 />
+          <Box />
+        </Slider>
       </div>
     </section>
   );
