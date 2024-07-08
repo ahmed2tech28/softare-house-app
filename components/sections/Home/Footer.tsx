@@ -113,7 +113,7 @@ const MobileFooter: React.FC = () => {
         ))}
       </div>
       <div className="text-xl h-[20%]">
-        &copy; 2023 DevHouse All rights reserved
+        &copy; {new Date().getFullYear()} DevHouse All rights reserved
       </div>
     </footer>
   );
