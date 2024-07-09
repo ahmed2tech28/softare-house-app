@@ -135,7 +135,8 @@ const Navbar: React.FC<{
           {path == "/" ||
           path.includes("/services") ||
           path.endsWith("blog") ||
-          path.endsWith("company") ? (
+          path.endsWith("company") ||
+          path.endsWith("industries") ? (
             <div
               className="logo"
               style={{
