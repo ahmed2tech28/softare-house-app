@@ -23,7 +23,7 @@ const navRoutes: Path[] = [
     name: "Services",
   },
   {
-    path: "#industries",
+    path: "/industries",
     name: "Industries",
   },
   {
